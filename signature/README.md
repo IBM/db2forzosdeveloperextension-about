@@ -1,10 +1,10 @@
 # Code signature validation
 
-This zip file contains IBM® Db2® for z/OS® Developer Extension 0.1.0 and code signing signatures to verify the binary of Db2 Developer Extension.
+This zip file contains IBM® Db2® for z/OS® Developer Extension 0.1.1 and code signing signatures to verify the binary of Db2 Developer Extension.
 
 ## How to verify the code signing signatures
 
-The db2forzosdeveloperextension-0.1.0.zip file contains .vsix, .sig and .pem files, which are used to verify the binary files.
+The db2forzosdeveloperextension-0.1.1.zip file contains .vsix, .sig and .pem files, which are used to verify the binary files.
 
 After you extract the files from the zip file, you can verify the code signing signatures for the .vsix file by completing the following instructions.
 
@@ -30,11 +30,11 @@ After you extract the files from the zip file, you can verify the code signing 
     ~~~~
     Response verify OK
     ~~~~
-3. Verify the downloaded binary file of Db2 Developer Extension 0.1.0.
+3. Verify the downloaded binary file of Db2 Developer Extension 0.1.1.
 
     To verify the file by using the signature and public key files, issue the following command:
     ~~~~
-    $ openssl dgst -sha256 -verify public.pem -signature db2forzosdeveloperextension-0.1.0.vsix.sig db2forzosdeveloperextension-0.1.0.vsix
+    $ openssl dgst -sha256 -verify public.pem -signature db2forzosdeveloperextension-0.1.1.vsix.sig db2forzosdeveloperextension-0.1.1.vsix
     ~~~~
     If the binary verification is successful, the output is:
     ~~~~
