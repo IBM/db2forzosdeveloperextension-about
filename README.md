@@ -4,13 +4,31 @@ IBM® Db2® for z/OS® Developer Extension (Db2 Developer Extension) is an exten
 
 ## Licenses
 
-Before downloading this extension, review the [Db2 Developer Extension License Agreement](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/LICENSE.txt) and [Third Party Notices](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/NOTICES.txt). 
+Before downloading this extension, review the [Db2 Developer Extension License Agreement](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/LICENSE.txt), [Third Party Notices](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/NOTICES.txt), and the license for [Separately Licensed Code](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/NON_IBM_LICENSE.txt). 
 
 ## Overview
 
 This extension provides language support for the Structured Query Language (SQL) syntax that is used to define, manipulate, and control data in IBM Db2 for z/OS databases.
 
-The features provided in this extension simplify the task of developing applications that interact with data in Db2 for z/OS databases. In this release, Db2 Developer Extension provides syntax highlighting and code snippets for commonly used SQL statements.
+The features provided in this extension simplify the task of developing applications that interact with data in Db2 for z/OS databases by providing:
+
+- Code completion and signature help
+- The ability to run SQL with or without parameter markers and host variables and to save SQL execution results
+- Integrated support for connecting to Db2 databases
+- Syntax checking
+- Syntax highlighting
+- Customizable code snippet support 
+
+See the [Features](#Features) section for more details and examples.
+
+## Table of contents
+
+- [Privacy notice for feedback](#Privacy-notice-for-feedback)
+- [Prerequisites for installing Db2 Developer Extension](#Prerequisites-for-installing-Db2-Developer-Extension)
+- [Configuring Java](#Configuring-Java)
+- [Specifying the Db2 SQL Service port number](#Specifying-the-Db2-SQL-Service-port-number)
+- [Features](#Features)
+- [Limitations for this release](#Limitations-for-this-release)
 
 ## Privacy notice for feedback
 
@@ -22,6 +40,9 @@ This current release of Db2 Developer Extension will collect anonymous data for 
 
 * Activation of this VS Code extension
 * Opening supported file types (See the **Feature Contributions** tab for a list of supported file types.)
+* Syntax parsing
+* Connecting to Db2
+* SQL execution
 * Deactivation of this VS Code extension
 
 Each of these events is logged with the following information:
@@ -32,9 +53,93 @@ Each of these events is logged with the following information:
 * Anonymous user and session ID
 * Version numbers of Microsoft VS Code and Db2 Developer Extension
 
-## Features
-### Syntax highlighting 
+## Prerequisites for installing Db2 Developer Extension
 
+Installing Db2 Developer Extension requires the following software:
+
+* One of the following IBM Data Server Driver JDBC license files:
+
+    * **The Db2 Connect Unlimited Edition for System z® server license**
+
+    This license must be activated on the Db2 for z/OS subsystems that you want to connect to. For more information, see the following topic: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.licensing.doc/doc/t0057375.html
+
+    * **The IBM Data Server Driver for JDBC client license file**
+
+    For information about locating and and enabling the client license file, see the following topic: 
+    https://www.ibm.com/support/pages/db2-jdbc-driver-not-licensed-connectivity-file-db2jcclicensecisuzjar-errorcode-4472-sqlstate42968
+
+    When you specify the location of the `db2jcc_license_cisuz.jar` license file in your VS Code settings (`db2forzosdeveloperextension.db2sqlservice.dependencies`), you must provide the full path.
+
+* One of the following 64-bit Java SDKs:
+
+    * [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 11 of Oracle Java
+    * Version 8 or 11 of the [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=openj9)
+
+    See [Configuring Java](#Configuring-Java) for information about setting the various options that control how Db2 Developer Extension uses Java.
+
+ * libsecret on Linux
+
+    If you are running Db2 Developer Extension for VS Code on Linux, install libsecret by running the appropriate command for your distribution:
+
+    * Debian/Ubuntu: `sudo apt-get install libsecret-1-0`
+    * Red Hat-based: `sudo yum install libsecret-devel`
+    * Arch Linux: `sudo pacman -S libsecret`   
+
+## Configuring Java
+
+Because part of the SQL language server in IBM Db2 for z/OS Developer Extension is implemented using Java, a Java runtime must be defined in the program path to start Db2 Developer Extension in VS Code. You can specify the specific Java runtime that you want to use and you can set additional Java configuration parameters, such as how much memory the extension can use, in the [VS Code User or Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings). You can also specify a Java runtime and set configuration parameters by editing the `settings.json` file directly.
+
+### Specifying the Java runtime for the Db2 Developer Extension language server
+
+The language server client that is running in the Db2 Dev Extension checks the following places to find a matching Java runtime:
+
+1. First, it checks your current VS Code User Settings or Workspace Settings. These settings take precedence over all other locations, which allows you to specify a different Java runtime for Db2 Developer Extension than you do for other programs on your computer.
+2. If a Java runtime was not specified in your VS Code User Settings or Workspace Settings, it checks your `JAVA_HOME` environment variable.
+3. If a Java runtime was not specified in your `JAVA_HOME` environment variable, it checks your `PATH` environment variable.
+
+If a Java runtime is not found in any of these locations, an error message is issued. To resolve the problem, specify a Java runtime in one of these locations.
+
+**Tip:** Alternatively, you can specify a path to a Java SDK on the `JAVA_HOME` environment variable; for example:
+
+* On Mac:
+    ```
+    "db2forzosdeveloperextension.java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home"
+    ```
+* On Windows:
+    ```
+    "db2forzosdeveloperextension.java.home": "C:\Program Files\Java\jdk1.8.0_181"
+    ```
+
+## Specifying the Db2 SQL Service port number
+
+The Db2 SQL Service (DSS) provides support for parsing Db2 SQL syntax and for communicating with Db2. Complete the following steps to specify the port that the DSS server will run on.
+
+1. Open VS Code settings and search for the `db2forzosdeveloperextension.db2sqlservice.port` setting.
+2. Specify the port number that you want to assign to the DSS server.
+3. Restart VS Code.
+
+## Features
+### Code completion and signature help
+Code completion simplifies the process of writing SQL statements by suggesting valid completions as you type.  Signature help provides information about the parameters that are required by a function or procedure. For this release, these features are provided for Db2 built-in functions and stored procedures only.
+
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/code-completion-signature-help.gif)
+
+### SQL execution
+You can run individual SQL statements that you highlight or all of the SQL statements in a file directly from Db2 Developer Extension by right-clicking in a file and selecting **Run Selected** or **Run All** respectively. You can run SQL with or without parameter markers and host variables, and you can save your SQL execution results in a .csv file. You can also specify run options to control how your SQL is parsed and run.  
+
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/sql-execution.gif)
+
+### Adding a database connection
+To create connections to Db2 databases, launch the **Add connection** wizard by clicking the plus sign (+) in the Db2 Developer Extension **CONNECTIONS** view.
+
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/add-connection.gif)
+
+### Syntax checking
+Syntax checking automatically recognizes when an SQL element has been specified incorrectly and provides the valid expected replacement either by hovering over an incorrectly specified element or by displaying it in the **PROBLEMS** view.
+
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/syntax-checking.gif)
+
+### Syntax highlighting 
 Syntax highlighting makes it easier to visually parse your code and to identify particular syntax elements based solely on their appearance. Db2 Developer Extension classifies all elements of a particular type into a group and applies a highlighting theme at the group level so that it's easy to customize highlighting themes.
 
 The following example shows the default highlighting theme:
@@ -47,3 +152,9 @@ Db2 Developer Extension provides code snippets for the most commonly used SQL sy
 The following example shows how to select and insert various SQL DDL statements:
 
 ![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/snippets.gif)
+
+## Limitations for this release
+
+* When you run an SQL statement that contains host variables (for example, a statement that was copied from the SQL in a native stored procedure), you must prefix the host variables with a colon (:).   For example, `:ind_db2_member`
+
+* CALL statements for stored procedures can include parameters of type IN only. Stored procedure CALL statements that include OUT or INOUT parameters will fail.
