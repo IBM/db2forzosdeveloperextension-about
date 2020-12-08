@@ -19,16 +19,16 @@ The features provided in this extension simplify the task of developing applicat
 - Syntax highlighting
 - Customizable code snippet support 
 
-See the [Features](#Features) section for more details and examples.
+See the [Features](#features) section for more details and examples.
 
 ## Table of contents
 
-- [Privacy notice for feedback](#Privacy-notice-for-feedback)
-- [Prerequisites for installing Db2 Developer Extension](#Prerequisites-for-installing-Db2-Developer-Extension)
-- [Configuring Java](#Configuring-Java)
-- [Specifying the Db2 SQL Service port number](#Specifying-the-Db2-SQL-Service-port-number)
-- [Features](#Features)
-- [Limitations for this release](#Limitations-for-this-release)
+- [Privacy notice for feedback](#privacy-notice-for-feedback)
+- [Prerequisites for installing Db2 Developer Extension](#prerequisites-for-installing-db2-developer-extension)
+- [Configuring Java](#configuring-java)
+- [Specifying the Db2 SQL Service port number](#specifying-the-db2-sql-service-port-number)
+- [Features](#features)
+- [Limitations for this release](#limitations-for-this-release)
 
 ## Privacy notice for feedback
 
@@ -75,7 +75,9 @@ Installing Db2 Developer Extension requires the following software:
     * [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 11 of Oracle Java
     * Version 8 or 11 of the [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=openj9)
 
-    See [Configuring Java](#Configuring-Java) for information about setting the various options that control how Db2 Developer Extension uses Java.
+    Alternatively, if you are not developing Java applications, you can install a [supported JRE](https://www.oracle.com/java/technologies/javase-jre8-downloads.html).
+
+    See [Configuring Java](#configuring-java) for information about setting the various options that control how Db2 Developer Extension uses Java.
 
  * libsecret on Linux
 
