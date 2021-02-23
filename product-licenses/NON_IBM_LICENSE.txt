@@ -1,6 +1,6 @@
 TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
 
-IBM Db2 for z/OS Developer Extension 0.5.9
+IBM Db2 for z/OS Developer Extension 1.1.0
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -22,25 +22,22 @@ The following are Separately Licensed Code:
 
 Lesser General Public License
 
-The Program includes some or all of the following licensed to you as Separately Licensed Code under the GNU General Public License. For copies of the source code for this software, send an email to kren@ca.ibm.com identifying the IBM product and the LGPL-licensed program for which you are requesting the source code.
+The Program includes some or all of the following licensed to you as Separately
+Licensed Code under the GNU General Public License. For copies of the source code
+for this software, send an email to kren@ca.ibm.com identifying the IBM product and
+the LGPL-licensed program for which you are requesting the source code.
 
-dbus-java-3.0.1.jar
+dbus-java-3.2.1.jar
 
 **************************************************************
-
 
 Creative Commons License
 
 The Program includes some or all of the following licensed to under the Creative Commons.
 
 CC-BY-SA-4.0
-glob 7.1.6 - Glob's logo was created by [Tanya Brassie](http://tanyabrassie.com/). Logo files can be found [here](https://github.com/isaacs/node-glob/tree/master/logo).
-
-CC-BY-2.5
-javax.annotation.concurrent Copyright (c) 2005 Brian Goetz, Official home: http://www.jcip.net
-
-CC-BY-3.0
-spdx-exceptions 2.1.0 Copyright © 2010-2015 Linux Foundation and its Contributors. https://www.npmjs.com/package/spdx-exceptions
+glob 7.1.6 - Glob's logo was created by [Tanya Brassie](http://tanyabrassie.com/).
+Logo files can be found [here](https://github.com/isaacs/node-glob/tree/master/logo).
 
 L/N:  L-JFIE-BTJNBZ
 D/N:  L-JFIE-BTJNBZ
