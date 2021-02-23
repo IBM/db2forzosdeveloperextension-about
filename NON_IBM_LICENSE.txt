@@ -1,0 +1,44 @@
+TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+
+IBM Db2 for z/OS Developer Extension 1.1.0
+
+The IBM license agreement and any applicable information on the web
+download page for IBM products refers Licensee to this file for details
+concerning terms and conditions applicable to code identified as
+Separately Licensed Code below and included in the products listed
+above ("the Program").
+
+The Separately Licensed Code is provided to Licensee under terms
+and conditions that are different from the IBM license agreement.
+Licensee's use of such components or portions thereof is subject to the
+terms of the associated license agreement provided or referenced in this
+section and not the terms of the IBM license agreement.
+
+Please note: This NON_IBM_LICENSE file may identify Separately Licensed
+Code and its related agreements that are not used by, or that were not
+shipped with, the Program as Licensee installed it.
+
+The following are Separately Licensed Code:
+
+Lesser General Public License
+
+The Program includes some or all of the following licensed to you as Separately
+Licensed Code under the GNU General Public License. For copies of the source code
+for this software, send an email to kren@ca.ibm.com identifying the IBM product and
+the LGPL-licensed program for which you are requesting the source code.
+
+dbus-java-3.2.1.jar
+
+**************************************************************
+
+Creative Commons License
+
+The Program includes some or all of the following licensed to under the Creative Commons.
+
+CC-BY-SA-4.0
+glob 7.1.6 - Glob's logo was created by [Tanya Brassie](http://tanyabrassie.com/).
+Logo files can be found [here](https://github.com/isaacs/node-glob/tree/master/logo).
+
+L/N:  L-JFIE-BTJNBZ
+D/N:  L-JFIE-BTJNBZ
+P/N:  L-JFIE-BTJNBZ
