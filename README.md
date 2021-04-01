@@ -1,2 +1,2 @@
-# db2devext.github.io
- Db2 Developer Extension Documentation Repository
+# IBM Db2 for z/OS Developer Extension Documentation Repository
+ This documentation repository contains tutorials and how-to information for using Db2 Developer Extension.
