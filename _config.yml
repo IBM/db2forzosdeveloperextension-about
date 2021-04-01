@@ -21,7 +21,7 @@
 title: IBM Db2 for z/OS Developer Extension
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Tutorials and how-to information for using IBM Db2 for z/OS Developer Extension
+  Tutorials and how-to information for using IBM Db2 for z/OS Developer Extension.
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 repository: ibm/db2forzosdeveloperextension-about
