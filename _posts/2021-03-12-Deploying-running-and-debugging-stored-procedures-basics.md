@@ -77,7 +77,7 @@ The **Deployment** view consists of two sections: **Deployment options** and **R
 
 ![Deployment options]({{site.baseurl}}/assets/images/nsp-basics-deployment-options.png)
 
-- Use the **Database connection** option to select a connection from the list of defined connections. See [Getting started]({{site.baseurl}}/2021/03/12/Getting-started.html) for more information about creating database connections.
+- Use the **Database connection** option to select a connection from the list of defined connections. See [Creating a database connection]({{site.baseurl}}/2021/06/15/Creating-a-database-connection.html) for more information.
 
 - Use the **Target schema** option for unqualified NSPs. This field is enabled only for unqualified NSPs. If the NSP is qualified (like the one in our example CREATE PROCEDURE statement, which is qualified to ADMF001), the field is disabled. If you leave this field empty, the JDBC property `currentSchema` will be used. If `currentSchema` is not set, the JDBC connection username will be used.
 
@@ -120,9 +120,11 @@ Click **Deploy** to finish the configuration and begin the deployment process fo
 
 ## Debugging a stored procedure
 
-The **Debug** action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment (note that conditional breakpoints currently aren't supported). You can also specify additional debugging options by using the **Run SQL Options** dialog, which is described later in this article. If input variables are specified in the SQL, you'll be prompted to specify values for them before the SQL goes through debugging.
+The **Debug** action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment ~~(note that conditional breakpoints currently aren't supported)~~. `Setting conditional breakpoints is covered later in this article.`
 
-**Note:** This section covers basic debugging. For more advanced debugging scenarios, see `insert hyperlink to advanced debugger article`.
+You can also specify additional debugging options by using the **Run SQL Options** dialog, which is described later in this article. If input variables are specified in the SQL, you'll be prompted to specify values for them before the SQL goes through debugging.
+
+<!-- **Note:** This section covers basic debugging. For more advanced debugging scenarios, see `insert hyperlink to advanced debugger article`. -->
 
 Click the **Debug** action to start debugging process. If your NSP contains input variables, you'll be prompted to specify values for them before the SQL goes through debugging, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
 
@@ -162,6 +164,25 @@ Click the **Run and Debug** icon in the **Activity Bar** (![Run and Debug icon](
 
 
 For more information about debugging your code in Visual Studio Code, see https://code.visualstudio.com/docs/editor/debugging.
+
+### Setting conditional hit-count breakpoints
+
+You can specify a hit count when you define a breakpoint, which means that when the breakpoint is reached, instead of pausing, execution continues until the hit count that you specified is reached. This feature is useful when you debug stored procedures that contain loops. You can allow execution to continue for the specified number of loops, and then debug the code when that number is reached.
+
+To set a breakpoint that includes a hit count:
+
+1. For a stored procedure that has already been deployed, right-click and select **Debug Stored Procedure**.
+2. Set any input parameters that need to be set.
+3. Click **Debug**. A **.spsql** file opens and the debugger starts at the top of this file. 
+4. Click the line that you want to set the conditional breakpoint for, then right-click and select **Edit Breakpoint > Add Conditional Breakpoint > Hit Count**. (Note that in this release, the **Expression** and **Log Message** options are not supported.)
+5. Specify the number of times the loop should be run before the debugger pauses.
+6. Click **Continue** (![Continue button]({{site.baseurl}}/assets/images/nsp-basics-continue-button.png)) to proceed with debugging.
+
+![Setting conditional hit-count breakpoints]({{site.baseurl}}/assets/images/nsp-basics-debug-hit-count.gif)
+
+The breakpoints that you set persist on the file. You don't need to reset these breakpoints if you want to debug this file again.
+
+You can clear breakpoints by deselecting them in the **BREAKPOINTS** view or by clicking on and removing them individually from the file.
 
 ## Running a stored procedure
 
