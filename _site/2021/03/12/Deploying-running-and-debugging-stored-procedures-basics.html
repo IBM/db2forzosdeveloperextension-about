@@ -1,0 +1,757 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.23.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Deploying, running,and debugging stored procedures - IBM Db2 for z/OS Developer Extension</title>
+<meta name="description" content="This article shows you how to use Db2 Developer Extension to deploy a native SQL stored procedure (NSP) with various deployment options: enabling debug, altering previous deployments, setting target schema, and others. It also walks you through the process of debugging and running an NSP.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="IBM Db2 for z/OS Developer Extension">
+<meta property="og:title" content="Deploying, running,and debugging stored procedures">
+<meta property="og:url" content="http://localhost:4000/2021/03/12/Deploying-running-and-debugging-stored-procedures-basics.html">
+
+
+  <meta property="og:description" content="This article shows you how to use Db2 Developer Extension to deploy a native SQL stored procedure (NSP) with various deployment options: enabling debug, altering previous deployments, setting target schema, and others. It also walks you through the process of debugging and running an NSP.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-03-12T00:00:00-08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/2021/03/12/Deploying-running-and-debugging-stored-procedures-basics.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="IBM Db2 for z/OS Developer Extension Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt="IBM Db2 for z/OS Developer Extension"></a>
+        
+        <a class="site-title" href="/">
+          IBM Db2 for z/OS Developer Extension
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blogs/">Blogs</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://marketplace.visualstudio.com/items?itemName=ibm.db2forzosdeveloperextension">VS Code Marketplace</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/IBM/db2forzosdeveloperextension-about/issues">GitHub</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">The basics</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/2021/03/12/Getting-started.html">Getting started</a></li>
+          
+            <li><a href="/2021/06/15/Creating-a-database-connection.html">Creating a database connection</a></li>
+          
+            <li><a href="/2021/03/16/Committing-and-rolling-back-changes.html">Committing and rolling back changes</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Working with SQL</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/2021/06/15/Preparing-to-run-an-SQL-statement.html">Preparing to run an SQL statement</a></li>
+          
+            <li><a href="/2021/06/16/Formatting-SQL.html">Formatting SQL</a></li>
+          
+            <li><a href="/2021/06/15/Running-multiple-SQL-statements.html">Running multiple SQL statements</a></li>
+          
+            <li><a href="/2021/03/12/Running-SQL-from-different-types-of-files.html">Running SQL from different types of files</a></li>
+          
+            <li><a href="/2021/06/15/Running-SQL-with-multiple-selection-scopes.html">Running SQL with multiple selection scopes</a></li>
+          
+            <li><a href="/2021/06/15/Running-SQL-from-within-a-stored-procedure.html">Running SQL from within a stored procedure</a></li>
+          
+            <li><a href="/2021/06/15/Saving-SQL-results-to-a-file.html">Saving SQL results to a file</a></li>
+          
+            <li><a href="/2021/06/16/Limiting-the-number-of-rows-returned.html">Limiting the number of rows returned</a></li>
+          
+            <li><a href="/2021/06/15/Comparing-SQL-results.html">Comparing SQL results</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Working with stored procedures</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/2021/03/16/Creating-stored-procedures.html">Creating stored procedures</a></li>
+          
+            <li><a href="/2021/03/12/Deploying-running-and-debugging-stored-procedures-basics.html" class="active">Deploying, running, and debugging stored procedures</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Tips and tricks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/2021/06/15/Running-commands-from-the-command-palette.html">Running commands from the Command Palette</a></li>
+          
+            <li><a href="/2021/06/15/Creating-your-own-code-snippets.html">Creating your own code snippets</a></li>
+          
+            <li><a href="/2021/06/16/Setting-multiple-port-numbers.html">Setting multiple port numbers</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Troubleshooting</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/2021/06/15/Opening-an-issue-and-providing-logs.html">Opening an issue and providing logs</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Deploying, running,and debugging stored procedures">
+    <meta itemprop="description" content="This article shows you how to use Db2 Developer Extension to deploy a native SQL stored procedure (NSP) with various deployment options: enabling debug, altering previous deployments, setting target schema, and others. It also walks you through the process of debugging and running an NSP.">
+    <meta itemprop="datePublished" content="2021-03-12T00:00:00-08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Deploying, running,and debugging stored procedures
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#deploying-a-stored-procedure">Deploying a stored procedure</a><ul><li><a href="#deployment-options">Deployment options</a></li><li><a href="#routine-options">Routine options</a></li></ul></li><li><a href="#debugging-a-stored-procedure">Debugging a stored procedure</a><ul><li><a href="#setting-conditional-hit-count-breakpoints">Setting conditional hit-count breakpoints</a></li></ul></li><li><a href="#running-a-stored-procedure">Running a stored procedure</a></li><li><a href="#specifying-additional-options">Specifying additional options</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This article shows you how to use Db2 Developer Extension to deploy a native SQL stored procedure (NSP) with various deployment options: enabling debug, altering previous deployments, setting target schema, and others. It also walks you through the process of debugging and running an NSP.</p>
+
+<p><strong>Tip:</strong> If you’re new to stored procedures, make sure you’re familiar with the information in <a href="/2021/03/16/Creating-stored-procedures.html">Creating stored procedures</a> first.</p>
+
+<p>One big advantage of using Db2 Developer Extension to deploy an NSP, as opposed to manually executing SQL, is that you can save the various deployment options separately from the SQL itself, which means that you can push your code into a source code manager, such as GitHub, without having to remove the deployment debug options first.</p>
+
+<p>Another advantage is that you don’t need to specify <code class="language-plaintext highlighter-rouge">--#SET TERMINATOR</code> in the header of <strong>.spsql</strong> files. Db2 Developer Extension uses the number sign character (#) as the default terminator character, but you can use any terminator character you want by setting a SQL routine option (explained later in this article).</p>
+
+<p><strong>Note:</strong> Currently, Db2 Developer Extension deploy, debug, and run options support only one NSP per <strong>.spsql</strong> file. When NSP options are specified, only the first NSP in the file will be executed; additional NSPs and SQL statements will be ignored.</p>
+
+<p>We’ll use the following example stored procedure throughout this article to demonstrate how to deploy, run, and debug an NSP. This NSP will read the total salary, including bonuses, from the table <code class="language-plaintext highlighter-rouge">DSN8B10.EMP</code> from a passed in-parameter <code class="language-plaintext highlighter-rouge">DEPTNUMBER</code>. You can paste it into a file so that you try things out for yourself.</p>
+
+<p><strong>RETURNDEPTSALARY.spsql</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE PROCEDURE ADMF001.RETURNDEPTSALARY
+ (IN DEPTNUMBER CHAR(3),
+  OUT DEPTSALARY DECIMAL(15,2),
+  OUT DEPTBONUSCNT INT)
+ LANGUAGE SQL
+ READS SQL DATA
+ P1: BEGIN
+     DECLARE EMPLOYEE_SALARY DECIMAL(9,2);
+     DECLARE EMPLOYEE_BONUS DECIMAL(9,2);
+     DECLARE TOTAL_SALARY DECIMAL(15,2) DEFAULT 0;
+     DECLARE BONUS_CNT INT DEFAULT 0;
+     DECLARE END_TABLE INT DEFAULT 0;
+     DECLARE C1 CURSOR FOR
+      SELECT SALARY, BONUS FROM DSN8B10.EMP
+       WHERE WORKDEPT = DEPTNUMBER;
+     DECLARE CONTINUE HANDLER FOR NOT FOUND
+      SET END_TABLE = 1;
+     DECLARE EXIT HANDLER FOR SQLEXCEPTION
+      SET DEPTSALARY = NULL;
+     OPEN C1;
+     FETCH C1 INTO EMPLOYEE_SALARY, EMPLOYEE_BONUS;
+     WHILE END_TABLE = 0 DO
+      SET TOTAL_SALARY = TOTAL_SALARY + EMPLOYEE_SALARY + EMPLOYEE_BONUS;
+      IF EMPLOYEE_BONUS &gt; 0 THEN
+       SET BONUS_CNT = BONUS_CNT + 1;
+      END IF;
+      FETCH C1 INTO EMPLOYEE_SALARY, EMPLOYEE_BONUS;
+     END WHILE;
+     CLOSE C1;
+     SET DEPTSALARY = TOTAL_SALARY;
+     SET DEPTBONUSCNT = BONUS_CNT;
+ END P1
+</code></pre></div></div>
+
+<p>Here’s how that same stored procedure looks in Db2 Developer Extension:</p>
+
+<p><img src="/assets/images/nsp-basics-example-nsp.png" alt="Example stored procedure" /></p>
+
+<p>The file extension of <code class="language-plaintext highlighter-rouge">.spsql</code> identifies it as a stored procedure. When you open a <strong>.spsql</strong> file in Db2 Developer Extension, you get some additional actions in the toolbar in the upper right corner of the view:</p>
+
+<p><img src="/assets/images/nsp-basics-action-toolbar.png" alt="Deploy, Debug, Run, action icons" /></p>
+
+<p>From left to right, these actions are <strong>Deploy</strong>, <strong>Debug</strong>, and <strong>Run</strong>. We’ll cover each one in the following sections.</p>
+
+<h2 id="deploying-a-stored-procedure">Deploying a stored procedure</h2>
+
+<p>Click the <strong>Deploy</strong> action to open the <strong>Deployment</strong> view. This is where you can set and customize deployment options and save the options for the <strong>.spsql</strong> file. These options are used only during deployment and do not impact the DDL source code.</p>
+
+<p>The <strong>Deployment</strong> view consists of two sections: <strong>Deployment options</strong> and <strong>Routine options</strong>.</p>
+
+<h3 id="deployment-options">Deployment options</h3>
+
+<p><img src="/assets/images/nsp-basics-deployment-options.png" alt="Deployment options" /></p>
+
+<ul>
+  <li>
+    <p>Use the <strong>Database connection</strong> option to select a connection from the list of defined connections. See <a href="/2021/06/15/Creating-a-database-connection.html">Creating a database connection</a> for more information.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Target schema</strong> option for unqualified NSPs. This field is enabled only for unqualified NSPs. If the NSP is qualified (like the one in our example CREATE PROCEDURE statement, which is qualified to ADMF001), the field is disabled. If you leave this field empty, the JDBC property <code class="language-plaintext highlighter-rouge">currentSchema</code> will be used. If <code class="language-plaintext highlighter-rouge">currentSchema</code> is not set, the JDBC connection username will be used.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Build owner</strong> option to specify the owner of the NSP. If this field is left empty, the JDBC property <code class="language-plaintext highlighter-rouge">currentSQLID</code> will be used. If <code class="language-plaintext highlighter-rouge">currentSQLID</code> is not set, the JDBC connection username will be used.</p>
+  </li>
+  <li>Use the <strong>Default path</strong> option for resolving an unqualified data type, function, or procedure referenced by the procedure that’s being deployed. You can specify multiple schemas, each one separated by a comma. For example:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "ADMF002","ADMF003","ADMF004"
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Use the <strong>Duplicate handling</strong> option to specify the behavior of the deployment if the procedure already exists:</p>
+
+    <ul>
+      <li>
+        <p><strong>Alter duplicates</strong> modifies the CREATE PROCEDURE DDL to ALTER PROCEDURE if the procedure already exists.</p>
+
+        <p><strong>Exception:</strong> If you’re using <code class="language-plaintext highlighter-rouge">CREATE OR REPLACE PROCEDURE</code>, which is available in Db2 12 function level 507 or later, this option does not result in any modifications.</p>
+      </li>
+      <li>
+        <p><strong>Drop duplicates</strong> calls DROP PROCEDURE before running the CREATE PROCEDURE DDL if the procedure already exists.</p>
+      </li>
+      <li>
+        <p><strong>Treat duplicate deployments as errors</strong> returns an error if the procedure already exists.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Note:</strong> Not all options mentioned above are displayed due to screen size limit.</p>
+
+<p>If you’re new to SQL and want more information about embedding SQL in host languages, there’s a lot of information about this topic in the <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPEK_12.0.0/apsg/src/tpc/db2z_programembeddedsql.html">Db2 for z/OS documentation</a>.</p>
+
+<h3 id="routine-options">Routine options</h3>
+
+<p><img src="/assets/images/nsp-basics-routine-options.png" alt="Routine options" /></p>
+
+<ul>
+  <li>
+    <p>Use the <strong>Enable debugging</strong> option to specify whether this procedure is available to be debugged.</p>
+  </li>
+  <li>
+    <p>Use the <strong>WLM environment</strong> option to specify which Workload Manager environment will be used to debug the procedure. If you enable debugging but leave this field empty, the default WLM environment will used.</p>
+  </li>
+  <li>
+    <p>Use the <strong>ASU time limit</strong> option to set the ASUTIME, which is the number of CPU seconds permitted for each SQL statement. The default value of 0 means NO LIMIT.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Additional routine options</strong> field to specify any additional options that you want to include. Separate each option with a semicolon. For example:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> QUALIFIER ADMF002; ISOLATION LEVEL RS
+</code></pre></div>    </div>
+    <p>Click <strong>Deploy</strong> to finish the configuration and begin the deployment process for the procedure.</p>
+  </li>
+</ul>
+
+<h2 id="debugging-a-stored-procedure">Debugging a stored procedure</h2>
+
+<p>The <strong>Debug</strong> action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment <del>(note that conditional breakpoints currently aren’t supported)</del>. <code class="language-plaintext highlighter-rouge">Setting conditional breakpoints is covered later in this article.</code></p>
+
+<p>You can also specify additional debugging options by using the <strong>Run SQL Options</strong> dialog, which is described later in this article. If input variables are specified in the SQL, you’ll be prompted to specify values for them before the SQL goes through debugging.</p>
+
+<!-- **Note:** This section covers basic debugging. For more advanced debugging scenarios, see `insert hyperlink to advanced debugger article`. -->
+
+<p>Click the <strong>Debug</strong> action to start debugging process. If your NSP contains input variables, you’ll be prompted to specify values for them before the SQL goes through debugging, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.</p>
+
+<p><img src="/assets/images/nsp-basics-debug-parameters.png" alt="Input parameters for debugging" /></p>
+
+<p>After you specify input parameter values, click <strong>Debug</strong>. Set the breakpoints for where you want the debugger to pause execution:</p>
+
+<p><img src="/assets/images/nsp-basics-debug-process.png" alt="Debug process" /></p>
+
+<p>When the debugging process starts, the following toolbar is displayed at the top of the view:</p>
+
+<p><img src="/assets/images/nsp-basics-debug-toolbar.png" alt="Debugging toolbar" /></p>
+
+<p>You use this toolbar to step through your code. From left to right, these actions are:</p>
+
+<ul>
+  <li>
+    <p><strong>Continue</strong> execution of the program until it hits a breakpoint, encounters an error, or completes</p>
+  </li>
+  <li>
+    <p><strong>Step Over</strong> to the next line of the program in the same code level</p>
+  </li>
+  <li>
+    <p><strong>Step Into</strong> the program to enter a deeper code level if the current line is a method</p>
+  </li>
+  <li>
+    <p><strong>Step Out</strong> to the caller if the current code level is inside a method</p>
+  </li>
+  <li>
+    <p><strong>Restart</strong> the debugging program</p>
+  </li>
+  <li>
+    <p><strong>Stop</strong> the debugging program</p>
+  </li>
+</ul>
+
+<p>Click the <strong>Run and Debug</strong> icon in the <strong>Activity Bar</strong> (<img src="/assets/images/nsp-basics-run-and-debug-icon.png" alt="Run and Debug icon" />) to display the following sections:</p>
+
+<ul>
+  <li>
+    <p>The <strong>Variables</strong> section contains variables declared through program execution and keeps track of the defined value of each variable as the debugger works its way through the code.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Watch</strong> section to specify variables or expressions that you want to be evaluated by the debugger.</p>
+  </li>
+  <li>
+    <p>The <strong>Call stack</strong> section keeps track of the current code level during debugger execution.</p>
+  </li>
+  <li>
+    <p>The <strong>Breakpoints</strong> section keeps track of the breakpoints set throughout the code module.</p>
+  </li>
+</ul>
+
+<p>For more information about debugging your code in Visual Studio Code, see https://code.visualstudio.com/docs/editor/debugging.</p>
+
+<h3 id="setting-conditional-hit-count-breakpoints">Setting conditional hit-count breakpoints</h3>
+
+<p>You can specify a hit count when you define a breakpoint, which means that when the breakpoint is reached, instead of pausing, execution continues until the hit count that you specified is reached. This feature is useful when you debug stored procedures that contain loops. You can allow execution to continue for the specified number of loops, and then debug the code when that number is reached.</p>
+
+<p>To set a breakpoint that includes a hit count:</p>
+
+<ol>
+  <li>For a stored procedure that has already been deployed, right-click and select <strong>Debug Stored Procedure</strong>.</li>
+  <li>Set any input parameters that need to be set.</li>
+  <li>Click <strong>Debug</strong>. A <strong>.spsql</strong> file opens and the debugger starts at the top of this file.</li>
+  <li>Click the line that you want to set the conditional breakpoint for, then right-click and select <strong>Edit Breakpoint &gt; Add Conditional Breakpoint &gt; Hit Count</strong>. (Note that in this release, the <strong>Expression</strong> and <strong>Log Message</strong> options are not supported.)</li>
+  <li>Specify the number of times the loop should be run before the debugger pauses.</li>
+  <li>Click <strong>Continue</strong> (<img src="/assets/images/nsp-basics-continue-button.png" alt="Continue button" />) to proceed with debugging.</li>
+</ol>
+
+<p><img src="/assets/images/nsp-basics-debug-hit-count.gif" alt="Setting conditional hit-count breakpoints" /></p>
+
+<p>The breakpoints that you set persist on the file. You don’t need to reset these breakpoints if you want to debug this file again.</p>
+
+<p>You can clear breakpoints by deselecting them in the <strong>BREAKPOINTS</strong> view or by clicking on and removing them individually from the file.</p>
+
+<h2 id="running-a-stored-procedure">Running a stored procedure</h2>
+
+<p>Click the <strong>Run</strong> action to start execution process. If your NSP contains input variables, you’ll be prompted to specify values for them before the NSP executes, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.</p>
+
+<p>If you have an input type that’s an array, you’d specify the values like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>numeric:   [1; 2; 3]
+character: [hello; world]
+</code></pre></div></div>
+
+<p><img src="/assets/images/nsp-basics-run-parameters.png" alt="Input parameters for running" /></p>
+
+<p>After your NSP is executed, the following output is displayed in these tabs:</p>
+
+<ul>
+  <li>The <strong>Status</strong> tab contains overall execution status. If an error occurred, the status will contain <strong>SQL code</strong>, <strong>SQL state</strong>, and <strong>Message text</strong>.</li>
+</ul>
+
+<p><img src="/assets/images/nsp-basics-status-tab.png" alt="Status tab" /></p>
+
+<ul>
+  <li>The <strong>Parameters</strong> tab contains variable information for passed-in parameters.</li>
+</ul>
+
+<p><img src="/assets/images/nsp-basics-parameters-tab.png" alt="Parameters tab" /></p>
+
+<ul>
+  <li>The <strong>SQL Results</strong> view contains data if a result set is expected (in our NSP example, a result set isn’t expected so the <strong>Result</strong> tab isn’t shown).</li>
+</ul>
+
+<h2 id="specifying-additional-options">Specifying additional options</h2>
+
+<p>You can specify and save additional NSP debug and run options by right-clicking inside the editor and selecting <strong>Run SQL Options</strong>.</p>
+
+<p><img src="/assets/images/nsp-basics-run-sql-options.png" alt="Run SQL Options" /></p>
+
+<p>…which opens the <strong>JDBC runtime options</strong> view:</p>
+
+<p><img src="/assets/images/nsp-basics-jdbc-runtime-options.png" alt="JDBC runtime options" /></p>
+
+<p>This article covers just the following options that you can set in this view:</p>
+
+<ul>
+  <li>
+    <p>Use the <strong>Statement terminator character</strong> option to set the statement terminator for the file.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Current schema</strong> option for resolving regular object types such as tables, views, and indexes.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Current path</strong> option for resolving an unqualified data type, function, or procedure referenced by the procedure that is being deployed.  You can specify multiple schemas by separating each one with a comma. For example:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "ADMF002","ADMF003","ADMF004"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>About commit and rollback options:</strong> The commit and rollback options behave a little differently with stored procedures. First, by default, all stored procedures run with COMMIT ON RETURN NO. You can change this behavior by including the COMMIT ON RETURN YES clause in your stored procedure DDL. If you need more control over the SQL statements in a stored procedure at the unit of work level, see <a href="https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/apsg/src/tpc/db2z_commitrollbacksp.html">COMMIT and ROLLBACK statements in a stored procedure</a>.</p>
+
+<p>Second, Db2 Developer Extension runs only the first stored procedure in a file and ignores any other SQL statements that you might have selected to run. If you select <strong>Commit on completion</strong> or <strong>Rollback changes on completion</strong>, processing will end after the first stored procedure is processed, even if you intended to run additional SQL statements in that same file. See <a href="/2021/03/16/Committing-and-rolling-back-changes.html">Committing and rolling back changes</a> for more information.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-12T00:00:00-08:00">March 12, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      <!--
+
+  <nav class="pagination">
+    
+      <a href="/jekyll/update/2021/02/04/welcome-to-jekyll.html" class="pagination--pager" title="Welcome to Jekyll!
+">Previous</a>
+    
+    
+      <a href="/2021/03/12/Getting-started.html" class="pagination--pager" title="Getting started
+">Next</a>
+    
+  </nav>
+
+-->
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 IBM Db2 for z/OS Developer Extension. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -17,12 +17,31 @@ articles:
     children:
       - title: "Getting started"
         url: /2021/03/12/Getting-started.html
-      - title: "Running SQL from different types of files"
-        url: /2021/03/12/Running-SQL-from-different-types-of-files.html
+      - title: "Creating a database connection"
+        url: /2021/06/15/Creating-a-database-connection.html
       - title: "Committing and rolling back changes"
         url: /2021/03/16/Committing-and-rolling-back-changes.html
-      - title: "Tips and tricks"
-        url: /2021/03/13/Tips-and-tricks.html
+
+  - title: Working with SQL
+    children:
+      - title: "Preparing to run an SQL statement"
+        url: /2021/06/15/Preparing-to-run-an-SQL-statement.html
+      - title: "Formatting SQL"
+        url: /2021/06/16/Formatting-SQL.html
+      - title: "Running multiple SQL statements"
+        url: /2021/06/15/Running-multiple-SQL-statements.html
+      - title: "Running SQL from different types of files"
+        url: /2021/03/12/Running-SQL-from-different-types-of-files.html
+      - title: "Running SQL with multiple selection scopes"
+        url: /2021/06/15/Running-SQL-with-multiple-selection-scopes.html
+      - title: "Running SQL from within a stored procedure"
+        url: /2021/06/15/Running-SQL-from-within-a-stored-procedure.html
+      - title: "Saving SQL results to a file"
+        url: /2021/06/15/Saving-SQL-results-to-a-file.html     
+      - title: "Limiting the number of rows returned"
+        url: /2021/06/16/Limiting-the-number-of-rows-returned.html 
+      - title: "Comparing SQL results"
+        url: /2021/06/15/Comparing-SQL-results.html
 
   - title: Working with stored procedures
     children:
@@ -30,6 +49,20 @@ articles:
         url: /2021/03/16/Creating-stored-procedures.html
       - title: "Deploying, running, and debugging stored procedures"
         url: /2021/03/12/Deploying-running-and-debugging-stored-procedures-basics.html
+
+  - title: Tips and tricks
+    children:
+      - title: "Running commands from the Command Palette"
+        url: /2021/06/15/Running-commands-from-the-command-palette.html
+      - title: "Creating your own code snippets"
+        url: /2021/06/15/Creating-your-own-code-snippets.html
+      - title: "Setting multiple port numbers"
+        url: /2021/06/16/Setting-multiple-port-numbers.html   
+
+  - title: Troubleshooting
+    children:
+      - title: "Opening an issue and providing logs"
+        url: /2021/06/15/Opening-an-issue-and-providing-logs.html
 
 # - title: Blogs
 #     children:

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-21T15:44:05-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">IBM Db2 for z/OS Developer Extension</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Limiting the number of rows returned</title><link href="http://localhost:4000/2021/06/16/Limiting-the-number-of-rows-returned.html" rel="alternate" type="text/html" title="Limiting the number of rows returned" /><published>2021-06-16T00:00:00-07:00</published><updated>2021-06-16T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/16/Limiting-the-number-of-rows-returned</id><content type="html" xml:base="http://localhost:4000/2021/06/16/Limiting-the-number-of-rows-returned.html">&lt;p&gt;For statements that return a huge number of rows in a result set, you can limit the number of rows that are returned by using the &lt;strong&gt;Max Number of Rows Returned&lt;/strong&gt; extension setting. The value you specify in this field takes precedence over any FETCH clauses that you might have defined in your SQL.&lt;/p&gt;
+
+&lt;p&gt;To  limit the number of rows that get returned when you run SQL statements:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open Db2 Developer Extension and click the &lt;strong&gt;Manage&lt;/strong&gt; icon at the lower left corner of VS Code window:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/manage-icon.png&quot; alt=&quot;Manage icon&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;strong&gt;Settings &amp;gt; Extensions &amp;gt; IBM Db2 for z/OS Developer Extension&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Specify the maximum number of rows that will be returned in a result set in the &lt;strong&gt;Max Number of Rows Returned&lt;/strong&gt; field:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-max-rows-returned-field.png&quot; alt=&quot;Specifying maximum number of rows returned&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, without setting the &lt;strong&gt;Max Number of Rows Returned&lt;/strong&gt; field, the following SELECT statement will return 50 rows at most, and the following CALL statement will return all available rows:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SELECT NAME, CREATOR, CARDF FROM SYSIBM.SYSTABLES 
+WHERE CREATOR = 'SYSIBM'
+FETCH FIRST 50 ROWS ONLY;
+
+CALL SYSIBM.SQLTABLES(?, ?, ?, ?, ?);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If you set the &lt;strong&gt;Max Number of Rows Returned&lt;/strong&gt; field to a positive integer value, let’s say 10, running that SELECT statement will return only 10 rows. The same behavior applies to CALL statements that return a result set or multiple results.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-max-rows-returned.gif&quot; alt=&quot;Specifying maximum number of rows returned&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">For statements that return a huge number of rows in a result set, you can limit the number of rows that are returned by using the Max Number of Rows Returned extension setting. The value you specify in this field takes precedence over any FETCH clauses that you might have defined in your SQL.</summary></entry><entry><title type="html">Formatting SQL</title><link href="http://localhost:4000/2021/06/16/Formatting-SQL.html" rel="alternate" type="text/html" title="Formatting SQL" /><published>2021-06-16T00:00:00-07:00</published><updated>2021-06-16T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/16/Formatting-SQL</id><content type="html" xml:base="http://localhost:4000/2021/06/16/Formatting-SQL.html">&lt;p&gt;Db2 Developer Extension takes advantage of VSCode’s &lt;strong&gt;Format Document&lt;/strong&gt; and &lt;strong&gt;Format Selection&lt;/strong&gt; capabilities by allowing you to format SQL within all SQL file types, including .ddl, .spsql, .sql, .javaspsql, and .udfsql files.&lt;/p&gt;
+
+&lt;p&gt;The ability to format your SQL makes it much easier to parse large blocks of code and to understand the relationship between different blocks of SQL elements and clauses.&lt;/p&gt;
+
+&lt;p&gt;The formatting actions are available from the editor context menu, as keyboard shortcuts, and from the &lt;a href=&quot;/2021/06/15/Running-commands-from-the-command-palette.html&quot;&gt;Command Palette&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/format-sql.gif&quot; alt=&quot;Formatting SQL&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Db2 Developer Extension takes advantage of VSCode’s Format Document and Format Selection capabilities by allowing you to format SQL within all SQL file types, including .ddl, .spsql, .sql, .javaspsql, and .udfsql files.</summary></entry><entry><title type="html">Setting multiple port numbers</title><link href="http://localhost:4000/2021/06/16/Setting-multiple-port-numbers.html" rel="alternate" type="text/html" title="Setting multiple port numbers" /><published>2021-06-16T00:00:00-07:00</published><updated>2021-06-16T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/16/Setting-multiple-port-numbers</id><content type="html" xml:base="http://localhost:4000/2021/06/16/Setting-multiple-port-numbers.html">&lt;p&gt;To make it easier to open and work in multiple VS Code instances without having to manually change the port settings for each instance, you can specify multiple individual port numbers by separating them with commas, and you can specify a range of port numbers by separating them with a hyphen. For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4555, 4556, 4559-4985
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To set the port numbers:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open Db2 Developer Extension and click the &lt;strong&gt;Manage&lt;/strong&gt; icon at the lower left corner of VS Code window:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/manage-icon.png&quot; alt=&quot;Manage icon&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;strong&gt;Settings &amp;gt; Extensions &amp;gt; IBM Db2 for z/OS Developer Extension&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update the &lt;strong&gt;Session Manager Port&lt;/strong&gt; and &lt;strong&gt;Port&lt;/strong&gt; settings fields with port numbers that are available for you to use:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/multiple-ports.png&quot; alt=&quot;Specifying multiple ports&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">To make it easier to open and work in multiple VS Code instances without having to manually change the port settings for each instance, you can specify multiple individual port numbers by separating them with commas, and you can specify a range of port numbers by separating them with a hyphen. For example:</summary></entry><entry><title type="html">Preparing to run an SQL statement</title><link href="http://localhost:4000/2021/06/15/Preparing-to-run-an-SQL-statement.html" rel="alternate" type="text/html" title="Preparing to run an SQL statement" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/15/Preparing-to-run-an-SQL-statement</id><content type="html" xml:base="http://localhost:4000/2021/06/15/Preparing-to-run-an-SQL-statement.html">&lt;p&gt;When you have some valid SQL and you have a valid database connection, you’re just about ready to run it. There’s a little bit of optional set up you might want to do first.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create and save a simple SQL statement. For example, the following statement selects the entire contents (a single row) of the Db2 sample table SYSIBM.SYSDUMMY1:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SELECT * FROM
+SYSIBM.SYSDUMMY1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Right-click anywhere in your .sql file and select &lt;strong&gt;Run SQL Options&lt;/strong&gt; from the context menu to open the following view:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/getting-started-run-sql-options.png&quot; alt=&quot;Run SQL Options&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;Use this view to set the following options for running your SQL:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Whether to always use an existing database connection to run this script or open a new database connection every time you run this script.&lt;/li&gt;
+      &lt;li&gt;The circumstances under which changes are &lt;a href=&quot;/2021/03/16/Committing-and-rolling-back-changes.html&quot;&gt;committed or rolled back&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;The statement termination character to use if you don’t want to use the default semicolon (;) character.&lt;/li&gt;
+      &lt;li&gt;Values for the &lt;a href=&quot;https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentschema.html&quot;&gt;CURRENT SCHEMA&lt;/a&gt; and &lt;a href=&quot;https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentpath.html&quot;&gt;CURRENT PATH&lt;/a&gt; special registers and whether these values are always converted to uppercase letters.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now, you can run your SQL by using any of the following methods:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Right-click anywhere in your SQL file and click &lt;strong&gt;Run All&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Highlight your SELECT statement, right-click anywhere in your SQL file and click &lt;strong&gt;Run Selected SQL&lt;/strong&gt;. This option is useful for testing and debugging individual SQL statements.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Use the Visual Studio Code &lt;a href=&quot;/2021/06/15/Running-commands-from-the-command-palette.html&quot;&gt;Command Palette&lt;/a&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;The results are displayed in the &lt;strong&gt;SQL Results&lt;/strong&gt; page that opens when the statement completes and stored in the &lt;strong&gt;QUERY HISTORY&lt;/strong&gt; menu in ther right sidebar. You can also save the results in a &lt;strong&gt;.csv&lt;/strong&gt; file or in a spreadsheet.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">When you have some valid SQL and you have a valid database connection, you’re just about ready to run it. There’s a little bit of optional set up you might want to do first.</summary></entry><entry><title type="html">Restricting the number of rows returned</title><link href="http://localhost:4000/2021/06/15/Restricting-the-number-of-rows-returned.html" rel="alternate" type="text/html" title="Restricting the number of rows returned" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/15/Restricting-the-number-of-rows-returned</id><content type="html" xml:base="http://localhost:4000/2021/06/15/Restricting-the-number-of-rows-returned.html">&lt;p&gt;TBD&lt;/p&gt;</content><author><name></name></author><summary type="html">TBD</summary></entry><entry><title type="html">Running SQL from within a stored procedure</title><link href="http://localhost:4000/2021/06/15/Running-SQL-from-within-a-stored-procedure.html" rel="alternate" type="text/html" title="Running SQL from within a stored procedure" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/15/Running-SQL-from-within-a-stored-procedure</id><content type="html" xml:base="http://localhost:4000/2021/06/15/Running-SQL-from-within-a-stored-procedure.html">&lt;p&gt;You can run SQL within a native stored procedure (NSP) body that contains SQL parameters and SQL variables. You’ll be prompted to specify values for them before the SQL executes. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.&lt;/p&gt;
+
+&lt;p&gt;Note that this feature applies to &lt;strong&gt;.spsql&lt;/strong&gt; files only.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-in-nsps.gif&quot; alt=&quot;Run SQL within a stored procedure&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">You can run SQL within a native stored procedure (NSP) body that contains SQL parameters and SQL variables. You’ll be prompted to specify values for them before the SQL executes. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.</summary></entry><entry><title type="html">Running SQL with multiple selection scopes</title><link href="http://localhost:4000/2021/06/15/Running-SQL-with-multiple-selection-scopes.html" rel="alternate" type="text/html" title="Running SQL with multiple selection scopes" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/15/Running-SQL-with-multiple-selection-scopes</id><content type="html" xml:base="http://localhost:4000/2021/06/15/Running-SQL-with-multiple-selection-scopes.html">&lt;p&gt;When you’re working in a file that contains a lot of SQL elements, especially in a non-SQL file (for example, Python, Java, etc.), you might want to select and run multiple individual SQL elements instead of having to run the entire statement.  Those elements might be on consecutive lines or they might be scattered throughout the file on different lines.&lt;/p&gt;
+
+&lt;p&gt;You can select and run individual elements by holding the Alt key and selecting the elements that you want to run. Then, right-click and select &lt;strong&gt;Run Selected SQL&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-multiple-selection.gif&quot; alt=&quot;Running multiple selections&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use &lt;a href=&quot;https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection&quot;&gt;column selection mode&lt;/a&gt; to select and run individual elements.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-column-selection.gif&quot; alt=&quot;Running multiple selections with column mode&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">When you’re working in a file that contains a lot of SQL elements, especially in a non-SQL file (for example, Python, Java, etc.), you might want to select and run multiple individual SQL elements instead of having to run the entire statement. Those elements might be on consecutive lines or they might be scattered throughout the file on different lines.</summary></entry><entry><title type="html">Running commands from the Command Palette</title><link href="http://localhost:4000/2021/06/15/Running-commands-from-the-command-palette.html" rel="alternate" type="text/html" title="Running commands from the Command Palette" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/15/Running-commands-from-the-command-palette</id><content type="html" xml:base="http://localhost:4000/2021/06/15/Running-commands-from-the-command-palette.html">&lt;p&gt;Visual Studio Code’s &lt;a href=&quot;https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette&quot;&gt;Command Palette&lt;/a&gt; allows you to execute commands quickly without navigating through the user interface. Visual Studio Code provides built-in commands, and Db2 Developer Extension provides its own commands.&lt;/p&gt;
+
+&lt;p&gt;To run a Db2 Dev Extension command, open the &lt;strong&gt;Command Palette&lt;/strong&gt; and start typing “Db2 Developer Extension.” You’ll be presented with a list of all the extension-related commands that you can execute.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/tips-tricks-command-palette.gif&quot; alt=&quot;VS Code command palette&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Visual Studio Code’s Command Palette allows you to execute commands quickly without navigating through the user interface. Visual Studio Code provides built-in commands, and Db2 Developer Extension provides its own commands.</summary></entry><entry><title type="html">Running multiple SQL statements</title><link href="http://localhost:4000/2021/06/15/Running-multiple-SQL-statements.html" rel="alternate" type="text/html" title="Running multiple SQL statements" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/15/Running-multiple-SQL-statements</id><content type="html" xml:base="http://localhost:4000/2021/06/15/Running-multiple-SQL-statements.html">&lt;p&gt;When you run multiple SQL statements simultaneously by using the &lt;strong&gt;Run Selected SQL&lt;/strong&gt; option or all of the SQL statements in a file by using the &lt;strong&gt;Run All&lt;/strong&gt; option, when the statements finish executing, the results are displayed in the &lt;strong&gt;Execution summary&lt;/strong&gt; page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-execution-summary.gif&quot; alt=&quot;Execution summary page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;Execution summary&lt;/strong&gt; page indicates the total number of statements that ran, the execution status of each statement (success, failure, warning), and the total amount of time that it took to run the statements.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A value of N/A in the &lt;strong&gt;Total elapsed time&lt;/strong&gt; field indicates that the execution results were generated prior to upgrading to Db2 Developer Extension 1.2.&lt;/p&gt;
+
+&lt;p&gt;Db2 Developer Extension maintains the execution history so that you can compare SQL execution results over time. Statements are grouped together in an expandable section in the &lt;strong&gt;QUERY HISTORY&lt;/strong&gt; view. Click an individual statement to display details about just that statement.&lt;/p&gt;
+
+&lt;p&gt;The query history is sorted in descending order by default. To sort the query history in ascending order, hover on the &lt;strong&gt;QUERY HISTORY&lt;/strong&gt; view and click the &lt;strong&gt;Sort Query History&lt;/strong&gt; icon (&lt;img src=&quot;/assets/images/runsql-sort-query-history-icon.png&quot; alt=&quot;Sort query history icon&quot; /&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-sort-query-history.png&quot; alt=&quot;Sort Query History&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Warning and failure icons indicate which statements might need some debugging.  To cycle through all of the statements that failed, click the &lt;strong&gt;Next Failure&lt;/strong&gt; icon  (&lt;img src=&quot;/assets/images/runsql-next-failure-icon.png&quot; alt=&quot;Next Failure&quot; /&gt;) and the next failing SQL statement is displayed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/runsql-next-failure.png&quot; alt=&quot;Failures and warnings&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">When you run multiple SQL statements simultaneously by using the Run Selected SQL option or all of the SQL statements in a file by using the Run All option, when the statements finish executing, the results are displayed in the Execution summary page:</summary></entry><entry><title type="html">Saving SQL results to a file</title><link href="http://localhost:4000/2021/06/15/Saving-SQL-results-to-a-file.html" rel="alternate" type="text/html" title="Saving SQL results to a file" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>http://localhost:4000/2021/06/15/Saving-SQL-results-to-a-file</id><content type="html" xml:base="http://localhost:4000/2021/06/15/Saving-SQL-results-to-a-file.html">&lt;p&gt;Any SQL results that generate a result set can be saved to a file. To save the results to a file, open a SQL result, go to the &lt;strong&gt;Result&lt;/strong&gt; tab, and click the &lt;strong&gt;Save&lt;/strong&gt; icon. When prompted, enter the location and name of the file. Press &lt;strong&gt;Enter&lt;/strong&gt; to save the results to the specified file.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/tips-tricks-saving-SQL-results.gif&quot; alt=&quot;Saving SQL results&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Any SQL results that generate a result set can be saved to a file. To save the results to a file, open a SQL result, go to the Result tab, and click the Save icon. When prompted, enter the location and name of the file. Press Enter to save the results to the specified file.</summary></entry></feed>
