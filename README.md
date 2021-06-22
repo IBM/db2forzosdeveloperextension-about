@@ -1,6 +1,6 @@
 # IBM Db2 for z/OS Developer Extension
 
-IBM® Db2® for z/OS® Developer Extension (Db2 Developer Extension) is an extension for Visual Studio Code that provides language support for developing Db2 for z/OS SQL applications.
+IBM® Db2® for z/OS® Developer Extension (Db2 Developer Extension) is an extension for Visual Studio Code that provides language support for developing Db2 for z/OS SQL applications. Complete documentation is contained in our [documentation repository](https://ibm.github.io/db2forzosdeveloperextension-about/).
 
 ## Licenses
 
@@ -8,21 +8,33 @@ Before downloading this extension, review the [Db2 Developer Extension License A
 
 ## Overview
 
-This extension provides language support for the Structured Query Language (SQL) syntax that is used to define, manipulate, and control data in IBM Db2 for z/OS databases.
+This extension provides language support for the Structured Query Language (SQL) syntax that is used to define, manipulate, and control data in IBM Db2 for z/OS databases. It includes basic productivity features that make it easier to write SQL, such as:
 
-The features provided in this extension simplify the task of developing applications that interact with data in Db2 for z/OS databases by providing:
-
--   The ability to deploy, run, and debug native stored procedures
--   The ability to commit or rollback the results of SQL transactions
--   The ability to run selected SQL statements from any type of file
+-   SQL formatting - **New**
+-   Syntax checking and highlighting
 -   Code completion and signature help
--   The ability to run SQL with or without parameter markers and host variables and to save SQL execution results
--   Integrated support for connecting to Db2 databases
--   Syntax checking
--   Syntax highlighting
--   Customizable code snippet support
+-   Customizable code snippets
 
-See the [Features](#features) section for more details and examples.
+It includes a robust set of capabilities for running SQL that include the ability to:
+
+-   Display consolidated results from running multiple SQL statements - **New**
+-   Run SQL that includes parameters and variables from within a native stored procedure (.spsql file) - **New**
+-   Sort query history by the timestamp of the execution - **New**
+-   Select multiple SQL elements on different lines and run those elements as a complete statement - **New**
+-   Restrict the number of rows in SQL result sets - **New**
+-   Quickly identify and display failing SQL statements - **New**
+-   Use null values and retain input values - **New**
+-   Validate XML for host variable parameters input - **New**
+-   Run selected SQL statements from any type of file
+-   Run SQL with or without parameter markers and host variables and to save SQL execution results
+-   Commit or rollback the results of SQL executions based on customizable success/failure settings
+
+It also includes support for working with native stored procedures by providing the ability to:
+
+-   Deploy, run, and debug native stored procedures
+-   Set conditional breakpoints when debugging stored procedures - **New**
+
+See the [Key features](#Key-features) section for more details and examples.
 
 ## Table of contents
 
@@ -30,7 +42,8 @@ See the [Features](#features) section for more details and examples.
 -   [Prerequisites for installing Db2 Developer Extension](#prerequisites-for-installing-db2-developer-extension)
 -   [Configuring Java](#configuring-java)
 -   [Specifying port numbers](#specifying-port-numbers)
--   [Features](#features)
+-   [Key features](#Key-features)
+-   [Additional information](#Additional-information)
 -   [Limitations for this release](#limitations-for-this-release)
 
 ## Privacy notice for feedback
@@ -61,13 +74,13 @@ Each of these events is logged with the following information:
 
 Installing Db2 Developer Extension requires the following software:
 
--   One of the following IBM Data Server Driver JDBC license files:
+-   One of the following IBM Data Server Driver for JDBC and SQLJ license files. Db2 Developer Extension requires an appropriately licensed JDBC driver. Using a JDBC driver from another tool or product not listed below is not permitted.
 
     -   **The Db2 Connect Unlimited Edition for System z® server license**
 
     This license must be activated on the Db2 for z/OS subsystems that you want to connect to. For more information, see the following topic: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.licensing.doc/doc/t0057375.html
 
-    -   **The IBM Data Server Driver for JDBC client license file**
+    -   **The IBM Data Server Driver for JDBC and SQLJ client license file**
 
     For information about locating and and enabling the client license file, see the following topic:
     https://www.ibm.com/support/pages/db2-jdbc-driver-not-licensed-connectivity-file-db2jcclicensecisuzjar-errorcode-4472-sqlstate42968
@@ -118,89 +131,80 @@ If a Java runtime is not found in any of these locations, an error message is is
 
 ## Specifying port numbers
 
+You need to specify port number settings for the Db2 SQL Service and the Debugger Session Manager. You can specify a single port number, [multiple port numbers, or a range of port numbers](https://ibm.github.io/db2forzosdeveloperextension-about/2021/06/16/Setting-multiple-port-numbers.html).
+
 ### Db2 SQL Service
 
-The Db2 SQL Service (DSS) provides support for parsing Db2 SQL syntax and for communicating with Db2. Complete the following steps to specify the port that the DSS server will run on.
+The Db2 SQL Service (DSS) provides support for parsing Db2 SQL syntax and for communicating with Db2. Complete the following steps to specify the port number or numbers that the DSS server will run on.
 
 1. Open VS Code settings and search for the `db2forzosdeveloperextension.db2sqlservice.port` setting.
-2. Specify the port number that you want to assign to the DSS server.
+2. Specify the port number or numbers that you want to assign to the DSS server.
 3. Restart VS Code.
 
 ### Debugger Session Manager
 
-The Debugger Session Manager (DSM) provides support for debugging native stored procedures. Complete the following steps to specify the port that the DSM will run on.
+The Debugger Session Manager (DSM) provides support for debugging native stored procedures. Complete the following steps to specify the port number or numbers that the DSM will run on.
 
 1. Open VS Code settings and search for the `db2forzosdeveloperextension.db2sqlservice.debugger.sessionManagerPort` setting.
-2. Specify the port number that you want to assign to the DSM.
+2. Specify the port number or numbers that you want to assign to the DSM.
 3. Restart VS Code.
 
-## Features
+## Key features
 
 ### Working with stored procedures
 
-Db2 Developer Extension provides end-to-end support for working with Db2 for z/OS native stored procedures.
+Db2 Developer Extension provides end-to-end support for working with Db2 for z/OS native stored procedures, from [creating them](https://ibm.github.io/db2forzosdeveloperextension-about/2021/03/16/Creating-stored-procedures.html) through [deploying, running, and debugging them](https://ibm.github.io/db2forzosdeveloperextension-about/2021/03/12/Deploying-running-and-debugging-stored-procedures-basics.html).
+
 #### Deploying a native stored procedure
 
 To deploy a native stored procedure, open a `.spsql` file that contains a `CREATE PROCEDURE` statement, then right-click the file and select **Deploy Stored Procedure**. You can specify deployment options and routine options before deploying the native stored procedure. For this release, only the first native stored procedure in the file will be deployed.
 
 ![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/deploy-nsp.gif)
 
-#### Running a native stored procedure
-
-To run a native stored procedure, open a `.spsql` file that contains a `CREATE PROCEDURE` statement, then right-click the file and select **Run Stored Procedure**. You will need to specify input values before running the native stored procedure. For this release, only the first native stored procedure in the file will be run.
-
 #### Debugging a native stored procedure
 
 To debug a native stored procedure, open a `.spsql` file that contains a `CREATE PROCEDURE` statement, then right-click the file and select **Debug Stored Procedure**. You will need to specify input values before debugging the native stored procedure. For this release, only the first native stored procedure in the file will be run.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/debug-nsp.gif)
+Db2 Developer Extension supports conditional hit-count breakpoints, which means that when the breakpoint is reached, instead of pausing, execution continues until the hit count that you specified is reached. This feature is useful for debugging stored procedures that contain loops.
 
-### Code completion and signature help
-
-Code completion simplifies the process of writing SQL statements by suggesting valid completions as you type. Signature help provides information about the parameters that are required by a function or procedure. For this release, these features are provided for Db2 built-in functions and stored procedures only.
-
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/code-completion-signature-help.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/debug-hitcount.gif)
 
 ### SQL execution
 
-You can run individual SQL statements that are embedded in any type of source code file by highlighting those statements, right-clicking, and selecting **Run Selected SQL.** This feature eliminates the need for copying and pasting the statements into a `.sql` file or modifying your SQL (for example, removing host variables or INTO clauses) before you run it. Within a SQL file, you can also run individual statements by using the **Run Selected SQL** option, or you can run the entire file by right-clicking and selecting **Run All**.
+You can run individual SQL statements that are embedded in any type of source code file by highlighting those statements, right-clicking, and selecting **Run Selected SQL.** This feature eliminates the need for copying and pasting the statements into a `.sql` file or modifying your SQL (for example, removing host variables or INTO clauses) before you run it.
 
-You can also specify run options to control how your SQL is parsed and run. The commit and rollback behavior in the run options applies to a single transaction. Refer to the [COMMIT](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_12.0.0/sqlref/src/tpc/db2z_sql_commit.html) and [ROLLBACK](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_sql_rollback.html) SQL documentation on the affected statements.
+Within a SQL file, you can run individual statements and even SQL elements that are on different lines by using the **Run Selected SQL** option, or you can run the entire file by right-clicking and selecting **Run All**. If your SQL contains host variables, you'll be prompted to provide a value and data type, or you can specify a null value. When the SQL finishes running, you can export the results in a `.csv` file.
+
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/run-sql-multiple-selection.gif)
+
+Db2 Developer Extension supports XML host variables and will validate the syntax if you specify an XML host variable. When you run multiple SQL statements, the results are displayed in in the **Execution Summary** page. From this page, you can drill down into individual statements, quickly identify, display, and cycle through failing SQL statements, and sort results by their timestamp.
 
 ![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/sql-execution.gif)
 
-### Adding a database connection
+Complete instructions for using the Db2 Developer Extension features for running SQL are in the WORKING WITH SQL category in our [documentation repository](https://ibm.github.io/db2forzosdeveloperextension-about/).
 
-To create connections to Db2 databases, launch the **Add Connection** wizard by clicking the plus sign (+) in the Db2 Developer Extension **CONNECTIONS** view.
+### SQL formatting
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/add-connection.gif)
+Db2 Developer Extension takes advantage of [VS Code’s Format Document and Format Selection](https://code.visualstudio.com/docs/editor/codebasics#_formatting) capabilities by allowing you to format SQL within all SQL file types, including `.ddl`, `.spsql`, `.sql`, `.javaspsql`, and `.udfsql` files.
 
-### Syntax checking
+The ability to format your SQL makes it much easier to parse large blocks of code and to understand the relationship between different blocks of SQL elements and clauses.
 
-Syntax checking automatically recognizes when an SQL element has been specified incorrectly and provides the valid expected replacement either by hovering over an incorrectly specified element or by displaying it in the **PROBLEMS** view.
+The formatting actions are available from the editor context menu, as keyboard shortcuts, and from the Command Palette.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/syntax-checking.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/sql-formatter.gif)
 
-### Syntax highlighting
+## Additional information
 
-Syntax highlighting makes it easier to visually parse your code and to identify particular syntax elements based solely on their appearance. Db2 Developer Extension classifies all elements of a particular type into a group and applies a highlighting theme at the group level so that it's easy to customize highlighting themes.
+You can find additional information in the Db2 for z/OS Developer Extension documentation repository, including instructions for:
 
-The following example shows the default highlighting theme:
+-   [Getting started](https://ibm.github.io/db2forzosdeveloperextension-about/2021/03/12/Getting-started.html), which contains information about the syntax checking and highlighting, code completion and signature help, and code snippets features.
+-   [Creating a database connection](https://ibm.github.io/db2forzosdeveloperextension-about/2021/06/15/Creating-a-database-connection.html)
+-   [Committing and rolling back changes](https://ibm.github.io/db2forzosdeveloperextension-about/2021/03/16/Committing-and-rolling-back-changes.html)
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/syntax-highlighting.png)
-
-### Code snippets
-
-Db2 Developer Extension provides code snippets for the most commonly used SQL syntax, complete with required parameters and options. These snippets provide you with a starting point that you can quickly build upon to create the SQL statements that you need and to customize snippets for your particular needs.
-
-The following example shows how to select and insert various SQL DDL statements:
-
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/snippets.gif)
+Also, see our [blog site](https://ibm.github.io/db2forzosdeveloperextension-about/blogs/) to keep up with latest developments.
 
 ## Limitations for this release
 
--   When you run an SQL statement that contains host variables (for example, a statement that was copied from the SQL in a native stored procedure), you must prefix the host variables with a colon (:). For example, `:ind_db2_member`
-
--   When you run an SQL statement that contains a CALL statement for a stored procedure, you can include parameters of type IN only. Stored procedure CALL statements that include OUT or INOUT parameters will fail.
+- When you run a CALL statement that includes OUT or INOUT parameters, it will fail.
 
 - Debugging a native stored procedure that contains input parameters as array types is not supported.
