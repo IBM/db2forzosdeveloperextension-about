@@ -31,7 +31,8 @@
                             </a>
                         </li>
                         <ul>
-                            <li class="collapse {% if page.url contains entry.url or pageUrl == sectionUrl %}show{% endif %}" id="{{ toggleId }}">
+                            <li class="collapse {% if page.url contains entry.url or pageUrl == sectionUrl %}show{% endif %}"
+                                id="{{ toggleId }}" data-parent="#{{ section.title | slugify }}">
                                 {% if entry.children %}
                                 {% for child in entry.children %}
                                 <a class="td-sidebar-link td-sidebar-link__page
@@ -53,13 +54,3 @@
         {% endfor %}
     </nav>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('[data-toggle]').on('click', function (e) {
-            var id = $(this).data("target");
-            var list = $(id);
-            list.toggle();
-        });
-    });
-</script>
