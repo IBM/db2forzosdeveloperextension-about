@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -24,42 +24,19 @@ description: >- # this means to ignore newlines until "baseurl:"
   Tutorials and how-to information for using IBM Db2 for z/OS Developer Extension.
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
-repository: ibm/db2forzosdeveloperextension-about
-
-github: [metadata]
-
-logo: "/assets/images/logo.png"
 
 # Build settings
-remote_theme: mmistakes/minimal-mistakes
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
+remote_theme: vsoch/docsy-jekyll
 
-include:
-  - _pages
+# Collections
+collections:
+  blogs:
+    output: false
 
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: false
-      comments: true
-      share: false
-      related: false
-      sidebar:
-        nav: "articles"
-
-# Minimal Mistakes settings
-search: true
-search_full_content: true
+# Theme settings (Docsy Jekyll)
+repo: "https://github.com/IBM/db2forzosdeveloperextension-about"
+github_user: "IBM"
+github_repo: "db2forzosdeveloperextension-about"
+github_branch: "gh-pages"
+color: "#000" # primary color for header and buttons
+fixedNav: true
