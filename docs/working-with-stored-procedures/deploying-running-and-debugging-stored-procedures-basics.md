@@ -6,7 +6,7 @@ title: "Deploying, running,and debugging stored procedures"
 
 This article shows you how to use Db2 Developer Extension to deploy a native SQL stored procedure (NSP) with various deployment options: enabling debug, altering previous deployments, setting target schema, and others. It also walks you through the process of debugging and running an NSP.
 
-**Tip:** If you're new to stored procedures, make sure you're familiar with the information in [Creating stored procedures]({{site.baseurl}}/2021/03/16/Creating-stored-procedures.html) first.
+**Tip:** If you're new to stored procedures, make sure you're familiar with the information in [Creating stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-stored-procedures.html) first.
 
 One big advantage of using Db2 Developer Extension to deploy an NSP, as opposed to manually executing SQL, is that you can save the various deployment options separately from the SQL itself, which means that you can push your code into a source code manager, such as GitHub, without having to remove the deployment debug options first.
 
@@ -73,7 +73,7 @@ The **Deployment** view consists of two sections: **Deployment options** and **R
 
 ![Deployment options]({{site.baseurl}}/assets/images/nsp-basics-deployment-options.png)
 
-- Use the **Database connection** option to select a connection from the list of defined connections. See [Creating a database connection]({{site.baseurl}}/2021/06/15/Creating-a-database-connection.html) for more information.
+- Use the **Database connection** option to select a connection from the list of defined connections. See [Creating a database connection]({{site.baseurl}}/docs/the-basics/creating-a-database-connection.html) for more information.
 
 - Use the **Target schema** option for unqualified NSPs. This field is enabled only for unqualified NSPs. If the NSP is qualified (like the one in our example CREATE PROCEDURE statement, which is qualified to ADMF001), the field is disabled. If you leave this field empty, the JDBC property `currentSchema` will be used. If `currentSchema` is not set, the JDBC connection username will be used.
 
@@ -231,4 +231,4 @@ This article covers just the following options that you can set in this view:
 
 **About commit and rollback options:** The commit and rollback options behave a little differently with stored procedures. First, by default, all stored procedures run with COMMIT ON RETURN NO. You can change this behavior by including the COMMIT ON RETURN YES clause in your stored procedure DDL. If you need more control over the SQL statements in a stored procedure at the unit of work level, see [COMMIT and ROLLBACK statements in a stored procedure](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/apsg/src/tpc/db2z_commitrollbacksp.html).
 
-Second, Db2 Developer Extension runs only the first stored procedure in a file and ignores any other SQL statements that you might have selected to run. If you select **Commit on completion** or **Rollback changes on completion**, processing will end after the first stored procedure is processed, even if you intended to run additional SQL statements in that same file. See [Committing and rolling back changes]({{site.baseurl}}/2021/03/16/Committing-and-rolling-back-changes.html) for more information.
+Second, Db2 Developer Extension runs only the first stored procedure in a file and ignores any other SQL statements that you might have selected to run. If you select **Commit on completion** or **Rollback changes on completion**, processing will end after the first stored procedure is processed, even if you intended to run additional SQL statements in that same file. See [Committing and rolling back changes]({{site.baseurl}}/docs/the-basics/committing-and-rolling-back-changes.html) for more information.

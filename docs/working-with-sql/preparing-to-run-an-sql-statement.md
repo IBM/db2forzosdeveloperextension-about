@@ -20,7 +20,7 @@ SYSIBM.SYSDUMMY1
    Use this view to set the following options for running your SQL:
 
    - Whether to always use an existing database connection to run this script or open a new database connection every time you run this script.
-   - The circumstances under which changes are [committed or rolled back]({{site.baseurl}}/2021/03/16/Committing-and-rolling-back-changes.html).
+   - The circumstances under which changes are [committed or rolled back]({{site.baseurl}}/docs/the-basics/committing-and-rolling-back-changes.html).
    - The statement termination character to use if you don't want to use the default semicolon (;) character.
    - Values for the [CURRENT SCHEMA](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentschema.html) and [CURRENT PATH](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentpath.html) special registers and whether these values are always converted to uppercase letters.
 
@@ -30,6 +30,6 @@ SYSIBM.SYSDUMMY1
 
    - Highlight your SELECT statement, right-click anywhere in your SQL file and click **Run Selected SQL**. This option is useful for testing and debugging individual SQL statements.
 
-   - Use the Visual Studio Code [Command Palette]({{site.baseurl}}/2021/06/15/Running-commands-from-the-command-palette.html).
+   - Use the Visual Studio Code [Command Palette]({{site.baseurl}}/docs/tips-and-tricks/running-commands-from-the-command-palette.html).
 
-   The results are displayed in the **SQL Results** page that opens when the statement completes and stored in the **QUERY HISTORY** menu in ther right sidebar. You can also save the results in a **.csv** file or in a spreadsheet.
+   The results are displayed in the **SQL Results** page that opens when the statement completes and stored in the **QUERY HISTORY** menu in the sidebar. You can also save the results in a **.csv** file or in a spreadsheet.

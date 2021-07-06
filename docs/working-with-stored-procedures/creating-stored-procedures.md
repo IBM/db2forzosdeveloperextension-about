@@ -18,7 +18,7 @@ This article covers the basics of using Db2 Developer Extension to create a simp
 
 The snippet includes some of the more commonly used parameters and an example SELECT statement. The SELECT statement is the part of the stored procedure that gets executed when the stored procedure is called. To see all of the options that you can define in a stored procedure, open the [link](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_sql_createproceduresqlnative.html) that is included at the top of the snippet.
 
-Now this stored procedure is ready to be deployed. To learn how, see [Deploying, running, and debugging stored procedures]({{site.baseurl}}/2021/03/12/Deploying-running-and-debugging-stored-procedures-basics.html).
+Now this stored procedure is ready to be deployed. To learn how, see [Deploying, running, and debugging stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics.html).
 
 Now let's look at some more complex examples.
 

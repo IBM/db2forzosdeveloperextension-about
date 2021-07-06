@@ -13,7 +13,7 @@ Using this feature is pretty straightforward. The only prerequisite is that you 
 1. Open a file and add a SQL statement.
 2. As an optional step, you can specify JDBC runtime options by right-clicking anywhere in the editor and selecting **Run SQL Options** from the context menu.
 
-   For example, you can specify commit and rollback settings, and you can set the [CURRENT SCHEMA](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentschema.html) and [CURRENT PATH](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentpath.html) special registers. For information about the commit and rollback options, see [Committing and rolling back changes]({{site.baseurl}}/2021/03/16/Committing-and-rolling-back-changes.html).
+   For example, you can specify commit and rollback settings, and you can set the [CURRENT SCHEMA](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentschema.html) and [CURRENT PATH](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_currentpath.html) special registers. For information about the commit and rollback options, see [Committing and rolling back changes]({{site.baseurl}}/docs/the-basics/committing-and-rolling-back-changes.html).
 
 3. Highlight the statement, right-click it, and select **Run Selected SQL** from the context menu.
 

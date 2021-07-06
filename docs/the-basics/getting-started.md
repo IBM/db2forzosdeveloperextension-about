@@ -19,7 +19,7 @@ It also also provides built-in capability for connecting to Db2 for z/OS databas
 
 2. Now, create a new file by clicking **File > New File**. Save your file as _anyname_.sql. The **.sql** suffix identifies the file to Db2 Developer Extension as an SQL file, so as soon as you save it you can start using Db2 Developer Extension's editing features.
 
-   **Note:** Although our examples use a **.sql** file, you can embed SQL in any type of file and run that SQL directly from Db2 Developer Extension. See [Running SQL from different types of files]({{site.baseurl}}/2021/03/12/Running-SQL-from-different-types-of-files.html) for more information.
+   **Note:** Although our examples use a **.sql** file, you can embed SQL in any type of file and run that SQL directly from Db2 Developer Extension. See [Running SQL from different types of files]({{site.baseurl}}/docs/working-with-sql/running-sql-from-different-types-of-files.html) for more information.
 
 3. Type the first letters of the SELECT statement. You'll only need to type a few letters before `SELECT statement` shows up in the list of available SQL elements.
 
