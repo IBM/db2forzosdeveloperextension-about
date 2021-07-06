@@ -1,18 +1,24 @@
-- title: Announcing IBM Db2 for z/OS Developer Extension for Microsoft Visual Studio Code
-  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2020/07/29/announcing-ibm-db2-for-zos-developer-extension-for?CommunityKey=621c2a2a-01f9-4b57-992f-36ed7432e3bb&tab=recentcommunityblogsdashboard
-  date: 2020/07/29
-- title: Customizing themes for SQL syntax highlighting for Db2 for z/OS in Visual Studio Code
-  url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/08/18/customizing-themes-for-sql-syntax-in-vsc
-  date: 2020/08/18
-- title: Announcing IBM Db2 for z/OS Developer Extension 0.5.0
-  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2020/10/27/announcing-ibm-db2-for-zos-developer-extension-050?CommunityKey=621c2a2a-01f9-4b57-992f-36ed7432e3bb&tab=recentcommunityblogsdashboard
-  date: 2020/10/27
-# - title: Running IBM Db2 for z/OS Developer Extension in Eclipse Theia
-#   url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/10/27/running-db2-for-zos-developer-extension-in-theia
-#   date: 2020/10/27
-- title: Running SQL with Db2 Developer Extension in Visual Studio Code
-  url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/12/08/running-sqls-with-db2-developer-extension-in-visua
-  date: 2020/12/08
+- title: Announcing IBM Db2 for z/OS Developer Extension 1.2
+  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2021/06/22/announcing-ibm-db2-for-zos-developer-extension-12
+  date: 2021/06/22
+- title: Getting started with IBM Db2 for z/OS Developer Extension - <b>Video</b>
+  url: https://video.ibm.com/recorded/130624971
+  date: 2021/06/21
 - title: Announcing IBM Db2 for z/OS Developer Extension 1.1
   url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/calene-janacek1/2021/02/23/announcing-ibm-db2-for-zos-developer-extension-11?CommunityKey=621c2a2a-01f9-4b57-992f-36ed7432e3bb&tab=recentcommunityblogsdashboard
   date: 2021/02/31
+- title: Running SQL with Db2 Developer Extension in Visual Studio Code
+  url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/12/08/running-sqls-with-db2-developer-extension-in-visua
+  date: 2020/12/08
+# - title: Running IBM Db2 for z/OS Developer Extension in Eclipse Theia
+#   url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/10/27/running-db2-for-zos-developer-extension-in-theia
+#   date: 2020/10/27
+- title: Announcing IBM Db2 for z/OS Developer Extension 0.5.0
+  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2020/10/27/announcing-ibm-db2-for-zos-developer-extension-050?CommunityKey=621c2a2a-01f9-4b57-992f-36ed7432e3bb&tab=recentcommunityblogsdashboard
+  date: 2020/10/27
+- title: Customizing themes for SQL syntax highlighting for Db2 for z/OS in Visual Studio Code
+  url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/08/18/customizing-themes-for-sql-syntax-in-vsc
+  date: 2020/08/18
+- title: Announcing IBM Db2 for z/OS Developer Extension for Microsoft Visual Studio Code
+  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2020/07/29/announcing-ibm-db2-for-zos-developer-extension-for?CommunityKey=621c2a2a-01f9-4b57-992f-36ed7432e3bb&tab=recentcommunityblogsdashboard
+  date: 2020/07/29
