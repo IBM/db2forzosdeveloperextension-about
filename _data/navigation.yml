@@ -17,6 +17,8 @@ articles:
     children:
       - title: "Getting started"
         url: /2021/03/12/Getting-started.html
+      - title: "Running SQL"
+        url: /2021/06/14/Running-SQL.html
       - title: "Running SQL from different types of files"
         url: /2021/03/12/Running-SQL-from-different-types-of-files.html
       - title: "Committing and rolling back changes"

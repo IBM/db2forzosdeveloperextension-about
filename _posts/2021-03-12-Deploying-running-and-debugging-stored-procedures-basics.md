@@ -122,7 +122,7 @@ Click **Deploy** to finish the configuration and begin the deployment process fo
 
 The **Debug** action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment (note that conditional breakpoints currently aren't supported). You can also specify additional debugging options by using the **Run SQL Options** dialog, which is described later in this article. If input variables are specified in the SQL, you'll be prompted to specify values for them before the SQL goes through debugging.
 
-**Note:** This section covers basic debugging. For more advanced debugging scenarios, see `insert hyperlink to advanced debugger article`.
+<!-- **Note:** This section covers basic debugging. For more advanced debugging scenarios, see `insert hyperlink to advanced debugger article`. -->
 
 Click the **Debug** action to start debugging process. If your NSP contains input variables, you'll be prompted to specify values for them before the SQL goes through debugging, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
 
