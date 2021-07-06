@@ -1,43 +1,6 @@
-main:
-# - title: "Posts"
-#     url: /posts/
-#  - title: "Tags"
-#    url: /tags/
-#   - title: "About"
-#     url: /about/
-  - title: "Blogs"
-    url: /blogs/
-  - title: "VS Code Marketplace"
-    url: https://marketplace.visualstudio.com/items?itemName=ibm.db2forzosdeveloperextension
-  - title: "GitHub"
-    url: https://github.com/IBM/db2forzosdeveloperextension-about/issues
-
-articles:
-  - title: The basics
-    children:
-      - title: "Getting started"
-        url: /2021/03/12/Getting-started.html
-      - title: "Running SQL"
-        url: /2021/06/14/Running-SQL.html
-      - title: "Running SQL from different types of files"
-        url: /2021/03/12/Running-SQL-from-different-types-of-files.html
-      - title: "Committing and rolling back changes"
-        url: /2021/03/16/Committing-and-rolling-back-changes.html
-      - title: "Tips and tricks"
-        url: /2021/03/13/Tips-and-tricks.html
-
-  - title: Working with stored procedures
-    children:
-      - title: "Creating stored procedures"
-        url: /2021/03/16/Creating-stored-procedures.html
-      - title: "Deploying, running, and debugging stored procedures"
-        url: /2021/03/12/Deploying-running-and-debugging-stored-procedures-basics.html
-
-# - title: Blogs
-#     children:
-#       - title: "Announcing IBM Db2 for z/OS Developer Extension 1.1"
-#         url: /posts/collections/
-#       - title: "Announcing IBM Db2 for z/OS Developer Extension 0.5.0"
-#         url: /posts/helpers/
-#       - title: "Announcing IBM Db2 for z/OS Developer Extension for Microsoft Visual Studio Code"
-#         url: /posts/utility-classes/
+- title: Blogs
+  url: blogs
+- title: VS Code Marketplace
+  external_url: https://marketplace.visualstudio.com/items?itemName=ibm.db2forzosdeveloperextension
+- title: GitHub
+  external_url: https://github.com/IBM/db2forzosdeveloperextension-about/issues
