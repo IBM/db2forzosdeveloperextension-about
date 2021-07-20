@@ -9,7 +9,7 @@ permalink: /blogs
 <ul>
 {% for blog in site.data.blogs %}
     <li>
-        {{ blog.date }} - <a href="{{ blog.url }}">{{ blog.title }}</a>
+        {{ blog.date }} - <a href="{{ blog.url }}" target="_blank">{{ blog.title }}</a>
     </li>
 {% endfor %}
 </ul>

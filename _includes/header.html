@@ -14,8 +14,10 @@
         {% for link in site.data.navigation %}
         <li class="nav-item mr-4 mb-2 mb-lg-0">
           <a class="nav-link"
-            href="{% if link.url %}{{ site.baseurl }}/{{ link.url }}{% else %}{{ link.external_url }}{% endif %}"><span>{{
-              link.title }}</span></a>
+            href="{% if link.url %}{{ site.baseurl }}/{{ link.url }}{% else %}{{ link.external_url }}{% endif %}"
+            target="{% if link.url %}_self{% else %}_blank{% endif %}">
+            <span>{{link.title }}</span>
+          </a>
         </li>{% endfor %}
       </ul>
     </div>
@@ -25,7 +27,7 @@
     </div>
 
     <div class="navbar-nav d-none d-lg-block">
-      <a class="gh-source" data-gh-source="github" href="{{ site.repo }}" title="Go to repository" data-md-state="done">
+      <a class="gh-source" data-gh-source="github" href="{{ site.repo }}" target="_blank" title="Go to repository" data-md-state="done">
         <div class="gh-source__repository">
           <i class="fab fa fa-github fa-2x" style='padding-right:20px; float:left; margin-top:5px'></i>
           {{ site.github_user }}/{{ site.github_repo }}
