@@ -119,7 +119,7 @@ Click **Deploy** to finish the configuration and begin the deployment process fo
 
 ## Debugging a stored procedure
 
-The **Debug** action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment ~~(note that conditional breakpoints currently aren't supported)~~. `Setting conditional breakpoints is covered later in this article.`
+The **Debug** action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment. Setting conditional breakpoints is covered later in this topic.
 
 You can also specify additional debugging options by using the **Run SQL Options** dialog, which is described later in this article. If input variables are specified in the SQL, you'll be prompted to specify values for them before the SQL goes through debugging.
 
