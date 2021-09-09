@@ -36,7 +36,9 @@
         - title: "Creating stored procedures"
           url: "docs/working-with-stored-procedures/creating-stored-procedures"
         - title: "Deploying, running, and debugging stored procedures"
-          url: "docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics"
+          url: "docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics" 
+        - title: "Advanced techniques for debugging stored procedures"
+          url: "docs/working-with-stored-procedures/debugging-stored-procedures"
     - title: Tips and tricks
       url: "docs/tips-and-tricks"
       children:
