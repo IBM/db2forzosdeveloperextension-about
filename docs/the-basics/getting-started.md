@@ -39,6 +39,6 @@ It also also provides built-in capability for connecting to Db2 for z/OS databas
 
 5. Let's get back to that SELECT statement. Highlight `column-name` after the `SELECT` keyword, type `LOC` and press **Ctrl + Space**. The `LOCATE_IN_STRING` clause shows up in a list of available syntax elements. Select it to insert it, then type an open parenthesis to display a description of the `LOCATE_IN_STRING` syntax and a link to detailed reference information about it.
 
-![Code completion for LOCATE_IN_STRING]({{site.baseurl}}/assets/images/getting-started-code-completion.png)
+   ![Code completion for LOCATE_IN_STRING]({{site.baseurl}}/assets/images/getting-started-code-completion.png)
 
 These features are useful when you know which syntax element you want to insert, but maybe you don't know the precise syntax that you need to enter. They also save you time and reduce the chance that you enter something incorrectly.

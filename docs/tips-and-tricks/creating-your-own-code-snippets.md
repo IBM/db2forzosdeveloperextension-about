@@ -12,20 +12,20 @@ Here's an example of how to create your own `CREATE TABLESPACE` snippet for file
 2. Select **sql (SQL)** from the list.
 3. In the snippet file, paste the following content and save it.
 
-```
-{
-  "CREATE TABLESPACE statement": {
-    "prefix": "CREATE TABLESPACE statement",
-    "body": [
-      "CREATE TABLESPACE ${1:tablespace-name}",
-      "\tIN ${2:database-name}",
-      "\tUSING STOGROUP ${3:stogroup-name};",
-    ],
-    "description": "Sample CREATE TABLESPACE statement"
-  }
-}
-```
+   ```
+   {
+     "CREATE TABLESPACE statement": {
+       "prefix": "CREATE TABLESPACE statement",
+       "body": [
+         "CREATE TABLESPACE ${1:tablespace-name}",
+         "\tIN ${2:database-name}",
+         "\tUSING STOGROUP ${3:stogroup-name};",
+       ],
+       "description": "Sample CREATE TABLESPACE statement"
+     }
+   }
+   ```
 
 4. Now start typing `CREATE TABLESPACE` in any SQL file to use the snippet.
 
-![Creating a custom code snippet]({{site.baseurl}}/assets/images/tips-tricks-custom-snippet.gif)
+   ![Creating a custom code snippet]({{site.baseurl}}/assets/images/tips-tricks-custom-snippet.gif)

@@ -16,7 +16,7 @@ To limit the number of rows that get returned when you run SQL statements:
 
 3. Specify the maximum number of rows that will be returned in a result set in the **Max Number of Rows Returned** field:
 
-![Specifying maximum number of rows returned]({{site.baseurl}}/assets/images/runsql-max-rows-returned-field.png)
+   ![Specifying maximum number of rows returned]({{site.baseurl}}/assets/images/runsql-max-rows-returned-field.png)
 
 For example, without setting the **Max Number of Rows Returned** field, the following SELECT statement will return 50 rows at most, and the following CALL statement will return all available rows:
 

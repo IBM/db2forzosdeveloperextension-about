@@ -24,7 +24,7 @@ Let's start with this scenario: Our company has just formed a new Client Support
 
 Here's the correct SQL for making these changes:
 
-```sql
+```
 UPDATE DSN8C10.DEPT SET DEPTNAME = 'CLIENT SUPPORT' WHERE DEPTNO = 'E01';
 INSERT INTO DSN8C10.DEPT VALUES ('A01', 'AI AD TEAM', '000070', 'D01', 'SVL');
 SELECT * FROM DSN8C10.DEPT WHERE DEPTNO = 'A01';

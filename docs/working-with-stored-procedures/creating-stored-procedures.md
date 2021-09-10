@@ -14,7 +14,7 @@ This article covers the basics of using Db2 Developer Extension to create a simp
 
 2. Select that snippet to populate your file with the basic CREATE PROCEDURE structure (in the following example, the procedure name has already been changed to MYPROCEDURE):
 
-![CREATE PROCEDURE code snippet]({{site.baseurl}}/assets/images/create-sp-snippet.png)
+![CREATE PROCEDURE code snippet]({{site.baseurl}}/assets/images/nsp-basics-create-nsp.png)
 
 The snippet includes some of the more commonly used parameters and an example SELECT statement. The SELECT statement is the part of the stored procedure that gets executed when the stored procedure is called. To see all of the options that you can define in a stored procedure, open the [link](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_sql_createproceduresqlnative.html) that is included at the top of the snippet.
 

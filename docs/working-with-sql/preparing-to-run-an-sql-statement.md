@@ -8,14 +8,14 @@ When you have some valid SQL and you have a valid database connection, you're ju
 
 1. Create and save a simple SQL statement. For example, the following statement selects the entire contents (a single row) of the Db2 sample table SYSIBM.SYSDUMMY1:
 
-```
-SELECT * FROM
-SYSIBM.SYSDUMMY1
-```
+   ```
+   SELECT * FROM
+   SYSIBM.SYSDUMMY1
+   ```
 
 2. Right-click anywhere in your .sql file and select **Run SQL Options** from the context menu to open the following view:
 
-   ![Run SQL Options]({{site.baseurl}}/assets/images/getting-started-run-sql-options.png)
+   ![Run SQL Options]({{site.baseurl}}/assets/images/runsql-options.png)
 
    Use this view to set the following options for running your SQL:
 
