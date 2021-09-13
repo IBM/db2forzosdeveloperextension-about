@@ -20,4 +20,4 @@ To set the port numbers:
 
 3. Update the **Session Manager Port** and **Port** settings fields with port numbers that are available for you to use:
 
-![Specifying multiple ports]({{site.baseurl}}/assets/images/multiple-ports.png)
+   ![Specifying multiple ports]({{site.baseurl}}/assets/images/tips-tricks-multiple-ports.png)

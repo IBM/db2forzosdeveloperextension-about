@@ -8,7 +8,7 @@ Before you can run your SQL, you need to connect to the Db2 for z/OS subsystem t
 
 From the **CONNECTIONS** view, click the plus sign (**+**) to open the **Add Connection** dialog.
 
-![Adding a database connection]({{site.baseurl}}/assets/images/getting-started-add-connection.png)
+![Adding a database connection]({{site.baseurl}}/assets/images/db2-connection-add-connection.png)
 
 - Use the **General** tab to specify basic connection information about the Db2 subsystem and valid user credentials for connecting to that Db2 subsystem.
 
@@ -28,6 +28,6 @@ Before you can run SQL from a file, you need to associate a Db2 connection to th
 
 **Note:** The message "No connection" is displayed in the **Status Bar** if a connection hasn't been associated with the file.
 
-![Changing the connection used to run SQL]({{site.baseurl}}/assets/images/tips-tricks-change-connection.gif)
+![Changing the connection used to run SQL]({{site.baseurl}}/assets/images/db2-connection-change-connection.gif)
 
 This method of changing the connection also applies to running and debugging native stored procedures, but it doesn't apply to deploying native stored procedures. You select the connection that's used to deploy a native stored procedure in the [Deployment options]({{site.baseurl}}/docs/deploying-running-and-debugging-stored-procedures-basics.html#deploying-a-stored-procedure).
