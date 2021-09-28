@@ -53,3 +53,5 @@
       children:
         - title: "Opening an issue and providing logs"
           url: "docs/troubleshooting/opening-an-issue-and-providing-logs"
+        - title: "JDBC driver errors"
+          url: "docs/troubleshooting/jdbc-driver-errors"
