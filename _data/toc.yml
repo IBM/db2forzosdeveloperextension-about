@@ -30,6 +30,21 @@
           url: "docs/working-with-sql/limiting-the-number-of-rows-returned"
         - title: "Comparing SQL results"
           url: "docs/working-with-sql/comparing-sql-results"
+    - title: Tuning SQL queries
+      url: "docs/tuning-sql-queries"
+      children:
+        - title: "Setting up a basic SQL tuning environment"
+          url: "docs/tuning-sql-queries/setting-up-a-basic-tuning-environment"
+        - title: "Advanced options for setting up an SQL tuning environment"
+          url: "docs/tuning-sql-queries/advanced-tuning-environment-options"
+        - title: "Sharing and revoking privileges to tuning connection profiles"
+          url: "docs/tuning-sql-queries/sharing-and-revoking-privileges"
+        - title: "Viewing a graphical explanation of access plans (Visual Explain)"
+          url: "docs/tuning-sql-queries/viewing-a-graphical-explanation-of-access-plans" 
+        - title: "Generating statistics to improve query performance (Statistics Advisor)"
+          url: "docs/tuning-sql-queries/generating-statistics-to-improve-query-performance"
+        - title: "Capturing your query environment"
+          url: "docs/tuning-sql-queries/capturing-your-query-environment"
     - title: Working with stored procedures
       url: "docs/working-with-stored-procedures"
       children:
@@ -55,3 +70,5 @@
           url: "docs/troubleshooting/opening-an-issue-and-providing-logs"
         - title: "JDBC driver errors"
           url: "docs/troubleshooting/jdbc-driver-errors"
+        - title: "SQL Tuning Services problems"
+          url: "docs/troubleshooting/sql-tuning-services"

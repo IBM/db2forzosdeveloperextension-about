@@ -6,7 +6,7 @@ title: "Creating a database connection"
 
 Before you can run your SQL, you need to connect to the Db2 for z/OS subsystem that contains the database that you want to work with. You can use Db2 Developer Extension's integrated database connection capability to add a connection.
 
-From the **CONNECTIONS** view, click the plus sign (**+**) to open the **Add Connection** dialog.
+From the **CONNECTIONS** view, click the plus sign (**+**) to the right of the **Db2 for z/OS connections** menu item to open the **Add Db2 Connection** dialog.
 
 ![Adding a database connection]({{site.baseurl}}/assets/images/db2-connection-add-connection.png)
 
@@ -16,7 +16,11 @@ From the **CONNECTIONS** view, click the plus sign (**+**) to open the **Add Con
 
 - If you want to include [additional properties](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/java/src/tpc/imjcc_r0052607.html) in your database connection, open the **Optional** tab and enter the property name and assign it a value. Select the checkbox to the left of a property to include it in a database connection. Click the blue plus sign (**+**) to add a new line.
 
-When you're done, click **Finish**. If your database connection was created successfully, it'll be added to the **CONNECTIONS** menu in the right side bar. If not, open the **Tracing** tab, enable tracing, and try again. Then, check the logs for more information about why the connection isn't being added.
+- Use the **Tuning** tab to specify a SQL Tuning Services server and to associate a tuning connection profile with a Db2 connection. See [Setting up a basic SQL tuning environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment.html) for more information.
+
+When you're done, click **Finish**. If your database connection was created successfully, it'll be added to the **CONNECTIONS** menu in the side bar under the **Db2 for z/OS connections** entry. 
+
+If your database connection fails to establish a connection, open the **Tracing** tab, enable tracing, and try to connect again. Then, check the logs for more information about why the connection failed to connect.
 
 ## Changing a connection name
 

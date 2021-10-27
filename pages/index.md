@@ -13,6 +13,7 @@ Db2 Developer Extension modernizes the experience of developing Db2 for z/OS app
 - The ability to run selected SQL statements from any type of file
 - The ability to display consolidated results from running multiple SQL statements
 - The ability to select multiple SQL elements on different lines and run those elements as a complete statement
+- The ability to tune SQL by using Visual Explain, Statistics Advisor, and Capture Query Environment
 - The ability to deploy, run, and debug native stored procedures
 - The ability to define conditional hit-count breakpoints when debugging stored procedures
 - The ability to run SQL that includes parameters and variables from within a native stored procedure
