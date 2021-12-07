@@ -4,7 +4,7 @@ IBM® Db2® for z/OS® Developer Extension (Db2 Developer Extension) is an exten
 
 ## Licenses
 
-Before downloading this extension, review the [Db2 Developer Extension License Agreement](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/LICENSE.txt), [Third Party Notices](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/NOTICES.txt), and the license for [Separately Licensed Code](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/product-licenses/NON_IBM_LICENSE.txt).
+Before downloading this extension, review the [Db2 Developer Extension License Agreement](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/product-licenses/LICENSE.txt), [Third Party Notices](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/product-licenses/NOTICES.txt), and the license for [Separately Licensed Code](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/product-licenses/NON_IBM_LICENSE.txt).
 
 ## Overview
 
@@ -35,17 +35,17 @@ It also includes support for working with native stored procedures by providing 
 -   Set conditional breakpoints when debugging stored procedures
 
 And it enables you to analyze and tune the performance of SQL queries by providing the ability to:
-- Run Visual Explain - **New**
-- Generate advice for collecting statistics for the data objects involved in a SQL statement and update statistics profiles by using the Statistics Advisor - **New**
-- Generate and download all the artifacts that are needed to re-create access path issues, such as DDL and statistics, by using the Capture Query Environment feature - **New**
-- Create, migrate, and drop EXPLAIN tables - **New**
-- Configure tuning options - **New**
-- Save a history of your tuning activities - **New**
 
+-   Run Visual Explain - **New**
+-   Generate advice for collecting statistics for the data objects involved in a SQL statement and update statistics profiles by using the Statistics Advisor - **New**
+-   Generate and download all the artifacts that are needed to re-create access path issues, such as DDL and statistics, by using the Capture Query Environment feature - **New**
+-   Create, migrate, and drop EXPLAIN tables - **New**
+-   Configure tuning options - **New**
+-   Save a history of your tuning activities - **New**
 
 Note: These SQL tuning capabilities require the [Database Services Expansion Pack](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/649/ENUS5697-Q05/index.html) component of Db2 Accessories Suite 4.2 and [APAR PH39038](https://www.ibm.com/support/pages/apar/PH39038).
 
-See the [Key features](#Key-features) section for more details and examples.
+See the [Key features](#key-features) section for more details and examples.
 
 ## Table of contents
 
@@ -53,8 +53,8 @@ See the [Key features](#Key-features) section for more details and examples.
 -   [Prerequisites for installing Db2 Developer Extension](#prerequisites-for-installing-db2-developer-extension)
 -   [Configuring Java](#configuring-java)
 -   [Specifying port numbers](#specifying-port-numbers)
--   [Key features](#Key-features)
--   [Additional information](#Additional-information)
+-   [Key features](#key-features)
+-   [Additional information](#additional-information)
 -   [Limitations for this release](#limitations-for-this-release)
 
 ## Privacy notice for feedback
@@ -71,6 +71,7 @@ This current release of Db2 Developer Extension will collect anonymous data for 
 -   Connecting to Db2
 -   SQL execution
 -   Deploying, running, or debugging native stored procedures
+-   Performing tuning actions
 -   Deactivation of this VS Code extension
 
 Each of these events is logged with the following information:
@@ -87,11 +88,11 @@ Installing Db2 Developer Extension requires the following software:
 
 -   One of the following IBM Data Server Driver for JDBC and SQLJ license files. Db2 Developer Extension requires an appropriately licensed JDBC driver. Using a JDBC driver from another tool or product not listed below is not permitted.
 
-    -   **The Db2 Connect Unlimited Edition for System z® server license**
+    -   **The Db2 Connect Unlimited Edition for System z® server license `V11.1 M4 FP4 iFix or later`**
 
     This license must be activated on the Db2 for z/OS subsystems that you want to connect to. For more information, see the following topic: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.licensing.doc/doc/t0057375.html
 
-    -   **The IBM Data Server Driver for JDBC and SQLJ client license file**
+    -   **The IBM Data Server Driver for JDBC and SQLJ client license file `4.25.1301 or later`**
 
     For information about locating and and enabling the client license file, see the following topic:
     https://www.ibm.com/support/pages/db2-jdbc-driver-not-licensed-connectivity-file-db2jcclicensecisuzjar-errorcode-4472-sqlstate42968
@@ -115,12 +116,12 @@ Installing Db2 Developer Extension requires the following software:
     -   Red Hat-based: `sudo yum install libsecret-devel`
     -   Arch Linux: `sudo pacman -S libsecret`
 
--   The SQL tuning capabilities that were introduced in 1.3 of this extension require the Database Services Expansion Pack component of Db2 Accessories Suite 4.2 and APAR PH39038. See the following resources for more information: 
-    
-    -  [Db2 Accessories Suite 4.2 overview](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/649/ENUS5697-Q05/index.html)
-    -  [Database Services Expansion Pack program directory](http://publibfp.dhe.ibm.com/epubs/pdf/i1359290.pdf)
-    -  [SQL Tuning Services installation and configuration documentation](https://www.ibm.com/docs/en/db2-for-zos/12?topic=services-installing-configuring-sql-tuning)
-    -  [APAR PH39038](https://www.ibm.com/support/pages/apar/PH39038)
+-   The SQL tuning capabilities that were introduced in 1.3 of this extension require the Database Services Expansion Pack component of Db2 Accessories Suite 4.2 and APAR PH39038. See the following resources for more information:
+
+    -   [Db2 Accessories Suite 4.2 overview](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/649/ENUS5697-Q05/index.html)
+    -   [Database Services Expansion Pack program directory](http://publibfp.dhe.ibm.com/epubs/pdf/i1359290.pdf)
+    -   [SQL Tuning Services installation and configuration documentation](https://www.ibm.com/docs/en/db2-for-zos/12?topic=services-installing-configuring-sql-tuning)
+    -   [APAR PH39038](https://www.ibm.com/support/pages/apar/PH39038)
 
 ## Configuring Java
 
@@ -177,7 +178,7 @@ Db2 Developer Extension provides end-to-end support for working with Db2 for z/O
 
 To deploy a native stored procedure, open a `.spsql` file that contains a `CREATE PROCEDURE` statement, then right-click the file and select **Deploy Stored Procedure**. You can specify deployment options and routine options before deploying the native stored procedure. For this release, only the first native stored procedure in the file will be deployed.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/deploy-nsp.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/readme/deploy-nsp.gif)
 
 #### Debugging a native stored procedure
 
@@ -185,7 +186,7 @@ To debug a native stored procedure, open a `.spsql` file that contains a `CREATE
 
 Db2 Developer Extension supports conditional hit-count breakpoints, which means that when the breakpoint is reached, instead of pausing, execution continues until the hit count that you specified is reached. This feature is useful for debugging stored procedures that contain loops.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/debug-hitcount.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/readme/debug-hitcount.gif)
 
 ### SQL execution
 
@@ -193,11 +194,11 @@ You can run individual SQL statements that are embedded in any type of source co
 
 Within a SQL file, you can run individual statements and even SQL elements that are on different lines by using the **Run Selected SQL** option, or you can run the entire file by right-clicking and selecting **Run All**. If your SQL contains host variables, you'll be prompted to provide a value and data type, or you can specify a null value. When the SQL finishes running, you can export the results in a `.csv` file.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/run-sql-multiple-selection.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/readme/run-sql-multiple-selection.gif)
 
 Db2 Developer Extension supports XML host variables and will validate the syntax if you specify an XML host variable. When you run multiple SQL statements, the results are displayed in in the **Execution Summary** page. From this page, you can drill down into individual statements, quickly identify, display, and cycle through failing SQL statements, and sort results by their timestamp.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/sql-execution.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/readme/sql-execution.gif)
 
 Complete instructions for using the Db2 Developer Extension features for running SQL are in the WORKING WITH SQL category in our [documentation repository](https://ibm.github.io/db2forzosdeveloperextension-about/).
 
@@ -209,7 +210,7 @@ The ability to format your SQL makes it much easier to parse large blocks of cod
 
 The formatting actions are available from the editor context menu, as keyboard shortcuts, and from the Command Palette.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/sql-formatter.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/readme/sql-formatter.gif)
 
 ### Tuning SQL statements
 
@@ -217,14 +218,15 @@ You can set up and run Visual Explain, Statistics Advisor, and Capture Query Env
 
 #### Setting up a tuning environment
 
-You can register a SQL Tuning Services server into the extension by adding the related information, create a tuning connection profile and EXPLAIN tables if they don't already exist, and then associate the tuning connection profile with the corresponding Db2 connection profile that you defined in the extension. 
+You can register a SQL Tuning Services server into the extension by adding the related information, create a tuning connection profile and EXPLAIN tables if they don't already exist, and then associate the tuning connection profile with the corresponding Db2 connection profile that you defined in the extension.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/tuning-services-tuning-profile.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/readme/tuning-services-tuning-profile.gif)
 
 #### Running the tuning features
+
 After you've set up your tuning environment, you can configure SQL tuning options and then run any of the available tuning features. The results from Visual Explain are displayed in a browser. Statistics Advisor and Capture Query Environment results are displayed in the Tuning Results window. Results from all three tuning features are accessible from the TUNING HISTORY view.
 
-![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/master/readme/tuning-services-tuning-actions.gif)
+![ ](https://github.com/IBM/db2forzosdeveloperextension-about/raw/main/readme/tuning-services-tuning-actions.gif)
 
 ## Additional information
 
@@ -238,6 +240,6 @@ Also, see our [blog site](https://ibm.github.io/db2forzosdeveloperextension-abou
 
 ## Limitations for this release
 
-- When you run a CALL statement that includes OUT or INOUT parameters, it will fail.
+-   When you run a CALL statement that includes OUT or INOUT parameters, it will fail.
 
-- Debugging a native stored procedure that contains input parameters as array types is not supported.
+-   Debugging a native stored procedure that contains input parameters as array types is not supported.
