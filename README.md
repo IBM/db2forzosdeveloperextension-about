@@ -43,7 +43,7 @@ And it enables you to analyze and tune the performance of SQL queries by providi
 -   Configure tuning options - **New**
 -   Save a history of your tuning activities - **New**
 
-Note: These SQL tuning capabilities require the [Database Services Expansion Pack](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/649/ENUS5697-Q05/index.html) component of Db2 Accessories Suite 4.2 and [APAR PH39038](https://www.ibm.com/support/pages/apar/PH39038).
+Note: These SQL tuning capabilities require the [Database Services Expansion Pack](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/649/ENUS5697-Q05/index.html) component of Db2 Accessories Suite 4.2 and [APAR PH42944](https://www.ibm.com/support/pages/apar/PH42944).
 
 See the [Key features](#key-features) section for more details and examples.
 
@@ -116,12 +116,12 @@ Installing Db2 Developer Extension requires the following software:
     -   Red Hat-based: `sudo yum install libsecret-devel`
     -   Arch Linux: `sudo pacman -S libsecret`
 
--   The SQL tuning capabilities that were introduced in 1.3 of this extension require the Database Services Expansion Pack component of Db2 Accessories Suite 4.2 and APAR PH39038. See the following resources for more information:
+-   The SQL tuning capabilities that were introduced in 1.3 of this extension require the Database Services Expansion Pack component of Db2 Accessories Suite 4.2 and APAR PH42944. See the following resources for more information:
 
     -   [Db2 Accessories Suite 4.2 overview](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/649/ENUS5697-Q05/index.html)
     -   [Database Services Expansion Pack program directory](http://publibfp.dhe.ibm.com/epubs/pdf/i1359290.pdf)
     -   [SQL Tuning Services installation and configuration documentation](https://www.ibm.com/docs/en/db2-for-zos/12?topic=services-installing-configuring-sql-tuning)
-    -   [APAR PH39038](https://www.ibm.com/support/pages/apar/PH39038)
+    -   [APAR PH42944](https://www.ibm.com/support/pages/apar/PH42944)
 
 ## Configuring Java
 

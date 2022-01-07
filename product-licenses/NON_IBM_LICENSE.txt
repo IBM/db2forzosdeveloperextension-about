@@ -1,6 +1,6 @@
 TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
 
-IBM Db2 for z/OS Developer Extension 1.3.2
+IBM Db2 for z/OS Developer Extension 1.3.3
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
