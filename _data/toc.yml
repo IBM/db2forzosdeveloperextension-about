@@ -72,5 +72,7 @@
           url: "docs/troubleshooting/opening-an-issue-and-providing-logs"
         - title: "JDBC driver errors"
           url: "docs/troubleshooting/jdbc-driver-errors"
+        - title: "SSL errors"
+          url: "docs/troubleshooting/ssl-errors"
         - title: "SQL Tuning Services problems"
           url: "docs/troubleshooting/sql-tuning-services"
