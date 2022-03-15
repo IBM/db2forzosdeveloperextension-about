@@ -88,7 +88,7 @@ Installing Db2 Developer Extension requires the following software:
 
 -   One of the following IBM Data Server Driver for JDBC and SQLJ license files. Db2 Developer Extension requires an appropriately licensed JDBC driver. Using a JDBC driver from another tool or product not listed below is not permitted.
 
-    -   **The Db2 Connect Unlimited Edition for System z® server license `V11.1 M4 FP4 iFix or later`**
+    -   **The Db2 Connect Unlimited Edition for System z® server license `V11.1 M4 FP4 iFix 1 or later`**
 
     This license must be activated on the Db2 for z/OS subsystems that you want to connect to. For more information, see the following topic: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.licensing.doc/doc/t0057375.html
 

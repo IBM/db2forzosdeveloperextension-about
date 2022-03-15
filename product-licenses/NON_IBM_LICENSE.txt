@@ -1,6 +1,6 @@
 TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
 
-IBM Db2 for z/OS Developer Extension 1.3.3
+IBM Db2 for z/OS Developer Extension 1.3.4
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -45,6 +45,6 @@ Logo files can be found [here](https://github.com/isaacs/node-glob/tree/master/l
 
 
 
-L/N:  L-DCLN-C3MSWT
-D/N:  L-DCLN-C3MSWT
-P/N:  L-DCLN-C3MSWT
+L/N:  L-DCLN-CB7P99
+D/N:  L-DCLN-CB7P99
+P/N:  L-DCLN-CB7P99
