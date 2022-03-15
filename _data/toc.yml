@@ -30,6 +30,8 @@
           url: "docs/working-with-sql/limiting-the-number-of-rows-returned"
         - title: "Comparing SQL results"
           url: "docs/working-with-sql/comparing-sql-results"
+        - title: "Running statements from your query history"
+          url: "docs/working-with-sql/running-sql-from-history"       
     - title: Tuning SQL queries
       url: "docs/tuning-sql-queries"
       children:
