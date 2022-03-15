@@ -87,13 +87,13 @@ The **Deployment** view consists of two sections: **Deployment options** and **R
 
 - Use the **Duplicate handling** option to specify the behavior of the deployment if the procedure already exists:
 
-  - **Alter duplicates** modifies the CREATE PROCEDURE DDL to ALTER PROCEDURE if the procedure already exists.
+  - **Alter duplicates** modifies the CREATE PROCEDURE DDL to ALTER PROCEDURE if the procedure already exists. Optionally, you can choose not to activate the procedure upon deployment; otherwise, it's activated by default.
 
-    **Exception:** If you're using `CREATE OR REPLACE PROCEDURE`, which is available in Db2 12 function level 507 or later, this option does not result in any modifications.
+    **Exception:** If you're using CREATE OR REPLACE PROCEDURE, which is available in Db2 12 function level 507 or later, this option does not result in any modifications.
 
-  - **Drop duplicates** calls DROP PROCEDURE before running the CREATE PROCEDURE DDL if the procedure already exists.
+  - **Drop duplicates** calls DROP PROCEDURE before running the CREATE PROCEDURE DDL if the procedure already exists, creates the procedure, and activates it upon deployment. By default, Db2 activates the first version of a stored procedure.
 
-  - **Treat duplicate deployments as errors** returns an error if the procedure already exists.
+  - **Treat duplicate deployments as errors** returns an error if the procedure already exists. If other versions of the procedure do not already exist, the procedure is created and activated upon deployment. By default, Db2 activates the first version of a stored procedure.
 
 **Note:** Not all options mentioned above are displayed due to screen size limit.
 
