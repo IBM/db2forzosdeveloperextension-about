@@ -59,11 +59,10 @@ Before you can use SSL/TLS to connect to a Db2 server, the [Db2 server must be c
      - `sslKeyStoreLocation` and `sslKeyStorePassword`
      - `sslKeyStoreLocation` and `sslKeyStorePassword` (optional), and `sslKeyStoreType`
 
-The following example shows the properties for using the Java truststore and Java KeyStore.
+   The following example shows the properties for using the Java truststore and Java KeyStore.
 
 ![Java truststore and Java KeyStore properties]({{site.baseurl}}/assets/images/db2-connection-ssl-tls.png)
 
-For more information, see [Configuring connections under the IBM Data Server Driver for JDBC and SQLJ to use SSL](https://www.ibm.com/docs/en/db2-for-zos/12?topic=dsdjsss-configuring-connections-under-data-server-driver-jdbc-sqlj-use-ssl).
-
 4. Click **Finish** to establish an SSL connection to the Db2 server.
 
+For more information, see [Configuring connections under the IBM Data Server Driver for JDBC and SQLJ to use SSL](https://www.ibm.com/docs/en/db2-for-zos/12?topic=dsdjsss-configuring-connections-under-data-server-driver-jdbc-sqlj-use-ssl).
