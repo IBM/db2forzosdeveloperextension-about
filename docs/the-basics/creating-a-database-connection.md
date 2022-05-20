@@ -48,20 +48,20 @@ Before you can use SSL/TLS to connect to a Db2 server, the [Db2 server must be c
 
    - `sslConnection` to `true`
    - One of the following set of properties to specify the Db2 server certificate location:
-     - `sslCertLocation`
-     - `sslTrustStoreLocation` and `sslTrustStorePassword`
-     - `sslTrustStoreLocation`, `sslTrustStorePassword` (optional), and `sslTrustStoreType`
+      - `sslCertLocation`
+      - `sslTrustStoreLocation` and `sslTrustStorePassword`
+      - `sslTrustStoreLocation`, `sslTrustStorePassword` (optional), and `sslTrustStoreType`
 
    If you're using the Java KeyStore to store the client certificate, you'll need to add the following properties:
 
    - `securityMechanism` set to `18`
-   - One of the following set of properties to specify the client certificate location:
+     - One of the following set of properties to specify the client certificate location:
      - `sslKeyStoreLocation` and `sslKeyStorePassword`
      - `sslKeyStoreLocation` and `sslKeyStorePassword` (optional), and `sslKeyStoreType`
 
    The following example shows the properties for using the Java truststore and Java KeyStore.
 
-![Java truststore and Java KeyStore properties]({{site.baseurl}}/assets/images/db2-connection-ssl-tls.png)
+   ![Java truststore and Java KeyStore properties]({{site.baseurl}}/assets/images/db2-connection-ssl-tls.png)
 
 4. Click **Finish** to establish an SSL connection to the Db2 server.
 
