@@ -35,3 +35,34 @@ Before you can run SQL from a file, you need to associate a Db2 connection to th
 ![Changing the connection used to run SQL]({{site.baseurl}}/assets/images/db2-connection-change-connection.gif)
 
 This method of changing the connection also applies to running and debugging native stored procedures, but it doesn't apply to deploying native stored procedures. You select the connection that's used to deploy a native stored procedure in the [Deployment options]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics.html#deploying-a-stored-procedure).
+
+## Connecting with SSL/TLS
+
+Before you can use SSL/TLS to connect to a Db2 server, the [Db2 server must be configured for SSL/TLS](https://www.ibm.com/docs/en/db2-for-zos/12?topic=pdter-encrypting-your-data-secure-socket-layer-ssl-support). If you're not sure if the Db2 server has been configured for SSL/TLS, check with your network administrator.
+
+1. Add or edit a Db2 connection.
+2. In the **General** tab, specify the secure port in the **Port** field.
+3. In the **Optional** tab, specify the JDBC properties for a secure connection.
+
+   At a minimum, you'll need the following properties:
+
+   - `sslConnection` to `true`
+   - One of the following set of properties to specify the Db2 server certificate location:
+     - `sslCertLocation`
+     - `sslTrustStoreLocation` and `sslTrustStorePassword`
+     - `sslTrustStoreLocation`, `sslTrustStorePassword` (optional), and `sslTrustStoreType`
+
+   If you're using the Java KeyStore to store the client certificate, you'll need to add the following properties:
+
+   - `securityMechanism` set to `18`
+   - One of the following set of properties to specify the client certificate location:
+     - `sslKeyStoreLocation` and `sslKeyStorePassword`
+     - `sslKeyStoreLocation` and `sslKeyStorePassword` (optional), and `sslKeyStoreType`
+
+The following example shows the properties for using the Java truststore and Java KeyStore.
+
+![Java truststore and Java KeyStore properties]({{site.baseurl}}/assets/images/db2-connection-ssl-tls.png)
+
+   For more information, see [Configuring connections under the IBM Data Server Driver for JDBC and SQLJ to use SSL](https://www.ibm.com/docs/en/db2-for-zos/12?topic=dsdjsss-configuring-connections-under-data-server-driver-jdbc-sqlj-use-ssl).
+
+4. Click **Finish** to establish an SSL connection to the Db2 server.
