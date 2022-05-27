@@ -14,7 +14,7 @@ Another advantage is that you don't need to specify `--#SET TERMINATOR` in the h
 
 **Note:** Currently, Db2 Developer Extension deploy, debug, and run options support only one NSP per **.spsql** file. When NSP options are specified, only the first NSP in the file will be executed; additional NSPs and SQL statements will be ignored.
 
-We'll use the following example stored procedure throughout this article to demonstrate how to deploy, run, and debug an NSP. This NSP will read the total salary, including bonuses, from the table `DSN8B10.EMP` from a passed in-parameter `DEPTNUMBER`. You can paste it into a file so that you try things out for yourself.
+We'll use the following example stored procedure throughout this article to demonstrate how to deploy, run, and debug an NSP. This NSP will read the total salary, including bonuses, from the table `DSN8D10.EMP` from a passed in-parameter `DEPTNUMBER`. You can paste it into a file so that you try things out for yourself.
 
 **RETURNDEPTSALARY.spsql**
 
@@ -32,7 +32,7 @@ CREATE PROCEDURE ADMF001.RETURNDEPTSALARY
      DECLARE BONUS_CNT INT DEFAULT 0;
      DECLARE END_TABLE INT DEFAULT 0;
      DECLARE C1 CURSOR FOR
-      SELECT SALARY, BONUS FROM DSN8B10.EMP
+      SELECT SALARY, BONUS FROM DSN8D10.EMP
        WHERE WORKDEPT = DEPTNUMBER;
      DECLARE CONTINUE HANDLER FOR NOT FOUND
       SET END_TABLE = 1;
@@ -97,7 +97,7 @@ The **Deployment** view consists of two sections: **Deployment options** and **R
 
 **Note:** Not all options mentioned above are displayed due to screen size limit.
 
-If you're new to SQL and want more information about embedding SQL in host languages, there's a lot of information about this topic in the [Db2 for z/OS documentation](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_12.0.0/apsg/src/tpc/db2z_programembeddedsql.html).
+If you're new to SQL and want more information about embedding SQL in host languages, there's a lot of information about this topic in the [Db2 for z/OS documentation](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_13.0.0/apsg/src/tpc/db2z_programembeddedsql.html).
 
 ### Routine options
 
@@ -229,6 +229,6 @@ This article covers just the following options that you can set in this view:
     "ADMF002","ADMF003","ADMF004"
 ```
 
-**About commit and rollback options:** The commit and rollback options behave a little differently with stored procedures. First, by default, all stored procedures run with COMMIT ON RETURN NO. You can change this behavior by including the COMMIT ON RETURN YES clause in your stored procedure DDL. If you need more control over the SQL statements in a stored procedure at the unit of work level, see [COMMIT and ROLLBACK statements in a stored procedure](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/apsg/src/tpc/db2z_commitrollbacksp.html).
+**About commit and rollback options:** The commit and rollback options behave a little differently with stored procedures. First, by default, all stored procedures run with COMMIT ON RETURN NO. You can change this behavior by including the COMMIT ON RETURN YES clause in your stored procedure DDL. If you need more control over the SQL statements in a stored procedure at the unit of work level, see [COMMIT and ROLLBACK statements in a stored procedure](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/apsg/src/tpc/db2z_commitrollbacksp.html).
 
 Second, Db2 Developer Extension runs only the first stored procedure in a file and ignores any other SQL statements that you might have selected to run. If you select **Commit on completion** or **Rollback changes on completion**, processing will end after the first stored procedure is processed, even if you intended to run additional SQL statements in that same file. See [Committing and rolling back changes]({{site.baseurl}}/docs/the-basics/committing-and-rolling-back-changes.html) for more information.
