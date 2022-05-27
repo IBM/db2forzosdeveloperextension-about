@@ -6,7 +6,7 @@ title: "Creating stored procedures"
 
 This article covers the basics of using Db2 Developer Extension to create a simple stored procedure and then explains some of the more complex things you might need to do when you create a stored procedure, such as working with DBCS data and user-defined types.
 
-[Stored procedures](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_12.0.0/apsg/src/tpc/db2z_storedprocedure.html) are a powerful tool for increasing the performance and efficiency of distributed applications. Currently, Db2 Developer Extension supports Db2 for z/OS native stored procedures, which are stored procedures that are written entirely in SQL and are created by using the [CREATE PROCEDURE or CREATE  OR REPLACE PROCEDURE](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_sql_createproceduresqlnative.html) statement, which is available with Db2 12 function level 507 and later.
+[Stored procedures](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_13.0.0/apsg/src/tpc/db2z_storedprocedure.html) are a powerful tool for increasing the performance and efficiency of distributed applications. Currently, Db2 Developer Extension supports Db2 for z/OS native stored procedures, which are stored procedures that are written entirely in SQL and are created by using the [CREATE PROCEDURE or CREATE  OR REPLACE PROCEDURE](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_sql_createproceduresqlnative.html) statement, which is available with Db2 12 function level 507 and later.
 
 ## Creating a basic stored procedure with code snippets
 
@@ -16,7 +16,7 @@ This article covers the basics of using Db2 Developer Extension to create a simp
 
 ![CREATE PROCEDURE code snippet]({{site.baseurl}}/assets/images/nsp-basics-create-nsp.png)
 
-The snippet includes some of the more commonly used parameters and an example SELECT statement. The SELECT statement is the part of the stored procedure that gets executed when the stored procedure is called. To see all of the options that you can define in a stored procedure, open the [link](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/sqlref/src/tpc/db2z_sql_createproceduresqlnative.html) that is included at the top of the snippet.
+The snippet includes some of the more commonly used parameters and an example SELECT statement. The SELECT statement is the part of the stored procedure that gets executed when the stored procedure is called. To see all of the options that you can define in a stored procedure, open the [link](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_sql_createproceduresqlnative.html) that is included at the top of the snippet.
 
 Now this stored procedure is ready to be deployed. To learn how, see [Deploying, running, and debugging stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics.html).
 
@@ -67,7 +67,7 @@ VAR3 OUT: HELLOWORLD
 
 ## Working with user-defined types: Distinct
 
-You can create and use a custom data type that's called a [user-defined distinct type](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_12.0.0/sqlref/src/tpc/db2z_distincttypessql.html) in Db2 for z/OS. For example, let's say that you keep email documents that are sent to your company in a Db2 table. The Db2 data type of an email document is a CLOB, but you define it as a distinct type so that you can control the types of operations that are performed on the email data. The distinct type is defined like this:
+You can create and use a custom data type that's called a [user-defined distinct type](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_13.0.0/sqlref/src/tpc/db2z_distincttypessql.html) in Db2 for z/OS. For example, let's say that you keep email documents that are sent to your company in a Db2 table. The Db2 data type of an email document is a CLOB, but you define it as a distinct type so that you can control the types of operations that are performed on the email data. The distinct type is defined like this:
 
 ```
 CREATE DISTINCT TYPE E_MAIL AS CLOB(5M); 
