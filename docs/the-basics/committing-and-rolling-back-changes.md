@@ -20,7 +20,7 @@ Depending on the commit or rollback option you select, you have the following op
 
 You set these options by right-clicking in your file and selecting **Run SQL Options** from the context menu to display the **JDBC runtime options** view. You use the **Action when script runs successfully** box to set commit and rollback options, and you use the **Action when an error occurs** box to control how Db2 Developer Extension responds when a SQL statement fails.
 
-Let's start with this scenario: Our company has just formed a new Client Support department and has staffed it with some existing employees and some new employees. We need to update two tables with information about the new department and its members. We'll use a couple of Db2-supplied sample tables, [DSN8C10.DEPT](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/intro/src/tpc/db2z_sampletablesdepartment.html) and [DSN8C10.EMP](https://www.ibm.com/support/knowledgecenter/SSEPEK_12.0.0/intro/src/tpc/db2z_sampletablesemployeemain.html), to demonstrate how the commit, roll back, and error-handling options work.
+Let's start with this scenario: Our company has just formed a new Client Support department and has staffed it with some existing employees and some new employees. We need to update two tables with information about the new department and its members. We'll use a couple of Db2-supplied sample tables, [DSN8C10.DEPT](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/intro/src/tpc/db2z_sampletablesdepartment.html) and [DSN8C10.EMP](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/intro/src/tpc/db2z_sampletablesemployeemain.html), to demonstrate how the commit, roll back, and error-handling options work.
 
 Here's the correct SQL for making these changes:
 
