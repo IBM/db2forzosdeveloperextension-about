@@ -4,7 +4,7 @@ title: "Generating statistics to improve query performance (Statistics Advisor)"
 
 # {{ page.title }}
 
-You can use the Statistics Advisor feature of Db2 Developer Extension to generate a recommended set of [RUNSTATS commands](https://www.ibm.com/docs/en/db2-for-zos/12?topic=utilities-runstats) to improve query performance. 
+You can use the Statistics Advisor feature of Db2 Developer Extension to generate a recommended set of [RUNSTATS commands](https://www.ibm.com/docs/en/db2-for-zos/13?topic=utilities-runstats) to improve query performance. 
 
 1. Open an SQL file and click on the connection in the [Status Bar](https://code.visualstudio.com/docs/getstarted/userinterface). Select a Db2 connection from the list that's displayed. Make sure the connection that you select already has a tuning connection profile associated with it. If not, see [Associating a tuning connection profile with a Db2 connection]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment.html#associating-a-tuning-connection-profile-with-a-db2-connection).
 
