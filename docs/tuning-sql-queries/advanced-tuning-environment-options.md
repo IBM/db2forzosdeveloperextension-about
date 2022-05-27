@@ -25,7 +25,7 @@ If you haven't already created a tuning connection profile, you need to create o
 
 ## Creating EXPLAIN tables
 
-Db2 uses [EXPLAIN tables](https://www.ibm.com/docs/en/db2-for-zos/12?topic=tables-explain) to store information about SQL statements, access paths, and other elements that can affect SQL performance. The tuning connection profile needs its own set of EXPLAIN tables
+Db2 uses [EXPLAIN tables](https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-explain) to store information about SQL statements, access paths, and other elements that can affect SQL performance. The tuning connection profile needs its own set of EXPLAIN tables
 
 1. Click three vertical dots at the end of the tuning connection profile you just created, and select **Create EXPLAIN tables**. The **Create EXPLAIN tables** window opens.
 
