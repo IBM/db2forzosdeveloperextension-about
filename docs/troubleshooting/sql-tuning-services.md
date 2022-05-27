@@ -6,7 +6,7 @@ title: "Troubleshooting problems with SQL tuning features"
 
 If you run into problems with any of the SQL tuning features of Db2 Developer Extension that aren't addressed in this article, use the information in the following topic to gather diagnostic information: 
 
-[Troubleshooting problems with SQL Tuning Services](https://www.ibm.com/docs/en/db2-for-zos/12?topic=services-troubleshooting)
+[Troubleshooting problems with SQL Tuning Services](https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-troubleshooting)
 
 ## Problems with creating or editing a tuning connection profile
 
