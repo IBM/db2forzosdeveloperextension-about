@@ -4,7 +4,7 @@ title: "JDBC driver errors"
 
 # {{ page.title }}
 
-This article provides potential solutions to common [JDBC driver errors](https://www.ibm.com/docs/en/db2-for-zos/12?topic=jsri-error-codes-issued-by-data-server-driver-jdbc-sqlj) that can occur when connecting to a Db2 for z/OS subsystem.
+This article provides potential solutions to common [JDBC driver errors](https://www.ibm.com/docs/en/db2-for-zos/13?topic=jsri-error-codes-issued-by-data-server-driver-jdbc-sqlj) that can occur when connecting to a Db2 for z/OS subsystem.
 
 ## -4499
 > A communication error occurred during operations on the connection's underlying socket, socket input stream, or socket output stream. Error location: Reply.fill() - insufficient data (-1). **Message: xxxxxxxxxxx** ERRORCODE=-4499, SQLSTATE=08001
