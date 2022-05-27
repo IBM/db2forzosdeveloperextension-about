@@ -10,7 +10,7 @@ For example, many stored procedures contain extremely complex business logic, es
 
 This article uses two example stored procedures to show you how to step through nested stored procedures, set breakpoints, and modify stored procedure variable values at runtime.  
 
-The first example stored procedure is RETURNBESTDEPTINFO, shown in the following figure. This is the caller stored procedure. It will retrieve the list of department names from the WORKDEPT column of the [DSN8C10.EMP](https://www.ibm.com/docs/en/db2-for-zos/12?topic=tables-employee-table-dsn8c10emp) sample table. 
+The first example stored procedure is RETURNBESTDEPTINFO, shown in the following figure. This is the caller stored procedure. It will retrieve the list of department names from the WORKDEPT column of the [DSN8D10.EMP](https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-employee-table-dsn8d10emp) sample table. 
 
 ![RETURNBESTDEPTINFO stored procedure]({{site.baseurl}}/assets/images/debug-nsp-returnbestdeptinfo.png)
 
