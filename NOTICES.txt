@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension 1.3.5
+IBM Db2 for z/OS Developer Extension 1.4
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -25,46 +25,45 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 1.3.5
+Notices and Information for IBM Db2 for z/OS Developer Extension, 1.4
 
 Apache 2.0 License
 
 The Program includes some or all of the following that IBM obtained under the Apache License Version 2.0:
 
-@carbon/colors 10.25.0
-@carbon/feature-flags 0.4.0
-@carbon/icon-helpers 10.17.0
-@carbon/icons-react 10.32.0
-@carbon/import-once 10.6.0
+@carbon/colors 10.12.0
+@carbon/icons-react 10.41.0
 @carbon/layout 10.29.0
-@carbon/telemetry 0.0.0-alpha.6
-@carbon/themes 10.34.0
-@carbon/type 10.28.0
-carbon-icons 7.0.7
+@carbon/themes 10.17.0
+@carbon/type 10.13.0
 carbon-components 10.49.0
-carbon-components-react 7.35.0
-error_prone_annotations 2.0.18
-find-java-home 1.1.0
-gson 2.8.2
-gson 2.7
-guava 22.0.rc1
-hkdf 1.1.0
-j2objc-annotations 1.1
-jackson-core 2.11.0
-jackson-core 2.11.2
-jackson-databind 2.11.0
-jackson-databind 2.11.2
-jffi 1.2.19
-jna 5.6.0
-jna-platform 5.6.0
-jnr-a64asm 1.0.0
-jnr-constants 0.9.12
-jnr-enxio 0.21
-jnr-ffi 2.1.10
-jnr-unixsocket 0.23
-jsr305 1.3.9
-log4j-core 2.17.1
-log4js 6.3.0
+carbon-components-react 7.49.0
+carbon-icons 7.0.7
+error_prone_annotations    2.0.18
+find-java-home1.1.0
+gson    2.7
+gson    2.8.2
+guava    22.0-rc1-android
+hkdf    1.1.0
+j2objc-annotations    1.1
+jackson-annotations    2.11.0
+jackson-annotations   2.13.2
+jackson-core    2.13.2
+jackson-databind    2.13.2
+jffi   1.2.19
+jna    5.6.0
+jna-platform    5.6.0
+jnr-a64asm    1.0.0
+jnr-constants    0.9.12
+jnr-enxio    0.21
+jnr-ffi    2.1.10
+jnr-posix    3.0.50
+jnr-unixsocket    0.23
+jsr305    1.3.9
+Log4j-api     2.17.1
+log4j-core    2.17.1
+log4js 6.4.1
+puppeteer-core 13.4.0
 
 
 
@@ -108,40 +107,18 @@ End or Apache 2.0 License
 **************************************************************
 
 
-BSD 2-Clause License
-
-The Program includes some or all of the following that IBM obtained under the BSD 2-Clause License:
-
-async-listener 0.6.10 Copyright © 2013 – 2017, Forrest L Norvell
-cls-hooked 4.2.2 Copyright © 2013 – 2016, Forrest L Norvell< ogd@aoaioxxysz.net>
-configstore 5.0.1 Copyright (c) Google. All rights reserved.
-continuation-local-storage 3.2.1 Copyright © 2013 – 2016, Forrest L Norvell <ogd@aoaioxxysz.net>
-emitter-listener 1.1.2 Copyright © 2013 – 2016, Forrest L Norvell <ogd@aoaioxxysz.net>
-http-cache-semantics 4.1.0 Copyright 2016-2018 Kornel Lesinski
-shimmer 1.2.1 Copyright © 2013 – 2019, Forrest L. Norvell
-winreg 1.2.4 Copyright (c) 2016, Paul Bottin All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-End of BSD 2-Clause License
-**************************************************************
-
 
 BSD 3-Clause License
 
 The Program includes some or all of the following that IBM obtained under the BSD 3-Clause License:
 
 
-asm 7.1 Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-analysis 7.1 Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-commons 7.1 Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-tree 7.1 Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-util 7.1 Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-java-keyring 1.0.2 Copyright (c) 2012, east301
-source-map 0.5.7 Copyright (c) 2009-2011, Mozilla Foundation and contributors, All rights reserved.
+asm  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
+asm-analysis  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
+asm-commons  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
+asm-tree  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
+asm-util  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
+java-keyring    1.0.2-SNAPSHOT	Copyright (c) 2012, east301
 
 
 
@@ -151,8 +128,10 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-End of BSD-2 Clause
+End of BSD-3 Clause
 *********************************************************
+
+
 
 Eclipse Public License v2.0
 
@@ -162,7 +141,8 @@ jnr-posix 3.0 https://mvnrepository.com/artifact/com.github.jnr/jnr-posix/3.0.51
 org.eclipse.lsp4j 0.7.2 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j/0.7.2
 org.eclipse.lsp4j.generator 0.7.2 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j.generator/0.7.2
 org.eclipse.lsp4j.jsonrpc 0.9.0 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j.jsonrpc/0.9.0
-org.eclipse.lsp4j.jsonrpc 0.7.2 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j.jsonrpc/0.7.2org.eclipse.xtend.lib 2.16.0 https://mvnrepository.com/artifact/org.eclipse.xtend/org.eclipse.xtend.lib/2.16.0
+org.eclipse.lsp4j.jsonrpc 0.7.2 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j.jsonrpc/0.7.2
+org.eclipse.xtend.lib 2.16.0 https://mvnrepository.com/artifact/org.eclipse.xtend/org.eclipse.xtend.lib/2.16.0
 org.eclipse.xtend.lib.macro 2.16.0 https://frontbackend.com/maven/artifact/org.eclipse.xtend/org.eclipse.xtend.lib.macro/2.16.0
 org.eclipse.xtext.xbase.lib 2.16.0 https://mvnrepository.com/artifact/org.eclipse.xtext/org.eclipse.xtext.xbase.lib/2.16.0.M1
 
@@ -176,33 +156,8 @@ The ISC License
 
 The Program includes some or all of the following that IBM obtained under the ISC License:
 
-at-least-node 1.0 Copyright (c) 2020 Ryan Zimmerman <opensrc@ryanzim.com>
 await-notify 1.0.1
-cliui 7.0.4  Copyright (c) 2015, Contributors
-fastq 1.11.0 Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>
-flatted 2.0.2 Copyright © 2018, Andrea Giammarchi, @webReflection
-fs.realpath 1.0.0 Copyright (c) Isaac Z. Schlueter and Contributors
-get-caller-file 2.0.5 ISC License (ISC) Copyright 2018 Stefan Penner
-glob 7.1.6 Copyright (c) Isaac Z. Schlueter and Contributors
-glob-parent 5.1.2 Copyright (c) 2015, 2019 Elan Shanker, 2021 Blaine Bublitz <blaine.bublitz@gmail.com>, Eric Schoffstall <yo@contra.io> and other contributors
-graceful-fs 4.2.6 Copyright (c) Isaac Z. Schlueter, Ben Noordhuis, and Contributors
-graceful-fs 4.2.6 Copyright © Isaac Z. Schlueter, Ben Noordhuis, and Contributors
-inflight 1.0.6 Copyright (c) Isaac Z. Schlueter
-inherits 2.0.4 Copyright (c) Isaac Z. Schlueter
-inherits 2.0.3 Copyright (c) Isaac Z. Schlueter
-lru-cache 6.0.0 Copyright (c) Isaac Z. Schlueter and Contributors
-minimatch 3.0.4 Copyright (c) Isaac Z. Schlueter and Contributors
-once 1.4.0 Copyright (c) Isaac Z. Schlueter and Contributors
-semver 5.7.1 Copyright © Isaac Z. Schlueter and Contributors
-semver 6.3.0 Copyright © Isaac Z. Schlueter and Contributors
-semver 7.3.5 Copyright © Isaac Z. Schlueter and Contributors
-signal-exit 3.0.3 Copyright (c) 2015, Contributors
-which 1.0.9 Copyright (c) Isaac Z. Schlueter and Contributors
-wrappy 1.0.2 Copyright (c) Isaac Z. Schlueter and Contributors
-write-file-atomic 3.0.3 Copyright (c) 2015, Rebecca Turner
-y18n 5.0.8 Copyright (c) 2015, Contributors
-yallist 4.0.0 Copyright (c) Isaac Z. Schlueter and Contributors
-yargs-parser 20.2.7 Copyright (c) 2016, Contributors
+glob 7.1.6	Copyright (c) 2009-2022 Isaac Z. Schlueter and Contributors
 
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
@@ -219,208 +174,34 @@ MIT License
 
 The Program includes some or all of the following that IBM obtained under the MIT License:
 
+animal-sniffer-annotations  1.14	Copyright (c) 2008 Kohsuke Kawaguchi and codehaus.org.
+async 3.2.3	Copyright (c) 2010-2018 Caolan McMahon
+axios 0.25.0	Copyright (c) 2014-present Matt Zabriskie
+fast-xml-parser 3.19.0	Copyright (c) 2017 Amit Kumar Gupta
+html-react-parser 1.4.8	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
+java-utils     1.0.6	Copyright (c) 2017 David M.
+jnr-x86asm    1.0.2	Copyright (C) 2010 Wayne Meissner, Copyright (c) 2008-2009, Petr Kobalicek <kobalicek.petr@gmail.com>
+json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
+karma-chrome-launcher 3.1.0	Copyright (C) 2011-2013 Google, Inc.
+path 0.12.7	Copyright Joyent, Inc. and other Node contributors. All rights reserved.
+react 16.13.1	Copyright (c) Facebook, Inc. and its affiliates.
+react-autosuggest 10.1.0	Copyright © 2017 Misha Moroshko
+react-dom 16.13.1	Copyright (c) Facebook, Inc. and its affiliates.
+react-scripts 5.0.0	Copyright (c) 2013-present, Facebook, Inc.
+secret-service    1.0.0	Copyright (c) 2015
+slf4j-api  1.7.30	Copyright (c) 2004-2011 QOS.ch
+slf4j-simple  1.7.30    Copyright (c) 2004-2017 QOS.ch
+uuid 8.3.2	Copyright (c) 2010-2020 Robert Kieffer and other contributors
+vscode-debugadapter  1.51.0	Copyright (c) Microsoft Corporation
+vscode-debugprotocol 1.41.0	Copyright (c) Microsoft Corporation
+vscode-extension-telemetry  0.1.2	Copyright (c) Microsoft Corporation
+vscode-jsonrpc 5.0.1	Copyright (c) Microsoft Corporation
+vscode-languageclient 6.1.3	Copyright (c) Microsoft Corporation
+vscode-languageserver 6.1.1	Copyright (c) Microsoft Corporation
+vscode-languageserver-textdocument 1.0.1	Copyright (c) Microsoft Corporation
+vscode-nls 5.0.0	Copyright (c) Microsoft Corporation
 
 
-@babel/code-frame 7.12.13 Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/generator	7.14.2 Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/helper-function-name 7.14.2 Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/helper-get-function-arity	7.12.13	Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/helper-split-export-declaration 7.12.13 Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/helper-validator-identifier 7.12.11 Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/highlight	7.14.0	Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/parser	7.14.2	Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/runtime 7.14.0    Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/template	7.12.13	Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/traverse	7.14.2	Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@babel/types	7.14.2	Copyright (c) 2014-present Sebastian McKenzie and other contributors
-@dabh/diagnostics 2.0.2	Copyright (c) 2015 Arnout Kazemier, Martijn Swaagman, the Contributors.
-@nodelib/fs.scandir 2.1.4	Copyright (c) Denis Malinochkin
-@nodelib/fs.stat	2.0.4	Copyright (c) Denis Malinochkin
-@nodelib/fs.walk	1.2.6	Copyright (c) Denis Malinochkin
-@sindresorhus/is	4.0.1	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-@szmarczak/http-timer 4.0.5 Copyright (c) 2018 Szymon Marczak
-@types/cacheable-request 6.0.1 Copyrights are respective of each contributor listed at the beginning of each definition file.
-@types/http-cache-semantics 4.0.0	Copyrights are respective of each contributor listed at the beginning of each definition file.
-@types/keyv	3.1.1	Copyrights are respective of each contributor listed at the beginning of each definition file.
-@types/node	15.3.0	Copyrights are respective of each contributor listed at the beginning of each definition file.
-@types/responselike	1.0.0	Copyrights are respective of each contributor listed at the beginning of each definition file.
-animal-sniffer-annotations 1.14 Copyright (c) 2008 Kohsuke Kawaguchi and codehaus.org.
-ansi-regex	5.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-ansi-styles	3.2.1	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-ansi-styles	4.3.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-applicationinsights 1.4.0 Copyright © Microsoft Corporation
-async 3.2.0 Copyright (c) 2010-2018 Caolan McMahon
-async-hook-jl 1.7.6 Copyright © 2015 Andreas Madsen
-axios 0.21.1 Copyright (c) 2014-present Matt Zabriskie
-balanced-match 1.0.0 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
-brace-expansion 1.1.11 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
-braces	3.0.2	Copyright (c) 2014-2018, Jon Schlinkert.
-cacheable-lookup	5.0.4	Copyright (c) 2019 Szymon Marczak
-cacheable-request	7.0.1	Copyright (c) 2017 Luke Childs
-chalk	2.4.2	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-ci-info	2.0.0	Copyright (c) 2016-2021 Thomas Watson Steen
-classnames 2.3.1 Copyright (c) 2018 Jed Watson
-clone-response	1.0.2	Copyright (c) 2017 Luke Childs
-color 3.1.3 Copyright (c) 2012 Heather Arthur
-color-convert 1.9.3 Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>Copyright (c) 2016-2021 Josh Junon <josh@junon.me>.
-color-convert 2.0.1 Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>Copyright (c) 2016-2021 Josh Junon <josh@junon.me>.
-color-name	1.1.3	Copyright (c) 2015 Dmitry Ivanov
-color-name	1.1.4	Copyright (c) 2015 Dmitry Ivanov
-color-string 1.5.5 Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>
-colors	1.4.0	"Original Library  - Copyright (c) Marak Squires. Additional Functionality - Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)"
-colorspace	1.1.2	Copyright (c) 2015 Arnout Kazemier, Martijn Swaagman, the Contributors.
-commander	6.2.1	Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
-compute-scroll-into-view 1.0.17 Copyright (c) 2018 Cody Olsen
-concat-map 0.0.1 n/a
-copy-to-clipboard 3.3.1 Copyright (c) 2017 sudodoki <smd.deluzion@gmail.com>
-core-util-is	1.0.2	Copyright Node.js contributors. All rights reserved.
-crypto-random-string	2.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-date-format 3.0.0 Copyright © Gareth Jones
-date-format 2.1.0 Copyright © 2013 Gareth Jones
-debug 4.3.1 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
-decompress-response	6.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-defer-to-connect	2.0.1	Copyright (c) 2018 Szymon Marczak
-diagnostic-channel 0.2.0 Copyright © Microsoft Corporation
-diagnostic-channel-publishers 0.3.5 Copyright © Microsoft Corporation
-dot-prop	5.3.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-downshift 5.2.1 Copyright (c) 2017 PayPal
-emoji-regex	8.0.0	Copyright Mathias Bynens <https://mathiasbynens.be/>
-enabled	2.0.0	Copyright (c) 2015 Arnout Kazemier, Martijn Swaagman, the Contributors.
-end-of-stream	1.4.4	Copyright (c) 2014 Mathias Buus
-es6-promise	4.2.8	Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors
-escalade	3.1.1	Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
-escape-string-regexp	1.0.5	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-fast-glob	3.2.5	Copyright (c) Denis Malinochkin
-fast-safe-stringify	2.0.7	Copyright (c) 2018 David Mark Clements, Matteo Collina & Ruben Bridgewater
-fast-xml-parser	3.19.0	opyright (c) 2017 Amit Kumar Gupta
-fecha	4.2.1	Copyright (c) 2015 Taylor Hakes
-fill-range	7.0.1	Copyright (c) 2014-present, Jon Schlinkert.
-flatpickr 4.6.9 Copyright (c) 2017 Gregory Petrosyan
-fn.name	1.1.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-follow-redirects 1.14.1. Copyright 2014–present Olivier Lalonde <olalonde@gmail.com>, James Talmage <james@talmage.io>, Ruben Verborgh
-fs-extra 8.1.0 Copyright © 2011 – 2017 JP Richardson
-fs-extra 9.1.0 Copyright © 2011 – 2017 JP Richardson
-get-stream	5.2.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-globals	11.12.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-got	11.8.2	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-has-flag	3.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-http2-wrapper	1.0.3	Copyright (c) 2018 Szymon Marczak
-imurmurhash	0.1.4	Copyright (c) 2013 Gary Court, Jens Taylor
-invariant 2.2.4 Copyright (c) 2013-present, Facebook, Inc.
-is-arrayish 0.3.2 Copyright (c) 2015 JD Ballard
-is-extglob	2.1.1	Copyright (c) 2014-2016, Jon Schlinkert
-is-fullwidth-code-point	3.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-is-glob	4.0.1	Copyright (c) 2014-2017, Jon Schlinkert.
-is-number	7.0.0	Copyright (c) 2014-2017, Jon Schlinkert.
-is-obj	2.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-is-stream	2.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-is-typedarray	1.0.0
-isarray	1.0.0	Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
-java-utils	1.0.6	Copyright (c) 2017 David M.
-jnr-x86asm 1.0.2 Copyright (C) 2010 Wayne Meissner, Copyright (c) 2008-2009, Petr Kobalicek <kobalicek.petr@gmail.com>
-js-tokens 4.0.0 Copyright (c) 2014, 2015, 2016, 2017, 2018, 2019, 2020 Simon Lydell
-jsesc	2.5.2	Copyright Mathias Bynens <https://mathiasbynens.be/>
-json-buffer	3.0.1	Copyright (c) 2013 Dominic Tarr
-json2csv 5.0.6 Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
-jsonfile 4.0.0 Copyright © 2012 – 2015, JP Richardson jprichardson@gmail.com
-jsonfile 6.1.0 Copyright © 2012 – 2015, JP Richardson jprichardson@gmail.com
-jsonparse 1.3.1 Copyright (c) 2011-2012 Tim Caswell
-keyv	4.0.3	Copyright (c) 2017 Luke Childs
-kuler	2.0.0	Copyright 2014 Arnout Kazemier
-lodash.debounce 4.0.8 Copyright JS Foundation and other contributors <https://js.foundation/>
-lodash.findlast 4.6.0 Copyright JS Foundation and other contributors <https://js.foundation/>
-lodash.get 4.4.2 Copyright JS Foundation and other contributors <https://js.foundation/>
-lodash.isequal 4.5.0 Copyright JS Foundation and other contributors <https://js.foundation/>
-lodash.omit 4.5.0 Copyright JS Foundation and other contributors <https://js.foundation/>
-lodash.throttle 4.1.1 Copyright JS Foundation and other contributors <https://js.foundation/>
-logform	2.2.0	Copyright (c) 2017 Charlie Robbins & the Contributors.
-loose-envify 1.4.0 Copyright (c) 2015 Andres Suarez <zertosh@gmail.com>
-lowercase-keys	2.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-make-dir	3.1.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-merge2	1.4.1	Copyright (c) 2014-2020 Teambition
-micromatch	4.0.4	Copyright (c) 2014-present, Jon Schlinkert.
-mimic-response 3.1.0 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-mimic-response 1.0.1 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-minimist 1.2.5 n/a
-mkdirp 0.5.5. Copyright James Halliday (mail@substack.net) and Isaac Z. Schlueter (i@izs.me)
-ms 2.1.2 Copyright © 2016 Zeit, Inc.
-normalize-url	4.5.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-object-assign 4.1.1 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-one-time	1.0.0	Copyright (c) 2015 Unshift.io, Arnout Kazemier, the Contributors.
-p-cancelable	2.1.1	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-path 0.12.7  Copyright Joyent, Inc. and other Node contributors. All rights reserved.
-path-is-absolute 1.0.1 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-picomatch 2.2.3.  Copyright (c) 2017-present, Jon Schlinkert.
-process 0.11.10 Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>
-process-nextick-args	2.0.1	Copyright (c) 2015 Calvin Metcalf
-prop-types 15.7.2 Copyright (c) 2018 Terkel Gjervig Nielsen
-pump	3.0.0	Copyright (c) 2014 Mathias Buus
-queue-microtask	1.2.3	Copyright (c) Feross Aboukhadijeh
-quick-lru	5.1.1	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-react 16.14 Copyright (c) Facebook, Inc. and its affiliates.
-react-autosuggest	10.1.0	Copyright © 2017 Misha Moroshko
-react-dom 16.14 Copyright (c) Facebook, Inc. and its affiliates.
-react-is 16.13.1 Copyright (c) Facebook, Inc. and its affiliates.
-react-scripts 5.0.0 Copyright (c) 2013-present, Facebook, Inc.
-react-themeable	1.1.0	Copyright © 2021 Mark Dalgleish
-readable-stream 3.6.0 Copyright Node.js contributors. All rights reserved.
-readable-stream 2.3.7 Copyright Node.js contributors. All rights reserved.
-regenerator-runtime 0.13.7 Copyright (c) 2014-present, Facebook, Inc.
-require-directory	2.1.1	Copyright (c) 2011 Troy Goode <troygoode@gmail.com>
-resize-observer-polyfill 1.5.1 Copyright (c) 2016 Denis Rul
-resolve-alpn	1.1.2	Copyright (c) 2018 Szymon Marczak
-responselike	2.0.0	Copyright (c) 2017 Luke Childs
-reusify	1.0.4	Copyright (c) 2015 Matteo Collina
-rfdc 1.1.4 Copyright © 2019 David Mark Clements David.mark.clements@gmail.com
-run-parallel	1.2.0	Copyright (c) Feross Aboukhadijeh
-safe-buffer 5.2.1  Copyright (c) Feross Aboukhadijeh
-safe-buffer 5.1.2  Copyright (c) Feross Aboukhadijeh
-scheduler 0.19.1 Copyright (c) Facebook, Inc. and its affiliates.
-secret-service 1.0.0 n/a
-section-iterator	2.0.0	Copyright © 2016 Misha Moroshko
-shallow-equal	1.2.1	Copyright © 2016 Misha Moroshko
-simple-swizzle 0.2.2 Copyright (c) Feross Aboukhadijeh
-slf4j-api 1.7.30 Copyright (c) 2004-2011 QOS.ch
-sql-formatter	4.0.2	"Copyright (c) 2016-2020 ZeroTurnaround LLC
-Copyright (c) 2020-present George Leslie-Waksman and other contributors"
-stack-chain 1.3.7 Copyright (c) 2012 Andreas Madsen
-stack-trace	0.0.10	Copyright (c) 2011 Felix Geisendörfer (felix@debuggable.com)
-streamroller 2.2.4 Copyright © 2013 Gareth Jones
-string_decoder	1.3.0	Copyright Node.js contributors. All rights reserved.
-string_decoder	1.1.1	Copyright Node.js contributors. All rights reserved.
-string-width	4.2.2	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-strip-ansi	6.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-supports-color	5.5.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-text-hex	1.0.0	Copyright (c) 2014-2015 Arnout Kazemier <opensource@3rd-Eden.com>
-toggle-selection 1.0.6   Copyright (c) 2017 sudodoki <smd.deluzion@gmail.com>
-to-fast-properties	2.0.0	"Copyright (c) Petka Antonov, Benjamin Gruenbaum, John-David Dalton, Sindre Sorhus"
-to-regex-range	5.0.1	Copyright (c) 2015-present, Jon Schlinkert.
-triple-beam	1.3.0	Copyright (c) 2017 winstonjs
-typedarray-to-buffer	3.1.5	Copyright (c) Feross Aboukhadijeh
-unique-string	2.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-universalify 0.1.2  Copyright © 2017, Ryan Zimmerman opensrc@ryanzim.com
-universalify 2.0.0  Copyright © 2017, Ryan Zimmerman opensrc@ryanzim.com
-use-resize-observer 6.1.0 Copyright 2018 Viktor Hubert <rpgmorpheus@gmail.com>
-util 0.10.4 Copyright Joyent, Inc. and other Node contributors. All rights reserved.
-util-deprecate	1.0.2	Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>
-uuid 8.3.2   Copyright (c) 2010-2020 Robert Kieffer and other contributors
-vscode-debugadapter 1.41.0 Copyright (c) Microsoft Corporation
-vscode-debugprotocol 1.41.0 Copyright (c) Microsoft Corporation
-vscode-debugprotocol 1.45.0 Copyright (c) Microsoft Corporation
-vscode-extension-telemetry 0.1.2 Copyright © Microsoft Corporation
-vscode-jsonrpc 5.0.1 Copyright (c) Microsoft Corporation
-vscode-languageclient 6.1.4 Copyright (c) Microsoft Corporation
-vscode-languageserver 6.1.1 Copyright (c) Microsoft Corporation
-vscode-languageserver-protocol 3.15.3 Copyright (c) Microsoft Corporation
-vscode-languageserver-textdocument 1.0.1 Copyright (c) Microsoft Corporation
-vscode-languageserver-types 3.15.1 Copyright (c) Microsoft Corporation
-vscode-nls 5.0.0 Copyright (c) Microsoft Corporation
-window-or-global 1.0.1 Copyright (c) Purpose Industries
-winston	3.3.3 Copyright (c) 2010 Charlie Robbins
-winston-transport 4.4.0	Copyright (c) 2015 Charlie Robbins & the contributors.
-wrap-ansi 7.0.0	Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-xdg-basedir 4.0.0 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-yargs 16.2.0 Copyright 2010 James Halliday (mail@substack.net); Modified work Copyright 2014 Contributors (ben@npmjs.com)
 
 
 The MIT License (MIT)
@@ -469,6 +250,7 @@ PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
 End of Python Software Foundation License 2.0
 
 
-L/N:  L-DCLN-CB7P99
-D/N:  L-DCLN-CB7P99
-P/N:  L-DCLN-CB7P99
+
+L/N:  L-DCLN-CCXTSN
+D/N:  L-DCLN-CCXTSN
+P/N:  L-DCLN-CCXTSN

@@ -8,7 +8,7 @@ Before downloading this extension, review the [Db2 Developer Extension License A
 
 ## Overview
 
-This extension provides language support for the Structured Query Language (SQL) syntax that is used to define, manipulate, and control data in IBM Db2 for z/OS databases. It includes basic productivity features that make it easier to write SQL, such as:
+This extension provides language support for the Structured Query Language (SQL) syntax that is used to define, manipulate, and control data in IBM Db2 for z/OS databases, including the latest SQL enhancements that were introduced with Db2 13 for z/OS. It includes basic productivity features that make it easier to write SQL, such as:
 
 -   SQL formatting
 -   Syntax checking and highlighting
@@ -52,6 +52,7 @@ See the [Key features](#key-features) section for more details and examples.
 -   [Privacy notice for feedback](#privacy-notice-for-feedback)
 -   [Prerequisites for installing Db2 Developer Extension](#prerequisites-for-installing-db2-developer-extension)
 -   [Configuring Java](#configuring-java)
+-   [Setting the JDBC license and JDBC driver files](#setting-the-jdbc-license-and-jdbc-driver-files)
 -   [Specifying port numbers](#specifying-port-numbers)
 -   [Key features](#key-features)
 -   [Additional information](#additional-information)
@@ -86,19 +87,6 @@ Each of these events is logged with the following information:
 
 Installing Db2 Developer Extension requires the following software:
 
--   One of the following IBM Data Server Driver for JDBC and SQLJ license files. Db2 Developer Extension requires an appropriately licensed JDBC driver. Using a JDBC driver from another tool or product not listed below is not permitted.
-
-    -   **The Db2 Connect Unlimited Edition for System z® server license `V11.1 M4 FP4 iFix 1 or later`**
-
-    This license must be activated on the Db2 for z/OS subsystems that you want to connect to. For more information, see the following topic: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.licensing.doc/doc/t0057375.html
-
-    -   **The IBM Data Server Driver for JDBC and SQLJ client license file `4.25.1301 or later`**
-
-    For information about locating and and enabling the client license file, see the following topic:
-    https://www.ibm.com/support/pages/db2-jdbc-driver-not-licensed-connectivity-file-db2jcclicensecisuzjar-errorcode-4472-sqlstate42968
-
-    When you specify the location of the `db2jcc_license_cisuz.jar` license file in your VS Code settings (`db2forzosdeveloperextension.db2sqlservice.dependencies`), you must provide the full path.
-
 -   One of the following 64-bit Java SDKs:
 
     -   [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 11 of Oracle Java
@@ -107,6 +95,19 @@ Installing Db2 Developer Extension requires the following software:
     Alternatively, if you are not developing Java applications, you can install a [supported JRE](https://www.oracle.com/java/technologies/javase-jre8-downloads.html).
 
     See [Configuring Java](#configuring-java) for information about setting the various options that control how Db2 Developer Extension uses Java.
+
+-   One of the following IBM Data Server Driver for JDBC and SQLJ license files. Db2 Developer Extension requires an appropriately licensed JDBC driver. Using a JDBC driver from another tool or product not listed below is not permitted.
+
+    -   **The Db2 Connect Unlimited Edition for System z® server license `V11.1 M4 FP4 iFix 1 or later`**
+
+        This license must be activated on the Db2 for z/OS subsystems that you want to connect to. For more information, see the following topic: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.licensing.doc/doc/t0057375.html
+
+    -   **The IBM Data Server Driver for JDBC and SQLJ client license file `4.25.1301 or later`**
+
+        For information about locating and and enabling the client license file, see the following topic:
+        https://www.ibm.com/docs/en/db2/11.5?topic=errors-errorcode-4472
+
+    For instructions for specifying the license file in your VS Code settings, see [Setting the JDBC license and JDBC driver files](#setting-the-jdbc-license-and-jdbc-driver-files).
 
 -   libsecret on Linux
 
@@ -120,7 +121,7 @@ Installing Db2 Developer Extension requires the following software:
 
     -   [Db2 Accessories Suite 4.2 overview](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/5/649/ENUS5697-Q05/index.html)
     -   [Database Services Expansion Pack program directory](http://publibfp.dhe.ibm.com/epubs/pdf/i1359290.pdf)
-    -   [SQL Tuning Services installation and configuration documentation](https://www.ibm.com/docs/en/db2-for-zos/12?topic=services-installing-configuring-sql-tuning)
+    -   [SQL Tuning Services installation and configuration documentation](https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-installing-configuring-sql-tuning)
     -   [APAR PH42944](https://www.ibm.com/support/pages/apar/PH42944)
 
 ## Configuring Java
@@ -147,6 +148,20 @@ If a Java runtime is not found in any of these locations, an error message is is
     ```
     "db2forzosdeveloperextension.java.home": "C:\Program Files\Java\jdk1.8.0_181"
     ```
+
+## Setting the JDBC license and JDBC driver files 
+
+You need to specify the JDBC license file `db2jcc_license_cisuz.jar` to interact with Db2 for z/OS. Optionally, to use your own JDBC driver version, you can provide a JDBC driver file.
+
+1. Open your VS Code settings and search for the `db2forzosdeveloperextension.db2sqlservice.dependencies` setting.
+2. Specify the JDBC license file, `db2jcc_license_cisuz.jar`. You must provide the full path.
+3. Optionally, specify the full path of your JDBC driver file. If you're using VS Code on Mac, separate the JDBC driver file from the JDBC license file with a colon (:). If you're using VS Code on Windows, separate them with a semicolon (;).
+
+    The following example shows specifications for both the JDBC license file and an optional JDBC driver file on Mac:
+
+    `/Users/myname/jccjars/db2jcc_license_cisuz.jar:/Users/myname/jccjars/db2jcc4.jar`
+
+4. Restart VS Code for the changes to take effect.
 
 ## Specifying port numbers
 
