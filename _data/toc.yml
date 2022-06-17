@@ -78,3 +78,5 @@
           url: "docs/troubleshooting/ssl-errors"
         - title: "SQL Tuning Services problems"
           url: "docs/troubleshooting/sql-tuning-services"
+        - title: "Formatting errors when using the backslash as the escape character"
+          url: "docs/troubleshooting/formatting-errors-when-using-the-backslash-as-the-escape-character"
