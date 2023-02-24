@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension 1.4
+IBM Db2 for z/OS Developer Extension
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -25,18 +25,18 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 1.4
+Notices and Information for IBM Db2 for z/OS Developer Extension, 2.1
 
 Apache 2.0 License
 
 The Program includes some or all of the following that IBM obtained under the Apache License Version 2.0:
 
 @carbon/colors 10.12.0
-@carbon/icons-react 10.41.0
+@carbon/icons-react 10.49.0
 @carbon/layout 10.29.0
 @carbon/themes 10.17.0
 @carbon/type 10.13.0
-carbon-components 10.49.0
+carbon-components 10.56.0
 carbon-components-react 7.49.0
 carbon-icons 7.0.7
 error_prone_annotations    2.0.18
@@ -44,23 +44,14 @@ find-java-home1.1.0
 gson    2.7
 gson    2.8.2
 guava    22.0-rc1-android
-hkdf    1.1.0
 j2objc-annotations    1.1
 jackson-annotations    2.11.0
 jackson-annotations   2.13.2
 jackson-core    2.13.2
-jackson-databind    2.13.2
-jffi   1.2.19
-jna    5.6.0
-jna-platform    5.6.0
-jnr-a64asm    1.0.0
-jnr-constants    0.9.12
-jnr-enxio    0.21
-jnr-ffi    2.1.10
-jnr-posix    3.0.50
-jnr-unixsocket    0.23
+Jackson-core    2.13.4
+jackson-databind    2.13.4
 jsr305    1.3.9
-Log4j-api     2.17.1
+log4j-api     2.17.1
 log4j-core    2.17.1
 log4js 6.4.1
 puppeteer-core 13.4.0
@@ -108,36 +99,11 @@ End or Apache 2.0 License
 
 
 
-BSD 3-Clause License
-
-The Program includes some or all of the following that IBM obtained under the BSD 3-Clause License:
-
-
-asm  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-analysis  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-commons  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-tree  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-asm-util  7.1	Copyright (c) 2000-2011 INRIA, France Telecom, All rights reserved.
-java-keyring    1.0.2-SNAPSHOT	Copyright (c) 2012, east301
-
-
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-End of BSD-3 Clause
-*********************************************************
-
-
-
 Eclipse Public License v2.0
 
 The Program includes some or all of the following that IBM obtained under the Eclipse Public License v2.0 (source code available via the indicated URL):"
 
-jnr-posix 3.0 https://mvnrepository.com/artifact/com.github.jnr/jnr-posix/3.0.51
+
 org.eclipse.lsp4j 0.7.2 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j/0.7.2
 org.eclipse.lsp4j.generator 0.7.2 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j.generator/0.7.2
 org.eclipse.lsp4j.jsonrpc 0.9.0 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j.jsonrpc/0.9.0
@@ -157,7 +123,6 @@ The ISC License
 The Program includes some or all of the following that IBM obtained under the ISC License:
 
 await-notify 1.0.1
-glob 7.1.6	Copyright (c) 2009-2022 Isaac Z. Schlueter and Contributors
 
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
@@ -179,16 +144,12 @@ async 3.2.3	Copyright (c) 2010-2018 Caolan McMahon
 axios 0.25.0	Copyright (c) 2014-present Matt Zabriskie
 fast-xml-parser 3.19.0	Copyright (c) 2017 Amit Kumar Gupta
 html-react-parser 1.4.8	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
-java-utils     1.0.6	Copyright (c) 2017 David M.
-jnr-x86asm    1.0.2	Copyright (C) 2010 Wayne Meissner, Copyright (c) 2008-2009, Petr Kobalicek <kobalicek.petr@gmail.com>
 json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
 karma-chrome-launcher 3.1.0	Copyright (C) 2011-2013 Google, Inc.
 path 0.12.7	Copyright Joyent, Inc. and other Node contributors. All rights reserved.
 react 16.13.1	Copyright (c) Facebook, Inc. and its affiliates.
 react-autosuggest 10.1.0	Copyright © 2017 Misha Moroshko
 react-dom 16.13.1	Copyright (c) Facebook, Inc. and its affiliates.
-react-scripts 5.0.0	Copyright (c) 2013-present, Facebook, Inc.
-secret-service    1.0.0	Copyright (c) 2015
 slf4j-api  1.7.30	Copyright (c) 2004-2011 QOS.ch
 slf4j-simple  1.7.30    Copyright (c) 2004-2017 QOS.ch
 uuid 8.3.2	Copyright (c) 2010-2020 Robert Kieffer and other contributors
@@ -251,6 +212,6 @@ End of Python Software Foundation License 2.0
 
 
 
-L/N:  L-DCLN-CCXTSN
-D/N:  L-DCLN-CCXTSN
-P/N:  L-DCLN-CCXTSN
+L/N: L-JQMT-FG9GJW
+D/N: L-JQMT-FG9GJW
+P/N: L-JQMT-FG9GJW
