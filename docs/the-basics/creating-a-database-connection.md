@@ -6,7 +6,7 @@ title: "Creating a database connection"
 
 Before you can run your SQL, you need to connect to the Db2 for z/OS subsystem that contains the database that you want to work with. You can use Db2 Developer Extension's integrated database connection capability to add a connection.
 
-From the **CONNECTIONS** view, click the plus sign (**+**) to the right of the **Db2 for z/OS connections** menu item to open the **Add Db2 Connection** dialog.
+From the **DB2 for Z/OS CONNECTIONS** view, click the plus sign (**+**) to open the **Add Db2 Connection** dialog.
 
 ![Adding a database connection]({{site.baseurl}}/assets/images/db2-connection-add-connection.png)
 
@@ -18,7 +18,7 @@ From the **CONNECTIONS** view, click the plus sign (**+**) to the right of the *
 
 - Use the **Tuning** tab to specify a SQL Tuning Services server and to associate a tuning connection profile with a Db2 connection. See [Setting up a basic SQL tuning environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment.html) for more information.
 
-When you're done, click **Finish**. If your database connection was created successfully, it'll be added to the **CONNECTIONS** menu in the side bar under the **Db2 for z/OS connections** entry. 
+When you're done, click **Finish**. If your database connection was created successfully, it'll be added to the **DB2 FOR Z/OS CONNECTIONS**  view. 
 
 If your database connection fails to establish a connection, open the **Tracing** tab, enable tracing, and try to connect again. Then, check the logs for more information about why the connection failed to connect.
 

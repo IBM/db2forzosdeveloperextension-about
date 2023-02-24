@@ -1,5 +1,5 @@
 ---
-title: "Deploying, running,and debugging stored procedures"
+title: "Deploying, running, and debugging stored procedures"
 ---
 
 # {{ page.title }}
@@ -161,7 +161,7 @@ Click the **Run and Debug** icon in the **Activity Bar** (![Run and Debug icon](
 
 - The **Breakpoints** section keeps track of the breakpoints set throughout the code module.
 
-For more information about debugging your code in Visual Studio Code, see https://code.visualstudio.com/docs/editor/debugging.
+For more information about debugging your code in Visual Studio Code, see [https://code.visualstudio.com/docs/editor/debugging](https://code.visualstudio.com/docs/editor/debugging).
 
 ### Setting conditional hit-count breakpoints
 

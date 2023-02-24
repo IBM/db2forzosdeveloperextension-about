@@ -6,18 +6,18 @@ title: "Setting up a basic SQL tuning environment"
 
 This article describes the minimum required steps for setting up an SQL Tuning Services environment in Db2 for z/OS Developer Extension. Additional information about optional configuration settings and features are described in [Advanced options for setting up an SQL tuning environment]({{site.baseurl}}/docs/tuning-sql-queries/advanced-tuning-environment-options.html).
 
-**Important:** The SQL tuning features of Db2 Developer Extension require the [Database Services Expansion Pack](http://publibfp.dhe.ibm.com/epubs/pdf/i1359290.pdf) component of Db2 Accessories Suite 4.2. Make sure that this component is installed on your system before you start to set up your SQL tuning environment.
+**Important:** The SQL tuning features of Db2 Developer Extension require additional software. See [Software requirements for using the SQL tuning features]({{site.baseurl}}/docs/tuning-sql-queries/sql-tuning-requirements.html) for details. Make sure that one of the SQL tuning options is installed on your system before you start to set up your SQL tuning environment.
 
 ## Adding an SQL Tuning Services server
 The first step in setting up an SQL tuning environment is adding an SQL Tuning Services server.
 
-1. In the **CONNECTIONS** view, click the plus sign (**+**) to the right of the **SQL Tuning Services servers** menu item to open the **Add SQL Tuning Services Server** dialog.
+1. In the **SQL TUNING SERVICES SERVERS** view, click the plus sign (**+**) to open the **Add SQL Tuning Services Server** dialog.
 
 2. Specify the hostname or IP address and port of the system where the SQL Tuning Services server is installed and a valid user ID and password for connecting to that server.
 
 3. Click **Finish**. 
 
-    The server you just created is displayed in the **SQL Tuning Services servers** section of the **CONNECTIONS** view.
+    The server you just created is displayed in the **SQL TUNING SERVICES SERVERS** view.
 
     ![Adding an SQL Tuning Services server]({{site.baseurl}}/assets/images/tuning-add-server.gif)
 
@@ -34,4 +34,4 @@ The following steps assume that a tuning connection profile has already been cre
 
     ![Associating a tuning connection profile]({{site.baseurl}}/assets/images/tuning-associate-profile.png)
 
-Now you can start using the [Visual Explain]({{site.baseurl}}/docs/tuning-sql-queries/viewing-a-graphical-explanation-of-access-plans.html), [Statistics Advisor]({{site.baseurl}}/docs/tuning-sql-queries/generating-statistics-to-improve-query-performance.html), and [Capture Query Environment]({{site.baseurl}}/docs/tuning-sql-queries/capturing-your-query-environment.html) tuning features of Db2 Developer Extension.
+Now you can start using the SQL tuning features that are available on your system.

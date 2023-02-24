@@ -6,7 +6,7 @@ title: "Sharing and revoking privileges to tuning connection profiles"
 
 The same tuning connection profile can be used by multiple users by explicitly sharing the privileges for that profile with them. When access to that tuning connection profile is no longer needed by a particular user or set of users, privileges can easily be revoked.
 
-1. To share a tuning connection profile, from the **SQL Tuning Services servers** section of the **CONNECTIONS** menu, click the **Show Tuning Connection Profiles** icon to display a list of available profiles.
+1. To share a tuning connection profile, from the **SQL TUNING SERVICES SERVERS** view, right-click an SQL Tuning Services server and click **Show Tuning Connection Profiles** to display a list of available profiles.
 
 2. Locate the profile that you want to share, click the three vertical dots at the end of that profile, and select **Share privileges**. 
 

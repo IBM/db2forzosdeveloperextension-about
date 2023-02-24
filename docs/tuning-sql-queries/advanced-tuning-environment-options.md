@@ -9,7 +9,7 @@ Use the instructions in this article if you need to create a new tuning connecti
 ## Creating a tuning connection profile
 If you haven't already created a tuning connection profile, you need to create one now. A tuning connection profile is required to perform tuning actions. 
 
-1. From the **SQL Tuning Services servers** section of the **CONNECTIONS** view, right-click an SQL Tuning Server and select **Show Tuning Connection Profiles**. The **Tuning Connection Profiles** window opens for the server you selected.
+1. From the **SQL TUNING SERVICES SERVERS** view, right-click an SQL Tuning Services server and click **Show Tuning Connection Profiles**. The **Tuning Connection Profiles** window opens for the server you selected.
 
 2. Click the blue plus sign on the right side of the dialog. The **Create a tuning profile** window opens.
 
@@ -25,7 +25,7 @@ If you haven't already created a tuning connection profile, you need to create o
 
 ## Creating EXPLAIN tables
 
-Db2 uses [EXPLAIN tables](https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-explain) to store information about SQL statements, access paths, and other elements that can affect SQL performance. The tuning connection profile needs its own set of EXPLAIN tables
+Db2 uses [EXPLAIN tables](https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-explain) to store information about SQL statements, access paths, and other elements that can affect SQL performance. The tuning connection profile needs its own set of EXPLAIN tables.
 
 1. Click three vertical dots at the end of the tuning connection profile you just created, and select **Create EXPLAIN tables**. The **Create EXPLAIN tables** window opens.
 

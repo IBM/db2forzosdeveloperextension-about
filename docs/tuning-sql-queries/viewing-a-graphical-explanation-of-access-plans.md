@@ -26,6 +26,6 @@ You can use the Visual Explain feature of Db2 Developer Extension to generate a 
 
     ![Running Visual Explain]({{site.baseurl}}/assets/images/tuning-visual-explain.gif)
 
-   You can also open the diagram in a new browser window or tab by clicking the **Open diagram in a new window** icon (![Open in new window icon]({{site.baseurl}}/assets/images/tuning-open-in-new-window-icon.png)).
+   You can also open the diagram in a new browser window or tab by clicking the **Open in Browser** icon (![Open in new window icon]({{site.baseurl}}/assets/images/tuning-open-in-new-window-icon.png)) or by right-clicking the entry and selecting **Open in Browser**.
 
     

@@ -3,12 +3,14 @@
     - title: The basics
       url: "docs/the-basics"
       children:
+        - title: "What's new in this release"
+          url: "docs/the-basics/whats-new-in-this-release"        
         - title: "Getting started"
           url: "docs/the-basics/getting-started"
         - title: "Creating a database connection"
           url: "docs/the-basics/creating-a-database-connection"
-        - title: "Committing and rolling back changes"
-          url: "docs/the-basics/committing-and-rolling-back-changes"
+        - title: "Navigating the Db2 catalog"
+          url: "docs/the-basics/navigating-the-db2-catalog"          
     - title: Working with SQL
       url: "docs/working-with-sql"
       children:
@@ -24,17 +26,21 @@
           url: "docs/working-with-sql/running-sql-with-multiple-selection-scopes"
         - title: "Running SQL from within a stored procedure"
           url: "docs/working-with-sql/running-sql-from-within-a-stored-procedure"
-        - title: "Saving SQL results to a file"
-          url: "docs/working-with-sql/saving-sql-results-to-a-file"
+        - title: "Running statements from your query history"
+          url: "docs/working-with-sql/running-sql-from-history"
+        - title: "Committing and rolling back changes"
+          url: "docs/working-with-sql/committing-and-rolling-back-changes" 
         - title: "Limiting the number of rows returned"
           url: "docs/working-with-sql/limiting-the-number-of-rows-returned"
+        - title: "Saving SQL results to a file"
+          url: "docs/working-with-sql/saving-sql-results-to-a-file"
         - title: "Comparing SQL results"
           url: "docs/working-with-sql/comparing-sql-results"
-        - title: "Running statements from your query history"
-          url: "docs/working-with-sql/running-sql-from-history"       
     - title: Tuning SQL queries
       url: "docs/tuning-sql-queries"
       children:
+        - title: "Software requirements for using the SQL tuning features"
+          url: "docs/tuning-sql-queries/sql-tuning-requirements"
         - title: "Setting up a basic SQL tuning environment"
           url: "docs/tuning-sql-queries/setting-up-a-basic-tuning-environment"
         - title: "Advanced options for setting up an SQL tuning environment"
@@ -43,10 +49,21 @@
           url: "docs/tuning-sql-queries/sharing-and-revoking-privileges"
         - title: "Viewing a graphical explanation of access plans (Visual Explain)"
           url: "docs/tuning-sql-queries/viewing-a-graphical-explanation-of-access-plans" 
-        - title: "Generating statistics to improve query performance (Statistics Advisor)"
+        - title: "Generating statistics recommendations (Statistics Advisor)"
           url: "docs/tuning-sql-queries/generating-statistics-to-improve-query-performance"
         - title: "Capturing your query environment"
           url: "docs/tuning-sql-queries/capturing-your-query-environment"
+        - title: "Generating access path recommendations (Access Path Advisor)"
+          url: "docs/tuning-sql-queries/generating-access-path-recommendations"
+        - title: "Generating index recommendations (Index Advisor)"
+          url: "docs/tuning-sql-queries/generating-index-recommendations"
+        - title: "Generating query rewrite recommendations (Query Rewrite Advisor)"
+          url: "docs/tuning-sql-queries/generating-query-recommendations"
+        - title: "Comparing access paths (Access Path Comparison)"
+          url: "docs/tuning-sql-queries/comparing-access-paths"
+        - title: "Gathering statistics about a transformed query (SQL Annotator)"
+          url: "docs/tuning-sql-queries/gathering-statistics-about-transformed-query"
+
     - title: Working with stored procedures
       url: "docs/working-with-stored-procedures"
       children:
@@ -59,6 +76,8 @@
     - title: Tips and tricks
       url: "docs/tips-and-tricks"
       children:
+        - title: "Support for VS Code Remote Development"
+          url: "docs/tips-and-tricks/support-for-remote-development" 
         - title: "Sharing connection definitions"
           url: "docs/tips-and-tricks/sharing-connection-definitions" 
         - title: "Running commands from the Command Palette"
