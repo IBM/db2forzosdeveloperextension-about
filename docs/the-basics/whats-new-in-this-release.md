@@ -20,7 +20,19 @@ See [Software requirements for using the SQL tuning features]({{site.baseurl}}/d
 
 ## Support for exploring objects in Db2 databases
 
-You can now locate and explore various Db2 database objects from within Db2 Developer Extension. See [Navigating the Db2 catalog]({{site.baseurl}}/docs/the-basics/navigating-the-db2-catalog.html) for more information.
+You can now locate and explore the following Db2 database objects from within Db2 Developer Extension:
+
+- Databases
+- Indexes
+- Packages
+- Plans
+- Schemas
+- Storage groups
+- Stored procedures
+- Tables
+- Views
+
+**Note:** The privileges that are required to navigate the catalog increased since the initial 2.1 release. See [Navigating the Db2 catalog]({{site.baseurl}}/docs/the-basics/navigating-the-db2-catalog.html) for the updated list of catalog tables that you need read access to.
 
 ## Support for VS Code Remote Development
 
