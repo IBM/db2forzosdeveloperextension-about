@@ -119,6 +119,8 @@ Click **Deploy** to finish the configuration and begin the deployment process fo
 
 ## Debugging a stored procedure
 
+**Requirement:** To enable the stored procedure debugging capabilities in Db2 Developer Extension, you must set up the Unified Debugger on Db2 for z/OS. See [Debugging stored procedures by using the Unified Debugger](https://www.ibm.com/docs/en/db2-for-zos/13?topic=procedures-debugging-stored-by-using-unified-debugger) for instructions.
+
 The **Debug** action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment. Setting conditional breakpoints is covered later in this topic.
 
 You can also specify additional debugging options by using the **Run SQL Options** dialog, which is described later in this article. If input variables are specified in the SQL, you'll be prompted to specify values for them before the SQL goes through debugging.
