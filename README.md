@@ -19,8 +19,8 @@ And it includes features that enable you to easily:
 
 -   [Run SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-sql/preparing-to-run-an-sql-statement)
 -   [Deploy, run, and debug native stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics)
--   [Analyze and tune the performance of SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment) - **New**
--   [Navigate the Db2 catalog](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/navigating-the-db2-catalog) - **New**
+-   [Analyze and tune the performance of SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment)
+-   [Navigate the Db2 catalog](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/navigating-the-db2-catalog)
 
 For more information about the latest Db2 Developer Extension features, see [What's new in this release](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/whats-new-in-this-release).
 
@@ -102,13 +102,13 @@ Installing Db2 Developer Extension requires the following software:
 
 -   The SQL tuning capabilities require the following additional software:
 
-    -   If you want to use only the following base set of SQL tuning features, you need the [Database Services Expansion Pack component of Db2 Accessories Suite 4.2](http://publibfp.dhe.ibm.com/epubs/pdf/i1359292.pdf), which is a no-charge add-on to Db2 for z/OS, plus [APAR PH42944](https://www.ibm.com/support/pages/apar/PH42944):
+    -   If you want to use only the following base set of SQL tuning features, you need the [Database Services Expansion Pack component of Db2 Accessories Suite 4.2](https://publibfp.dhe.ibm.com/epubs/pdf/i1359292.pdf), which is a no-charge add-on to Db2 for z/OS, plus [APAR PH42944](https://www.ibm.com/support/pages/apar/PH42944):
 
         -   Statistics Advisor
         -   Visual Explain
         -   Capture Query Environment
 
-    -   If you want to use the base set of SQL tuning features and the following additional SQL tuning capabilities, you need [Db2 Query Workload Tuner for z/OS 6.1](http://publibfp.dhe.ibm.com/epubs/pdf/i1355470.pdf):
+    -   If you want to use the base set of SQL tuning features and the following additional SQL tuning capabilities, you need [Db2 Query Workload Tuner for z/OS 6.1](https://publibfp.dhe.ibm.com/epubs/pdf/i1355510.pdf):
 
         -   Access Path Advisor
         -   Access Path Comparison

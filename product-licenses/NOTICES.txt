@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension
+IBM Db2 for z/OS Developer Extension, 2.1.1
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -25,7 +25,7 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 2.1
+Notices and Information for IBM Db2 for z/OS Developer Extension, 2.1.1
 
 Apache 2.0 License
 
@@ -37,7 +37,7 @@ The Program includes some or all of the following that IBM obtained under the Ap
 @carbon/themes 10.17.0
 @carbon/type 10.13.0
 carbon-components 10.56.0
-carbon-components-react 7.49.0
+carbon-components-react 7.51.0
 carbon-icons 7.0.7
 error_prone_annotations    2.0.18
 find-java-home1.1.0
@@ -58,7 +58,7 @@ puppeteer-core 13.4.0
 
 
 
-Apache License Version 2.0, January 2004 http://www.apache.org/licenses/
+Apache LicenseVersion 2.0, January 2004http://www.apache.org/licenses/
 TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 1. Definitions.
 "License" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
@@ -142,7 +142,7 @@ The Program includes some or all of the following that IBM obtained under the MI
 animal-sniffer-annotations  1.14	Copyright (c) 2008 Kohsuke Kawaguchi and codehaus.org.
 async 3.2.3	Copyright (c) 2010-2018 Caolan McMahon
 axios 0.25.0	Copyright (c) 2014-present Matt Zabriskie
-fast-xml-parser 3.19.0	Copyright (c) 2017 Amit Kumar Gupta
+fast-xml-parser 4.2.4	Copyright (c) 2017 Amit Kumar Gupta
 html-react-parser 1.4.8	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
 json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
 karma-chrome-launcher 3.1.0	Copyright (C) 2011-2013 Google, Inc.
@@ -212,6 +212,6 @@ End of Python Software Foundation License 2.0
 
 
 
-L/N: L-JQMT-FG9GJW
-D/N: L-JQMT-FG9GJW
-P/N: L-JQMT-FG9GJW
+L/N: L-YBQZ-K4S8EZ
+D/N: L-YBQZ-K4S8EZ
+P/N: L-YBQZ-K4S8EZ
