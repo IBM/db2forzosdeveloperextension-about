@@ -6,7 +6,7 @@ title: "Software requirements for using the SQL tuning features"
 
 The SQL tuning features of Db2 Developer Extension require additional software. The software that you need depends on the SQL tuning features that you want to use.
 
-- To use only the base set of SQL tuning features, you need the [Database Services Expansion Pack](http://publibfp.dhe.ibm.com/epubs/pdf/i1359292.pdf) component of Db2 Accessories Suite 4.2, which is a no-charge add-on for Db2 for z/OS, and SQL Tuning Services [APAR PH42944](https://www.ibm.com/support/pages/apar/PH42944). The base set of SQL tuning features include:
+- To use only the base set of SQL tuning features, you need the [Database Services Expansion Pack](https://publibfp.dhe.ibm.com/epubs/pdf/i1359292.pdf) component of Db2 Accessories Suite 4.2, which is a no-charge add-on for Db2 for z/OS, and SQL Tuning Services [APAR PH42944](https://www.ibm.com/support/pages/apar/PH42944). The base set of SQL tuning features include:
 
   - Statistics Advisor
   - Visual Explain

@@ -91,6 +91,8 @@
       children:
         - title: "Opening an issue and providing logs"
           url: "docs/troubleshooting/opening-an-issue-and-providing-logs"
+        - title: "Db2 SQL Service errors"
+          url: "docs/troubleshooting/db2-sql-service-errors"
         - title: "JDBC driver errors"
           url: "docs/troubleshooting/jdbc-driver-errors"
         - title: "SSL errors"

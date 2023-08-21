@@ -20,6 +20,13 @@ GRANT SELECT ON SYSIBM.SYSFOREIGNKEYS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSINDEXES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSJAROBJECTS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSKEYCOLUSE TO {user ID};
+GRANT SELECT ON SYSIBM.SYSKEYS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKAGE TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKDEP TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKLIST TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKSTMT TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPARMS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPLAN TO {user ID};
 GRANT SELECT ON SYSIBM.SYSROUTINES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSSEQUENCES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSSTOGROUP TO {user ID};
@@ -28,6 +35,8 @@ GRANT SELECT ON SYSIBM.SYSTABLES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSTABLESPACE TO {user ID};
 GRANT SELECT ON SYSIBM.SYSTRIGGERS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSVARIABLES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSVIEWDEP TO {user ID};
+GRANT SELECT ON SYSIBM.SYSVIEWS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSVOLUMES TO {user ID};
 ```
 
@@ -35,7 +44,18 @@ where {user ID} is the authorization ID or role that you want to grant read acce
 
 ## Exploring Db2 objects
 
-After catalog navigation has been enabled by granting read access to Db2 system catalog tables, when you create a database connection, all of the the storage groups, databases, tables, and schemas that are associated with that connection are listed under the connection name. You can expand an object to see detailed information about that object (columns, constraints, indexes, and so on).
+After catalog navigation has been enabled by granting read access to Db2 system catalog tables, when you create a database connection, the following object types that are associated with that connection are listed under the connection name:
+- Databases
+- Indexes
+- Packages
+- Plans
+- Schemas
+- Storage groups
+- Stored procedures
+- Tables
+- Views
+
+You can expand an object to see detailed information about that object (columns, constraints, indexes, and so on).
 
 When browsing a list of objects, you can use the the toolbar to change the rows returned and get numerical information about the objects.
 
@@ -58,3 +78,45 @@ For an individual storage group, database, and schema, you can view objects with
 For an individual table, you can view a table's columns, contraints, indexes, and data.
 
 ![Adding a database connection]({{site.baseurl}}/assets/images/catalog-navigation-table.png)
+
+## Catalog object reference
+
+The following list shows which characteristics are provided for each object type:
+
+- Databases
+    - Properties
+    - Objects
+- Indexes
+    - Properties
+    - Columns
+- Packages
+    - Properties
+    - Statements
+    - Dependencies
+- Plans
+    - Properties
+    - Packages
+- Schemas
+    - Properties
+    - Objects
+- Storage groups
+    - Properties
+    - Objects
+- Stored procedures
+    - Properties (differs depending on the type of procedure)
+    - Options (differs depending on the type of procedure)
+    - Parameters
+    - DDL
+    - Packages
+- Tables
+    - Properties
+    - Columns
+    - Constraints
+    - Indexes
+    - Data
+- Views
+    - Properties
+    - Columns
+    - DDL
+    - Data
+    - Dependencies
