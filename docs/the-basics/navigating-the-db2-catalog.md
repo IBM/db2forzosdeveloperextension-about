@@ -59,11 +59,11 @@ You can expand an object to see detailed information about that object (columns,
 
 When browsing a list of objects, you can use the the toolbar to change the rows returned and get numerical information about the objects.
 
-![Adding a database connection]({{site.baseurl}}/assets/images/catalog-navigation-toolbar.png)
+![Catalog navigation toolbar]({{site.baseurl}}/assets/images/catalog-navigation-toolbar.png)
 
-- Click the search icon (![Adding a database connection]({{site.baseurl}}/assets/images/catalog-navigation-search.svg)) to search within the displayed rows.
+- Click the search icon (![Search the catalog]({{site.baseurl}}/assets/images/catalog-navigation-search.svg)) to search within the displayed rows.
 
-- Click the filter icon (![Adding a database connection]({{site.baseurl}}/assets/images/catalog-navigation-filter.png)) to filter the rows by object name. Specify a valid pattern expression based on the [LIKE predicate](https://www.ibm.com/docs/en/db2-for-zos/13?topic=predicates-like-predicate).
+- Click the filter icon (![Filter the catalog]({{site.baseurl}}/assets/images/catalog-navigation-filter.png)) to filter the rows by object name. Specify a valid pattern expression based on the [LIKE predicate](https://www.ibm.com/docs/en/db2-for-zos/13?topic=predicates-like-predicate).
 
 - **Display _n_ rows** shows the number of rows fetched.
 
@@ -73,11 +73,11 @@ When browsing a list of objects, you can use the the toolbar to change the rows 
 
 For an individual storage group, database, and schema, you can view objects within the object in the **Objects** tab.
 
-![Adding a database connection]({{site.baseurl}}/assets/images/catalog-navigation-objects.png)
+![Objects tab]({{site.baseurl}}/assets/images/catalog-navigation-objects.png)
 
 For an individual table, you can view a table's columns, contraints, indexes, and data.
 
-![Adding a database connection]({{site.baseurl}}/assets/images/catalog-navigation-table.png)
+![Table objects]({{site.baseurl}}/assets/images/catalog-navigation-table.png)
 
 ## Catalog object reference
 
