@@ -101,4 +101,14 @@
           url: "docs/troubleshooting/sql-tuning-services"
         - title: "Formatting errors when using the backslash as the escape character"
           url: "docs/troubleshooting/formatting-errors-when-using-the-backslash-as-the-escape-character"
-          
+        - title: "Column names being interpreted as variables"
+          url: "docs/troubleshooting/column-names-being-interpreted-as-variables"
+    - title: Legal information
+      url: "docs/legal-information"
+      children:
+        - title: "Notices"
+          url: "docs/legal-information/notices"
+        - title: "Trademarks"
+          url: "docs/legal-information/trademarks"
+        - title: "Privacy policy considerations"
+          url: "docs/legal-information/privacy-policy-considerations"
