@@ -39,3 +39,5 @@ Db2 Developer Extension modernizes the experience of developing Db2 for z/OS app
 - Create, migrate, and drop EXPLAIN tables
 - Configure tuning options
 - Save a history of your tuning activities
+
+&copy; Copyright International Business Machines Corporation 2020, 2023.
