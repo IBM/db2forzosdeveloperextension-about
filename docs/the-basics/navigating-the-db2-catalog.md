@@ -149,4 +149,3 @@ The following list shows which characteristics are provided for each object type
     - DDL
     - Data
     - Dependencies
-    - 
