@@ -16,6 +16,7 @@ GRANT SELECT ON SYSIBM.SYSCOLUMNS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSCONTROLS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSDATABASE TO {user ID};
 GRANT SELECT ON SYSIBM.SYSDATATYPES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSDEPENDENCIES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSFOREIGNKEYS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSINDEXES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSJAROBJECTS TO {user ID};
@@ -29,8 +30,10 @@ GRANT SELECT ON SYSIBM.SYSPARMS TO {user ID};
 GRANT SELECT ON SYSIBM.SYSPLAN TO {user ID};
 GRANT SELECT ON SYSIBM.SYSROUTINES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSSEQUENCES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSSEQUENCESDEP TO {user ID};
 GRANT SELECT ON SYSIBM.SYSSTOGROUP TO {user ID};
 GRANT SELECT ON SYSIBM.SYSTABCONST TO {user ID};
+GRANT SELECT ON SYSIBM.SYSTABLEPART TO {user ID};
 GRANT SELECT ON SYSIBM.SYSTABLES TO {user ID};
 GRANT SELECT ON SYSIBM.SYSTABLESPACE TO {user ID};
 GRANT SELECT ON SYSIBM.SYSTRIGGERS TO {user ID};
@@ -50,10 +53,15 @@ After catalog navigation has been enabled by granting read access to Db2 system 
 - Packages
 - Plans
 - Schemas
+- Sequences (including sequence aliases)
 - Storage groups
 - Stored procedures
-- Tables
-- Views
+- Tables (including table aliases)
+- Table spaces
+- Triggers
+- User-defined functions
+- User-defined types
+- Views (including view aliases)
 
 You can expand an object to see detailed information about that object (columns, constraints, indexes, and so on).
 
@@ -61,9 +69,11 @@ When browsing a list of objects, you can use the the toolbar to change the rows 
 
 ![Catalog navigation toolbar]({{site.baseurl}}/assets/images/catalog-navigation-toolbar.png)
 
-- Click the search icon (![Search the catalog]({{site.baseurl}}/assets/images/catalog-navigation-search.svg)) to search within the displayed rows.
+- Click the search icon (![Search icon]({{site.baseurl}}/assets/images/catalog-navigation-search.svg)) to search within the displayed rows.
 
-- Click the filter icon (![Filter the catalog]({{site.baseurl}}/assets/images/catalog-navigation-filter.png)) to filter the rows by object name. Specify a valid pattern expression based on the [LIKE predicate](https://www.ibm.com/docs/en/db2-for-zos/13?topic=predicates-like-predicate).
+- Click the filter icon (![Filter icon]({{site.baseurl}}/assets/images/catalog-navigation-filter.png)) to filter the rows by object name. Specify a valid pattern expression based on the [LIKE predicate](https://www.ibm.com/docs/en/db2-for-zos/13?topic=predicates-like-predicate).
+
+- For object types that allow implicitly created objects, click the view icon (![View icon]({{site.baseurl}}/assets/images/catalog-navigation-view.png)) to view or hide these objects.
 
 - **Display _n_ rows** shows the number of rows fetched.
 
@@ -99,6 +109,9 @@ The following list shows which characteristics are provided for each object type
 - Schemas
     - Properties
     - Objects
+- Sequences
+    - Properties
+    - References
 - Storage groups
     - Properties
     - Objects
@@ -114,9 +127,26 @@ The following list shows which characteristics are provided for each object type
     - Constraints
     - Indexes
     - Data
+- Table spaces
+    - Properties
+    - Partitions
+    - Tables
+- Triggers
+    - Properties (differs depending on the type of trigger)
+    - DDL
+- User-defined functions
+    - Properties (differs depending on the type of user-defined function)
+    - Options (differs depending on the type of user-defined function)
+    - Parameters
+    - DDL
+    - Packages
+- User-defined types
+    - Properties (differs depending on the type of user-defined type)
+    - References
 - Views
     - Properties
     - Columns
     - DDL
     - Data
     - Dependencies
+    - 
