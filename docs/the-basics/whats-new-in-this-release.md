@@ -20,7 +20,7 @@ See [Software requirements for using the SQL tuning features]({{site.baseurl}}/d
 
 ## Support for exploring objects in Db2 for z/OS databases
 
-You can now locate and explore the following Db2 database objects from within Db2 Developer Extension:
+You can now locate and explore the following Db2 for z/OS database objects from within Db2 Developer Extension:
 
 - Databases
 - Indexes<sup>1</sup>
