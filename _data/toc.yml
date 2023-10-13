@@ -103,6 +103,8 @@
           url: "docs/troubleshooting/formatting-errors-when-using-the-backslash-as-the-escape-character"
         - title: "Column names being interpreted as variables"
           url: "docs/troubleshooting/column-names-being-interpreted-as-variables"
+        - title: "Usage problems related to changes in keytar support"
+          url: "docs/troubleshooting/usage-problems-related-to-changes-in-keytar-support"
     - title: Legal information
       url: "docs/legal-information"
       children:
