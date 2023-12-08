@@ -26,16 +26,6 @@ If your database connection fails to establish a connection, open the **Tracing*
 
 When you create a connection, a connection name is automatically generated based on the connection information. You can change this name by editing the connection and changing the **Connection name** field.
 
-## Changing the connection that's used to run SQL
-
-Before you can run SQL from a file, you need to associate a Db2 connection to the file. To change the connection that's associated with a file, open the file and click on the connection in the [Status Bar](https://code.visualstudio.com/docs/getstarted/userinterface). Select a different connection from the list that's displayed.
-
-**Note:** The message "No connection" is displayed in the **Status Bar** if a connection hasn't been associated with the file.
-
-![Changing the connection used to run SQL]({{site.baseurl}}/assets/images/db2-connection-change-connection.gif)
-
-This method of changing the connection also applies to running and debugging native stored procedures, but it doesn't apply to deploying native stored procedures. You select the connection that's used to deploy a native stored procedure in the [Deployment options]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics.html#deploying-a-stored-procedure).
-
 ## Connecting with SSL/TLS
 
 Before you can use SSL/TLS to connect to a Db2 server, the [Db2 server must be configured for SSL/TLS](https://www.ibm.com/docs/en/db2-for-zos/13?topic=pdter-encrypting-your-data-secure-socket-layer-ssl-support). If you're not sure if the Db2 server has been configured for SSL/TLS, check with your network administrator.
