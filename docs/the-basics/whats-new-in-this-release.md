@@ -23,9 +23,11 @@ See [Software requirements for using the SQL tuning features]({{site.baseurl}}/d
 You can now locate and explore the following Db2 for z/OS database objects from within Db2 Developer Extension:
 
 - Databases
+- Global variables<sup>3</sup>
 - Indexes<sup>1</sup>
 - Packages<sup>1</sup>
 - Plans<sup>1</sup>
+- REST services<sup>3</sup>
 - Schemas
 - Sequences<sup>2</sup>
 - Storage groups
@@ -42,7 +44,8 @@ You can now locate and explore the following Db2 for z/OS database objects from 
 You can now view and hide implicit objects by using the view icon (![View icon]({{site.baseurl}}/assets/images/catalog-navigation-view.png)).<sup>2</sup>
 
 <sup>1</sup> Delivered in Db2 for z/OS Developer Extension 2.1.1.<br>
-<sup>2</sup> Delivered in Db2 for z/OS Developer Extension 2.1.2.
+<sup>2</sup> Delivered in Db2 for z/OS Developer Extension 2.1.2.<br>
+<sup>3</sup> Delivered in Db2 for z/OS Developer Extension 2.1.3.
 
 ## Support for VS Code Remote Development
 
