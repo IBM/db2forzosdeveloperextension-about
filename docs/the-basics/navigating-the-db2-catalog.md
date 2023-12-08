@@ -45,13 +45,24 @@ GRANT SELECT ON SYSIBM.SYSVOLUMES TO {user ID};
 
 where {user ID} is the authorization ID or role that you want to grant read access to.
 
+### Viewing REST services
+
+Viewing REST services requires some additional configuration.
+
+1. Ensure that REST services are enabled on Db2 for z/OS. See [Enabling Db2 REST services](https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-enabling-db2-rest) for instructions. 
+2. Use either of the following methods to authorize access to REST services:
+- Submit the `GRANT SELECT ON SYSIBM.DSNSERVICE TO {user ID};` statement.
+- Complete the instructions in [Authorization of REST service users](https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-authorization-rest-service-users).
+
 ## Exploring Db2 objects
 
 After catalog navigation has been enabled by granting read access to Db2 system catalog tables, when you create a database connection, the following object types that are associated with that connection are listed under the connection name:
 - Databases
+- Global variables
 - Indexes
 - Packages
 - Plans
+- REST services
 - Schemas
 - Sequences (including sequence aliases)
 - Storage groups
@@ -96,6 +107,9 @@ The following list shows which characteristics are provided for each object type
 - Databases
     - Properties
     - Objects
+- Global variables
+    - Properties
+    - References
 - Indexes
     - Properties
     - Columns
@@ -106,6 +120,10 @@ The following list shows which characteristics are provided for each object type
 - Plans
     - Properties
     - Packages
+- REST services
+    - Properties
+    - Request body
+    - Response body
 - Schemas
     - Properties
     - Objects
