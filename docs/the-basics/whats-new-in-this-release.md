@@ -45,7 +45,7 @@ You can now view and hide implicit objects by using the view icon (![View icon](
 
 <sup>1</sup> Delivered in Db2 for z/OS Developer Extension 2.1.1.<br>
 <sup>2</sup> Delivered in Db2 for z/OS Developer Extension 2.1.2.<br>
-<sup>3</sup> Delivered in Db2 for z/OS Developer Extension 2.1.3.
+<sup>3</sup> Delivered in Db2 for z/OS Developer Extension 2.1.4.
 
 ## Support for VS Code Remote Development
 
