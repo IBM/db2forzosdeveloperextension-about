@@ -16,6 +16,8 @@
       children:
         - title: "Preparing to run an SQL statement"
           url: "docs/working-with-sql/preparing-to-run-an-sql-statement"
+        - title: "Changing the connection that's used to run SQL"
+          url: "docs/working-with-sql/changing-the-connection-to-run-sql"
         - title: "Formatting SQL"
           url: "docs/working-with-sql/formatting-sql"
         - title: "Running multiple SQL statements"
