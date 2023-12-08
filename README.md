@@ -79,18 +79,11 @@ Installing Db2 Developer Extension requires the following software:
 
     See [Configuring Java](#configuring-java) for information about setting the various options that control how Db2 Developer Extension uses Java.
 
--   One of the following IBM Data Server Driver for JDBC and SQLJ license files. Db2 Developer Extension requires an appropriately licensed JDBC driver. Using a JDBC driver from another tool or product not listed below is not permitted.
+-   IBM Data Server Driver for JDBC and SQLJ 4.29.24 (11.5.6), which is packaged with Db2 Developer Extension, and one of the following licenses, which is required to connect to Db2 for z/OS:
 
-    -   **The Db2 Connect Unlimited Edition for System z® server license `V11.1 M4 FP4 iFix 1 or later`**
+    -   [Db2 Connect Enterprise Edition](https://www.ibm.com/support/customer/csol/terms/?ref=L-KHAI-CARQ42-01-10-2022-zz-en) (client-side license). See [Setting the JDBC license and JDBC driver files](https://github.com/IBM/db2forzosdeveloperextension-about#setting-the-jdbc-license-and-jdbc-driver-files) for information about specifying this license in your VS Code settings.
 
-        This license must be activated on the Db2 for z/OS subsystems that you want to connect to. For more information, see the following topic: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.5.0/com.ibm.db2.luw.licensing.doc/doc/t0057375.html
-
-    -   **The IBM Data Server Driver for JDBC and SQLJ client license file `4.25.1301 or later`**
-
-        For information about locating and and enabling the client license file, see the following topic:
-        https://www.ibm.com/docs/en/db2/11.5?topic=errors-errorcode-4472
-
-    For instructions for specifying the license file in your VS Code settings, see [Setting the JDBC license and JDBC driver files](#setting-the-jdbc-license-and-jdbc-driver-files).
+    -   [IBM Db2 Connect Unlimited Edition for System z](https://www.ibm.com/support/customer/csol/terms/?ref=L-KHAI-CARQ6U-01-10-2022-zz-en) (server-side license). See [Activating the license certificate file for Db2 Connect Unlimited Edition](https://www.ibm.com/docs/en/db2/11.5?topic=li-activating-license-certificate-file-db2-connect-unlimited-edition) for information about obtaining and activating this license.
 
 -   libsecret on Linux
 
