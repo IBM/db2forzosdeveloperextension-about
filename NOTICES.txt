@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension, 2.1.4
+IBM Db2 for z/OS Developer Extension, 2.1.5
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -25,34 +25,38 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 2.1.4
+Notices and Information for IBM Db2 for z/OS Developer Extension, 2.1.5
 
 Apache 2.0 License
 
 The Program includes some or all of the following that IBM obtained under the Apache License Version 2.0:
 
-@carbon/colors 10.12.0
-@carbon/icons-react 10.49.0
-@carbon/layout 10.29.0
-@carbon/themes 10.17.0
-@carbon/type 10.13.0
-carbon-components 10.56.0
-carbon-components-react 7.56.0
-carbon-icons 7.0.7
-find-java-home1.1.0
-gson    2.10.1
-gson    2.9.1
-http client  4.5.14
-httpcore  4.4.16
-jackson-annotations    2.11.0
-jackson-annotations   12.15.2
-jackson-core    2.13.2
-Jackson-core    12.15.2
-jackson-databind    2.15.2
-log4j-api     2.17.1
-log4j-core    2.17.1
-log4js 6.4.1
-puppeteer-core 13.4.0
+@carbon/colors  10.12.0
+@carbon/layout  10.29.0
+@carbon/react  1.46.1
+@carbon/styles  1.47.0
+@carbon/themes  10.17.0
+@carbon/type  10.13.0
+carbon-components-react  7.56.0
+carbon-components  10.56.0
+carbon-icons  7.0.7
+commons-codec  1.11
+commons-codec  1.16
+commons-logging  1.2
+find-java-home  1.1.0
+gson  2.10.1
+gson  2.9.1
+httpclientr  4.5.14
+httpcore  jar  4.4.16
+jackson-annotations  12.15.2
+jackson-annotations  2.11.0
+jackson-core  12.15.2
+jackson-core  2.13.2
+jackson-databind  2.15.2
+log4j-api  2.17.1
+log4j-core  2.17.1
+log4js  6.4.1
+puppeteer-core  13.4.0
 
 
 
@@ -136,8 +140,8 @@ MIT License
 The Program includes some or all of the following that IBM obtained under the MIT License:
 
 async 3.2.3	Copyright (c) 2010-2018 Caolan McMahon
-axios 1.6.2	Copyright (c) 2014-present Matt Zabriskie
-fast-xml-parser 3.19.0	Copyright (c) 2017 Amit Kumar Gupta
+axios 1.6.7	Copyright (c) 2014-present Matt Zabriskie
+fast-xml-parser 4.2.4	Copyright (c) 2017 Amit Kumar Gupta
 html-react-parser 1.4.8	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
 json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
 karma-chrome-launcher 3.1.0	Copyright (C) 2011-2013 Google, Inc.
@@ -145,6 +149,7 @@ path 0.12.7	Copyright Joyent, Inc. and other Node contributors. All rights reser
 react 16.13.1	Copyright (c) Facebook, Inc. and its affiliates.
 react-autosuggest 10.1.0	Copyright © 2017 Misha Moroshko
 react-dom 16.13.1	Copyright (c) Facebook, Inc. and its affiliates.
+sass 1.69.7	Copyright (c) 2016, Google, Inc.
 slf4j-api  1.7.30	Copyright (c) 2004-2011 QOS.ch
 slf4j-simple  1.7.30    Copyright (c) 2004-2017 QOS.ch
 uuid 8.3.2	Copyright (c) 2010-2020 Robert Kieffer and other contributors
@@ -207,6 +212,6 @@ End of Python Software Foundation License 2.0
 
 
 
-L/N: L-YNWU-TE3VNN
-D/N: L-YNWU-TE3VNN
-P/N: L-YNWU-TE3VNN
+L/N: L-ZBBQ-8FAM55
+D/N: L-ZBBQ-8FAM55
+P/N: L-ZBBQ-8FAM55

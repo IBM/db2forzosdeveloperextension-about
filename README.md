@@ -19,6 +19,8 @@ And it includes features that enable you to easily:
 
 -   [Run SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-sql/preparing-to-run-an-sql-statement)
 -   [Deploy, run, and debug native stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics)
+-   [Deploy and run external SQL stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-SQL-stored-procedures)
+-   [Deploy and run Java stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures)
 -   [Analyze and tune the performance of SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment)
 -   [Navigate the Db2 catalog](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/navigating-the-db2-catalog)
 
@@ -70,7 +72,7 @@ Installing Db2 Developer Extension requires the following software:
 
     Db2 Developer Extension is delivered as an extension to VS Code instead of a stand-alone editor, so you must install and configure VS Code first. We recommend always using the latest version of VS Code available. For information about installing and configuring VS Code, see its [documentation](https://code.visualstudio.com/docs/setup/setup-overview).
 
--   One of the following 64-bit Java SDKs:
+-   One of the following Java SDKs:
 
     -   [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 11 of Oracle Java
     -   Version 8 or 11 of the [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=openj9)
@@ -79,7 +81,7 @@ Installing Db2 Developer Extension requires the following software:
 
     See [Configuring Java](#configuring-java) for information about setting the various options that control how Db2 Developer Extension uses Java.
 
--   IBM Data Server Driver for JDBC and SQLJ 4.29.24 (11.5.6), which is packaged with Db2 Developer Extension, and one of the following licenses, which is required to connect to Db2 for z/OS:
+-   IBM Data Server Driver for JDBC and SQLJ 4.32.28 (11.5.8), which is packaged with Db2 Developer Extension, and one of the following licenses, which is required to connect to Db2 for z/OS:
 
     -   [Db2 Connect Enterprise Edition](https://www.ibm.com/support/customer/csol/terms/?ref=L-KHAI-CARQ42-01-10-2022-zz-en) (client-side license). See [Setting the JDBC license and JDBC driver files](https://github.com/IBM/db2forzosdeveloperextension-about#setting-the-jdbc-license-and-jdbc-driver-files) for information about specifying this license in your VS Code settings.
 
