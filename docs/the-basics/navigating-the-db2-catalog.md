@@ -82,7 +82,7 @@ When browsing a list of objects, you can use the the toolbar to change the rows 
 
 - Click the search icon (![Search icon]({{site.baseurl}}/assets/images/catalog-navigation-search.svg)) to search within the displayed rows.
 
-- Click the filter icon (![Filter icon]({{site.baseurl}}/assets/images/catalog-navigation-filter.png)) to filter the rows by object name. Specify a valid pattern expression based on the [LIKE predicate](https://www.ibm.com/docs/en/db2-for-zos/13?topic=predicates-like-predicate).
+- Click the filter icon (![Filter icon]({{site.baseurl}}/assets/images/catalog-navigation-filter.png)) to filter the rows by one or more criteria. Specify a valid pattern expression based on the [LIKE predicate](https://www.ibm.com/docs/en/db2-for-zos/13?topic=predicates-like-predicate), and use the exact case (the filter feature is case-sensitive). For more information, see [Filtering by multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html). 
 
 - For object types that allow implicitly created objects, click the view icon (![View icon]({{site.baseurl}}/assets/images/catalog-navigation-view.png)) to view or hide these objects.
 
@@ -137,8 +137,10 @@ The following list shows which characteristics are provided for each object type
     - Properties (differs depending on the type of procedure)
     - Options (differs depending on the type of procedure)
     - Parameters
-    - DDL
     - Packages
+    - DDL
+    - JAR dependencies (applies only to external Java stored procedures)
+    - Source (applies only to external Java stored procedures)
 - Tables
     - Properties
     - Columns
@@ -156,14 +158,14 @@ The following list shows which characteristics are provided for each object type
     - Properties (differs depending on the type of user-defined function)
     - Options (differs depending on the type of user-defined function)
     - Parameters
-    - DDL
     - Packages
+    - DDL
 - User-defined types
     - Properties (differs depending on the type of user-defined type)
     - References
 - Views
     - Properties
     - Columns
-    - DDL
     - Data
     - Dependencies
+    - DDL
