@@ -4,9 +4,47 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
-Db2 for z/OS Developer Extension 2.1 provides the following significant enhancements:
+## 2.1.5 (March 2024)
 
-## An expanded set of SQL analysis and tuning features
+Db2 for z/OS Developer Extension 2.1.5 provides the following significant enhancements:
+
+### Initial support for external stored procedures
+
+You can now deploy and run external SQL stored procedures and external Java stored procedures. See the following articles to get started:
+
+- [Creating external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-sql-stored-procedures.html)
+- [Creating external Java stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-java-stored-procedures.html)
+
+### Support for using a notebook interface
+
+You can now edit and run SQL in a notebook interface. For more information, see [Working with SQL in a notebook editor]({{site.baseurl}}/docs/working-with-sql/working-with-sql-in-notebook-editor.html).
+
+### Support for multi-column filtering of database objects
+
+You can now apply complex filtering criteria to a subset of Db2 for z/OS catalog objects, including:
+
+- Databases
+- Indexes
+- Storage groups
+- Stored procedures
+- Tables
+
+For more information, see [Filtering by multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html).
+
+### Support for VS Code light mode theme
+
+You can now customize the appearance of the Db2 Developer Extension interface by selecting from the available color themes. For more information, see [Changing the color theme]({{site.baseurl}}/docs/tips-and-tricks/changing-the-color-theme.html).
+
+### Support for 32-bit JRE
+
+Starting with Db2 Developer Extension 2.1.5, a 64-bit JRE is no longer required. Note that although the requirement has been removed, using Db2 Developer Extension with a 32-bit JRE has not been tested extensively, so results might be unpredictable.
+
+
+## 2.1.4 (December 2023)
+
+Db2 for z/OS Developer Extension 2.1.4 provides the following significant enhancements:
+
+### An expanded set of SQL analysis and tuning features
 
 By leveraging the functionality provided by Db2 Query Workload Tuner for z/OS 6.1, you can now run the following SQL analysis and tuning tools from within Db2 Developer Extension:
 
@@ -18,7 +56,7 @@ By leveraging the functionality provided by Db2 Query Workload Tuner for z/OS 6.
 
 See [Software requirements for using the SQL tuning features]({{site.baseurl}}/docs/tuning-sql-queries/sql-tuning-requirements.html) for information about the prerequisites for using SQL tuning features.
 
-## Support for exploring objects in Db2 for z/OS databases
+### Support for exploring objects in Db2 for z/OS databases
 
 You can now locate and explore the following Db2 for z/OS database objects from within Db2 Developer Extension:
 
@@ -45,9 +83,9 @@ You can now view and hide implicit objects by using the view icon (![View icon](
 
 <sup>1</sup> Delivered in Db2 for z/OS Developer Extension 2.1.1.<br>
 <sup>2</sup> Delivered in Db2 for z/OS Developer Extension 2.1.2.<br>
-<sup>3</sup> Delivered in Db2 for z/OS Developer Extension 2.1.4.
+<sup>3</sup> Delivered in Db2 for z/OS Developer Extension 2.1.3.
 
-## Support for VS Code Remote Development
+### Support for VS Code Remote Development
 
 You can now take advantage of VS Code Remote Development support to create a remote Db2 Developer Extension development environment. See [Support for VS Code Remote Development]({{site.baseurl}}/docs/tips-and-tricks/support-for-remote-development.html) for more information.
 
