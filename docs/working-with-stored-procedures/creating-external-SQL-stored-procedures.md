@@ -24,6 +24,6 @@ The snippet includes some of the more commonly used parameters and an example SE
 
 ## What's next
 
-- This stored procedure is ready to be deployed. To learn how, see [Deploying and running external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures.html).
+- This stored procedure is ready to be deployed. To learn how, see [Deploying and running external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-SQL-stored-procedures.html).
 
 - You can also explore some of the more complex things you might need to do when you create a stored procedure, such as working with [double-byte character set (DBCS) data]({{site.baseurl}}/docs/working-with-stored-procedures/working-with-dbcs-data.html) and [user-defined types]({{site.baseurl}}/docs/working-with-stored-procedures/working-with-user-defined-types.html).
