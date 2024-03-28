@@ -12,7 +12,7 @@ Db2 for z/OS Developer Extension 2.1.5 provides the following significant enhanc
 
 You can now deploy and run external SQL stored procedures and external Java stored procedures. See the following articles to get started:
 
-- [Creating external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-sql-stored-procedures.html)
+- [Creating external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-SQL-stored-procedures.html)
 - [Creating external Java stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-java-stored-procedures.html)
 
 ### Support for using a notebook interface
