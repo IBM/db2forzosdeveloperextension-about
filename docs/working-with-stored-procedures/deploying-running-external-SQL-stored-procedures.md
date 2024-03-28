@@ -6,7 +6,7 @@ title: "Deploying and running external SQL stored procedures"
 
 This article shows you how to use Db2 Developer Extension to deploy an external SQL stored procedure with various deployment options: altering previous deployments, setting target schema, and others. It also walks you through the process of running an external SQL stored procedure.
 
-**Tip:** If you're new to stored procedures, make sure you're familiar with the information in [Creating external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-sql-stored-procedures.html) first.
+**Tip:** If you're new to stored procedures, make sure you're familiar with the information in [Creating external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-SQL-stored-procedures.html) first.
 
 One big advantage of using Db2 Developer Extension to deploy a stored procedure, as opposed to manually executing SQL, is that you can save the various deployment options separately from the SQL itself, which means that you can push your code into a source code manager, such as GitHub, without having to remove the deployment debug options first.
 
