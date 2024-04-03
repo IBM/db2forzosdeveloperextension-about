@@ -19,8 +19,5 @@ The SQL tuning features of Db2 Developer Extension require additional software. 
   - Index Advisor
   - Query Rewrite Advisor
   - SQL Annotator
-  - Statistics Advisor
-  - Visual Explain
-  - Capture Query Environment
 
 For instructions for enabling the SQL tuning features of Db2 Developer Extension, see [Installing and configuring SQL Tuning Services](https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-installing-configuring-sql-tuning).
