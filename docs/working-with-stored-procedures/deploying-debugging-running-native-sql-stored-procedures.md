@@ -1,12 +1,12 @@
 ---
-title: "Deploying, running, and debugging native SQL stored procedures"
+title: "Deploying and running native SQL stored procedures"
 ---
 
 # {{ page.title }}
 
-This article shows you how to use Db2 Developer Extension to deploy a native SQL stored procedure (NSP) with various deployment options: enabling debug, altering previous deployments, setting target schema, and others. It also walks you through the process of debugging and running an NSP.
+This article shows you how to use Db2 Developer Extension to deploy a native SQL stored procedure (NSP) with various deployment options: enabling debug, altering previous deployments, setting target schema, and others. It also walks you through the process of running an NSP.
 
-**Tip:** Before you use the information in this article, make sure you're familiar with the instructions for [Creating a native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html).
+**Tip:** Before you use the information in this article, make sure you're familiar with the instructions for [Creating native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html).
 
 One big advantage of using Db2 Developer Extension to deploy an NSP, as opposed to manually executing SQL, is that you can save the various deployment options separately from the SQL itself, which means that you can push your code into a source code manager, such as GitHub, without having to remove the deployment debug options first.
 
@@ -14,7 +14,7 @@ Another advantage is that you don't need to specify `--#SET TERMINATOR` in the h
 
 **Note:** Currently, Db2 Developer Extension deploy, debug, and run options support only one NSP per **.spsql** file. When NSP options are specified, only the first NSP in the file will be executed; additional NSPs and SQL statements will be ignored.
 
-We'll use the following example stored procedure throughout this article to demonstrate how to deploy, run, and debug an NSP. This NSP will read the total salary, including bonuses, from the table `DSN8D10.EMP` from a passed in-parameter `DEPTNUMBER`. You can paste it into a file so that you try things out for yourself.
+We'll use the following example stored procedure throughout this article to demonstrate how to deploy and run an NSP. This NSP will read the total salary, including bonuses, from the table `DSN8D10.EMP` from a passed in-parameter `DEPTNUMBER`. You can paste it into a file so that you try things out for yourself.
 
 **RETURNDEPTSALARY.spsql**
 
@@ -61,7 +61,7 @@ The file extension of `.spsql` identifies it as a stored procedure. When you ope
 
 ![Deploy, Debug, Run, action icons]({{site.baseurl}}/assets/images/nsp-basics-action-toolbar.png)
 
-From left to right, these actions are **Deploy**, **Debug**, and **Run**. We'll cover each one in the following sections.
+From left to right, these actions are **Deploy**, **Debug**, and **Run**. We'll cover deploying and running in the following sections.
 
 ## Deploying a stored procedure
 
@@ -116,75 +116,6 @@ If you're new to SQL and want more information about embedding SQL in host langu
 ```
 
 Click **Deploy** to finish the configuration and begin the deployment process for the procedure.
-
-## Debugging a stored procedure
-
-**Requirement:** To enable the stored procedure debugging capabilities in Db2 Developer Extension, you must set up the Unified Debugger on Db2 for z/OS.  See [Debugging stored procedures by using the Unified Debugger](https://www.ibm.com/docs/en/db2-for-zos/13?topic=procedures-debugging-stored-by-using-unified-debugger) for instructions. 
-
-The **Debug** action allows you to debug your stored procedure by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment. Setting conditional breakpoints is covered later in this topic.
-
-You can also specify additional debugging options by using the **Run SQL Options** dialog, which is described later in this article. If input variables are specified in the SQL, you'll be prompted to specify values for them before the SQL goes through debugging.
-
-<!-- **Note:** This section covers basic debugging. For more advanced debugging scenarios, see `insert hyperlink to advanced debugger article`. -->
-
-Click the **Debug** action to start debugging process. If your NSP contains input variables, you'll be prompted to specify values for them before the SQL goes through debugging, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
-
-![Input parameters for debugging]({{site.baseurl}}/assets/images/nsp-basics-debug-parameters.png)
-
-After you specify input parameter values, click **Debug**. Set the breakpoints for where you want the debugger to pause execution:
-
-![Debug process]({{site.baseurl}}/assets/images/nsp-basics-debug-process.png)
-
-When the debugging process starts, the following toolbar is displayed at the top of the view:
-
-![Debugging toolbar]({{site.baseurl}}/assets/images/nsp-basics-debug-toolbar.png)
-
-You use this toolbar to step through your code. From left to right, these actions are:
-
-- **Continue** execution of the program until it hits a breakpoint, encounters an error, or completes
-
-- **Step Over** to the next line of the program in the same code level
-
-- **Step Into** the program to enter a deeper code level if the current line is a method
-
-- **Step Out** to the caller if the current code level is inside a method
-
-- **Restart** the debugging program
-
-- **Stop** the debugging program
-
-Click the **Run and Debug** icon in the **Activity Bar** (![Run and Debug icon]({{site.baseurl}}/assets/images/nsp-basics-run-and-debug-icon.png)) to display the following sections:
-
-- The **Variables** section contains variables declared through program execution and keeps track of the defined value of each variable as the debugger works its way through the code.
-
-- Use the **Watch** section to specify variables or expressions that you want to be evaluated by the debugger.
-
-- The **Call stack** section keeps track of the current code level during debugger execution.
-
-- The **Breakpoints** section keeps track of the breakpoints set throughout the code module.
-
-For more information about debugging your code in Visual Studio Code, see [https://code.visualstudio.com/docs/editor/debugging](https://code.visualstudio.com/docs/editor/debugging).
-
-### Setting conditional hit-count breakpoints
-
-You can specify a hit count when you define a breakpoint, which means that when the breakpoint is reached, instead of pausing, execution continues until the hit count that you specified is reached. This feature is useful when you debug stored procedures that contain loops. You can allow execution to continue for the specified number of loops, and then debug the code when that number is reached.
-
-To set a breakpoint that includes a hit count:
-
-1. For a stored procedure that has already been deployed, right-click and select **Debug Stored Procedure**.
-2. Set any input parameters that need to be set.
-3. Click **Debug**. A **.spsql** file opens and the debugger starts at the top of this file.
-4. Click the line that you want to set the conditional breakpoint for, then right-click and select **Edit Breakpoint > Add Conditional Breakpoint > Hit Count**. (Note that in this release, the **Expression** and **Log Message** options are not supported.)
-5. Specify the number of times the loop should be run before the debugger pauses.
-6. Click **Continue** (![Continue button]({{site.baseurl}}/assets/images/nsp-basics-continue-button.png)) to proceed with debugging.
-
-![Setting conditional hit-count breakpoints]({{site.baseurl}}/assets/images/nsp-basics-debug-hit-count.gif)
-
-The breakpoints that you set persist on the file. You don't need to reset these breakpoints if you want to debug this file again.
-
-You can clear breakpoints by deselecting them in the **BREAKPOINTS** view or by clicking on and removing them individually from the file.
-
-After you're familiar with the basic stored procedure debugging process, check out [Advanced techniques for debugging native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-stored-procedures-advanced.html)
 
 ## Running a stored procedure
 
