@@ -1,14 +1,14 @@
 ---
-title: "Advanced techniques for debugging native SQL stored procedures"
+title: "Advanced techniques for debugging native and external SQL stored procedures"
 ---
 
 # {{ page.title }}
 
-After you understand how to use Db2 Developer Extension to [create a native SQL stored procedure]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html) and the basic process of [deploying, debugging, and running a native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-debugging-running-native-sql-stored-procedures.html), you might need some more in-depth information about using Db2 Developer Extension to do  debug more complex problems.
+After you understand the basic process of debugging native and external SQL stored procedures, you might need some more in-depth information about using Db2 Developer Extension to debug more complex problems.
 
 For example, many stored procedures contain extremely complex business logic, especially when nested stored procedures are involved. In these types of stored procedures, locating, analyzing, and fixing a problem can be quite a challenge. 
 
-This article uses two example stored procedures to show you how to step through nested stored procedures, set breakpoints, and modify stored procedure variable values at runtime.  
+This article uses two example stored procedures to show you how to step through nested stored procedures, set breakpoints, and modify stored procedure variable values at runtime.
 
 The first example stored procedure is RETURNBESTDEPTINFO, shown in the following figure. This is the caller stored procedure. It will retrieve the list of department names from the WORKDEPT column of the [DSN8D10.EMP](https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-employee-table-dsn8d10emp) sample table. 
 
@@ -22,7 +22,7 @@ Unfortunately, the caller stored procedure isn't working as expected. It always 
 
 ![Null output]({{site.baseurl}}/assets/images/debug-nsp-blank-output.gif)
 
-Our first step in debugging these nested stored procedures is to deploy them with ENABLE DEBUGGING turned on. We also need to specify the WLM environment name for debugging. These steps are documented in [Deploying, debugging, and running native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-debugging-running-native-sql-stored-procedures.html).
+Our first step in debugging these nested stored procedures is to deploy them with ENABLE DEBUGGING turned on. We also need to specify the WLM environment name for debugging.
 
 After the stored procedures are deployed correctly, we start to debug them by clicking **Debug Stored Procedure**.  When the execution cursor is displayed on the first line of the RETURNBESTDEPTINFO caller stored procedure, we set a breakpoint on the line of code that calls the RETURNDEPTSALARY callee stored procedure. Then we either click **Continue** or we press F5 to continue the execution. When the execution cursor reaches that breakpoint (line 22 in the following figure), execution pauses.
 
@@ -66,7 +66,7 @@ Great! The stored procedures are working as designed and are now returning corre
 
 By using Db2 Developer Extension's stored procedure debugger, we were able to quickly determine that a variable initialization was missing for the OUT_DEPTBONUSCNT variable. Without the stored procedure debugger, to locate a code bug in a stored procedure, we would need to update the stored procedure to print more trace data or generate more logs, we would need to execute the stored procedure multiple times to collect the data, and then we would need to to analyze that data, all of which takes a huge amount of time. With the stored procedure debugger, we can develop and maintain stored procedures more quickly and with higher efficiency.
 
-## More tips on debugging native SQL stored procedures
+## More tips on debugging native and external SQL stored procedures
 
 The following sections contain more information about the process of debugging stored procedures with Db2 Developer Extension.
 
