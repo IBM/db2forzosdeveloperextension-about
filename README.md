@@ -18,11 +18,11 @@ This extension provides language support for the Structured Query Language (SQL)
 And it includes features that enable you to easily:
 
 -   [Run SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-sql/preparing-to-run-an-sql-statement)
--   [Deploy, run, and debug native stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-and-debugging-stored-procedures-basics)
--   [Deploy and run external SQL stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-SQL-stored-procedures)
--   [Deploy and run Java stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures)
+-   Deploy and run [native](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures), [java](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures), and [external](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures) stored procedures
+-   [Debug native and external stored procedures](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/working-with-stored-procedures/debugging-native-external-stored-procedures)
 -   [Analyze and tune the performance of SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment)
 -   [Navigate the Db2 catalog](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/navigating-the-db2-catalog)
+-   [Import database connections from Data Studio](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/importing-connections-from-data-studio)
 
 For more information about the latest Db2 Developer Extension features, see [What's new in this release](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/whats-new-in-this-release).
 
