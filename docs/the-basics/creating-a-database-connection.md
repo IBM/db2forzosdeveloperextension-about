@@ -16,7 +16,7 @@ From the **DB2 for Z/OS CONNECTIONS** view, click the plus sign (**+**) to open 
 
 - If you want to include [additional properties](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/java/src/tpc/imjcc_r0052607.html) in your database connection, open the **Optional** tab and enter the property name and assign it a value. Select the checkbox to the left of a property to include it in a database connection. Click the blue plus sign (**+**) to add a new line.
 
-- Use the **Tuning** tab to specify a SQL Tuning Services server and to associate a tuning connection profile with a Db2 connection. See [Setting up a basic SQL tuning environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment.html) for more information.
+- Use the **Tuning** tab to specify a SQL Tuning Services server and to associate a tuning connection profile with a Db2 connection. See [Setting up an SQL Tuning Services environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html) for more information.
 
 When you're done, click **Finish**. If your database connection was created successfully, it'll be added to the **DB2 FOR Z/OS CONNECTIONS**  view. 
 
@@ -25,6 +25,19 @@ If your database connection fails to establish a connection, open the **Tracing*
 ## Changing a connection name
 
 When you create a connection, a connection name is automatically generated based on the connection information. You can change this name by editing the connection and changing the **Connection name** field.
+
+## Connecting with multi-factor authentication
+
+When you select **MFA token** as the login method, use the IBM Verify app to generate an MFA token and specify that token in the **MFA token** field.
+
+![Using multi-factor authentication]({{site.baseurl}}/assets/images/db2-connection-mfa.png)
+
+**Important:** To reduce timeout issues with MFA tokens, make sure that the following Db2 for z/OS subsystem parameters are set appropriately. For example:
+
+```
+MFA_AUTHCACHE_UNUSED_TIME=120
+AUTHEXIT_CACHEREFRESH=ALL
+```
 
 ## Connecting with SSL/TLS
 
