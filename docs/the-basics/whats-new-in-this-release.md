@@ -4,6 +4,27 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.1.6 (June 2024)
+
+Db2 for z/OS Developer Extension 2.1.6 provides the following significant enhancements:
+
+### Support for debugging external stored procedures
+
+You can now debug external SQL stored procedures. For more information, see [Debugging native and external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-native-external-stored-procedures.html).
+
+### Support for tuning SQL statements without using a tuning profile
+
+You can now run SQL tuning features without using a tuning profile. For more information, see [Setting up an SQL Tuning Environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html).
+
+### Support for importing existing database connections from IBM Data Studio
+
+You can now import database connections from IBM Data Studio. For more information, see [Importing database connections from IBM Data Studio]({{site.baseurl}}/docs/the-basics/importing-connections-from-data-studio.html).
+
+### Complete support for filtering multiple columns
+
+You can now apply complex filtering criteria to all of the Db2 for z/OS catalog objects. For more information, see [Filtering by multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html).
+
+
 ## 2.1.5 (March 2024)
 
 Db2 for z/OS Developer Extension 2.1.5 provides the following significant enhancements:
@@ -12,7 +33,7 @@ Db2 for z/OS Developer Extension 2.1.5 provides the following significant enhanc
 
 You can now deploy and run external SQL stored procedures and external Java stored procedures. See the following articles to get started:
 
-- [Creating external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-SQL-stored-procedures.html)
+- [Creating external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-sql-stored-procedures.html)
 - [Creating external Java stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-java-stored-procedures.html)
 
 ### Support for using a notebook interface
@@ -88,4 +109,5 @@ You can now view and hide implicit objects by using the view icon (![View icon](
 ### Support for VS Code Remote Development
 
 You can now take advantage of VS Code Remote Development support to create a remote Db2 Developer Extension development environment. See [Support for VS Code Remote Development]({{site.baseurl}}/docs/tips-and-tricks/support-for-remote-development.html) for more information.
+
 
