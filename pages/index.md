@@ -29,10 +29,13 @@ Db2 Developer Extension modernizes the experience of developing Db2 for z/OS app
 - The ability to run SQL with or without parameter markers and host variables and to save SQL execution results
 - The ability to modify and re-run SQL from the query history
 
-**Features for working with native stored procedures:**
-- The ability to deploy, run, and debug native stored procedures
-- The ability to define conditional hit-count breakpoints when debugging stored procedures
-- The ability to run SQL that includes parameters and variables from within a native stored procedure
+**Features for working with native and external SQL stored procedures:**
+- The ability to deploy, debug, and run native and external SQL stored procedures
+- The ability to define conditional hit-count breakpoints when debugging native and external SQL stored procedures
+- The ability to run SQL that includes parameters and variables from within native and external SQL stored procedures
+
+**Features for working with external Java stored procedures:**
+- The ability to deploy and run external Java stored procedures
 
 **Features for analyzing and tuning SQL:**
 - The ability to analyze and tune SQL by using the extended set of tuning features that are provided with Query Workload Tuner for z/OS 6.1 or by using the base subset of those tuning features that are provided with Database Services Expansion Pack (Visual Explain, Statistics Advisor, and Capture Query Environment). See [Software requirements for using the SQL tuning features]({{site.baseurl}}/docs/tuning-sql-queries/sql-tuning-requirements.html) for more information.
@@ -40,4 +43,4 @@ Db2 Developer Extension modernizes the experience of developing Db2 for z/OS app
 - Configure tuning options
 - Save a history of your tuning activities
 
-&copy; Copyright International Business Machines Corporation 2020, 2023.
+&copy; Copyright International Business Machines Corporation 2020, 2024.
