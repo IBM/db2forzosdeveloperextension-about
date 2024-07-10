@@ -26,7 +26,7 @@ The first step in setting up an SQL tuning environment is adding an SQL Tuning S
 
 Tuning profiles enable a SQL Tuning Services server to access the Db2 for z/OS database that contains the SQL that you want to tune. A tuning profile includes a valid Db2 for z/OS user ID and password, security information, and location information for the target database (host, location, and so on).
 
-**Note:** The use of tuning profiles is optional in certain situations. See [Tuning without a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-an-sql-tuning-services-environment.html#tuning-without-a-tuning-profile) for details.
+**Note:** The use of tuning profiles is optional in certain situations. See [Tuning without a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#tuning-without-a-tuning-profile) for details.
 
 The benefit of using tuning profiles is that they can be reused and shared. For example, a database administrator can create a single tuning profile with specific credentials and make it available to multiple Db2 Developer Extension users. However, if you specify a Db2 for z/OS password when you create a tuning profile, this password must be updated whenever the password is updated in RACF. To avoid this additional overhead, you can use multi-factor authentication instead of a password when you create a tuning profile.
 
