@@ -20,7 +20,7 @@ When you have some valid SQL and you have a valid database connection, you're ju
    Use this view to set the following options for running your SQL:
 
    - Whether to always use an existing database connection to run this script or open a new database connection every time you run this script.
-   - The circumstances under which changes are [committed or rolled back]({{site.baseurl}}/docs/the-basics/committing-and-rolling-back-changes.html).
+   - The circumstances under which changes are [committed or rolled back]({{site.baseurl}}/docs/working-with-sql/committing-and-rolling-back-changes.html).
    - The statement termination character to use if you don't want to use the default semicolon (;) character.
    - Values for the [CURRENT SCHEMA](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_currentschema.html) and [CURRENT PATH](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_currentpath.html) special registers and whether these values are always converted to uppercase letters.
 
