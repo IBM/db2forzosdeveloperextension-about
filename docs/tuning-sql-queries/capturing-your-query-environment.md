@@ -6,9 +6,9 @@ title: "Capturing your query environment"
 
 When working with IBM Support to resolve a performance problem with an SQL statement, you can use the Capture Query Environment feature to capture the statement's environment in a set of files. 
 
-1. Open an SQL file and click on the connection in the [Status Bar](https://code.visualstudio.com/docs/getstarted/userinterface). Select a Db2 connection from the list that's displayed. Make sure the connection that you select already has a tuning connection profile associated with it. If not, see [Associating a tuning connection profile with a Db2 connection]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment.html#associating-a-tuning-connection-profile-with-a-db2-connection).
+1. Open an SQL file and click on the connection in the [Status Bar](https://code.visualstudio.com/docs/getstarted/userinterface). Select a Db2 connection from the list that's displayed. If you are using a tuning profile, make sure the connection that you select already has a tuning profile associated with it. If not, see [Creating a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#optional-creating-a-tuning-profile).
 
-   **Note:** The message "No connection" is displayed in the **Status Bar** if a Db2 connection hasn't been associated with the file.
+   **Note:** The message "No connection" is displayed in the **Status Bar** if a Db2 connection hasn't been associated with the profile.
 
 2. Right-click in the .sql file and select **SQL Tuning Options**. The **Customize Tuning Options** dialog is displayed. 
 
