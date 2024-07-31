@@ -4,6 +4,10 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.1.7 (July 2024)
+
+Db2 for z/OS Developer Extension 2.1.7 provides miscellaneous fixes for importing database connections from IBM Data Studio and for tuning SQL.
+
 ## 2.1.6 (June 2024)
 
 Db2 for z/OS Developer Extension 2.1.6 provides the following significant enhancements:
