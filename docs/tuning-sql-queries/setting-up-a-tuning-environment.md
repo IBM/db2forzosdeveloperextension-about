@@ -22,11 +22,21 @@ The first step in setting up an SQL tuning environment is adding an SQL Tuning S
 
     ![Adding an SQL Tuning Services server]({{site.baseurl}}/assets/images/tuning-add-server.gif)
 
-## Optional: Creating a tuning profile
+## Supported security mechanisms
+
+Db2 Developer Extension supports the following security mechanisms for SQL tuning. Your options for using or not using a tuning profile are dependent on the security mechanism that you use in your environment. 
+
+- If you are using security mechanism 18 (SSL) to tune SQL, you must create and use tuning profiles to tune SQL. See [Creating a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#creating-a-tuning-profile) for instructions.
+
+- Security mechanisms 7 and 9 do not support the use of tuning profiles. If you are using one of these security mechanisms to tune SQL, see [Tuning without a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#tuning-without-a-tuning-profile) for more information.
+
+- Security mechanism 3 supports both methods for tuning SQL.
+
+## Creating a tuning profile
 
 Tuning profiles enable a SQL Tuning Services server to access the Db2 for z/OS database that contains the SQL that you want to tune. A tuning profile includes a valid Db2 for z/OS user ID and password, security information, and location information for the target database (host, location, and so on).
 
-**Note:** The use of tuning profiles is optional in certain situations. See [Tuning without a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#tuning-without-a-tuning-profile) for details.
+**Note:** The use of tuning profiles is optional in certain situations. See [Tuning without a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#tuning-without-a-tuning-profile) for details. However, if you are using security mechanism 18, you must use a tuning profile.
 
 The benefit of using tuning profiles is that they can be reused and shared. For example, a database administrator can create a single tuning profile with specific credentials and make it available to multiple Db2 Developer Extension users. However, if you specify a Db2 for z/OS password when you create a tuning profile, this password must be updated whenever the password is updated in RACF. To avoid this additional overhead, you can use multi-factor authentication instead of a password when you create a tuning profile.
 
@@ -64,9 +74,11 @@ Now that you've created a tuning profile, you must associate it with a Db2 datab
 
 ## Tuning without a tuning profile
 
-The use of tuning profiles is optional if you are using Db2 Developer Extension 2.1.6 and SQL Tuning Services APAR PH60806 has been applied. If you decide to not use a tuning profile, the authentication information in the database connection is used instead.
+The use of tuning profiles is optional if you are using Db2 Developer Extension 2.1.6 and SQL Tuning Services APAR PH60806 has been applied. If you decide to not use a tuning profile, the authentication information in the database connection is used instead. Tuning without a profile supports security mechanism 3 and is required for security mechanism 7 and 9.
 
 If you are tuning SQL without a tuning profile and you are using MFA, you will be prompted to enter an MFA token twice: when you first connect to Db2 and again when you initiate the tuning action. The tokens must be unique. Use the IBM Verify app to generate these MFA tokens.
+
+**Note:** Tuning without a profile enables you to select and run multiple tuning actions simultaneously. When you do so, the results for each of the tuning actions that you run will share the same Job ID.
 
 ## Creating EXPLAIN tables
 
