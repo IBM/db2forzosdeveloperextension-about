@@ -81,7 +81,7 @@
         - title: "Creating external Java stored procedures"
           url: "docs/working-with-stored-procedures/creating-external-java-stored-procedures"
         - title: "Deploying and running native SQL stored procedures"
-          url: "docs/working-with-stored-procedures/deploying-debugging-running-native-sql-stored-procedures"
+          url: "docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures"
         - title: "Deploying and running external SQL stored procedures"
           url: "docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures"
         - title: "Deploying and running external Java stored procedures"
