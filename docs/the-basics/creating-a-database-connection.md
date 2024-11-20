@@ -66,7 +66,7 @@ Before you can use SSL/TLS to connect to a Db2 server, the [Db2 server must be c
 
    ![Java truststore and Java KeyStore properties]({{site.baseurl}}/assets/images/db2-connection-ssl-tls.png)
 
-If you're using encrypted password security (security mechanism 7) or encrypted user ID and encrypted password security (security mechanism 9), you'll need one of the following set of properties:
+   If you're using encrypted password security (security mechanism 7) or encrypted user ID and encrypted password security (security mechanism 9), you'll need one of the following set of properties:
    
    - For encrypted password security, set the `securityMechanism` property to `7` and set the `encryptionAlgorithm` property to the appropriate value for your environment.
    - For encrypted user ID and encrypted password security, set the `securityMechanism` property to `9` and set the `encryptionAlgorithm` property to the appropriate value for your environment.
