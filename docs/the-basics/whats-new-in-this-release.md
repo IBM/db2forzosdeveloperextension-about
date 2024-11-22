@@ -10,7 +10,7 @@ Db2 for z/OS Developer Extension 2.2.0 provides the following significant enhanc
 
 - Support for [editing data in Db2 tables]({{site.baseurl}}/docs/the-basics/editing-table-data.html)
 
-- Support for [deploying SQL user-defined functions](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/working-with-stored-procedures/deploying-user-defined-functions.html)
+- Support for [deploying SQL user-defined functions]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-user-defined-functions.html)
 
 - Support for [creating]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-java-stored-procedures.html) and [deploying SQLJ stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures.html)
 
@@ -32,7 +32,7 @@ Db2 for z/OS Developer Extension 2.1.6 provides the following significant enhanc
 
 <!--You can now debug external SQL stored procedures. For more information, see [Debugging native and external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-native-external-stored-procedures.html). -->
 
-- Support for [tuning SQL statements without using a tuning profile](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment#tuning-without-a-tuning-profile)
+- Support for [tuning SQL statements without using a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment#tuning-without-a-tuning-profile)
 
 <!--You can now run SQL tuning features without using a tuning profile. For more information, see [Setting up an SQL Tuning Environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html). -->
 
@@ -44,7 +44,7 @@ Db2 for z/OS Developer Extension 2.1.6 provides the following significant enhanc
 
 <!--You can now apply complex filtering criteria to all of the Db2 for z/OS catalog objects. For more information, see [Filtering by multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html). -->
 
-- Support for [security mechanisms 7 and 9](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/the-basics/creating-a-database-connection#connecting-with-ssltls)
+- Support for [security mechanisms 7 and 9]({{site.baseurl}}/docs//the-basics/creating-a-database-connection#connecting-with-ssltls)
 
 ## 2.1.5 (March 2024)
 
