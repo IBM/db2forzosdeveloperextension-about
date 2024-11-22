@@ -1,16 +1,16 @@
 ---
-title: "Creating external Java stored procedures"
+title: "Creating external Java and SQLJ stored procedures"
 ---
 
 # {{ page.title }}
 
-This article covers the basics of using Db2 Developer Extension to create a simple external Java stored procedure.
+This article covers the basics of using Db2 Developer Extension to create a simple external Java or SQLJ stored procedure.
 
-Currently, Db2 Developer Extension supports JDBC stored procedures (SQLJ stored procedures are not supported).
+<!-- Currently, Db2 Developer Extension supports JDBC stored procedures (SQLJ stored procedures are not supported). -->
 
 ## Before you begin
 
-Before you can run an external Java stored procedure on Db2 for z/OS, you need to set up a WLM environment and set Java environment variables.  For instructions, see [Setting up the environment for Java routines](https://www.ibm.com/docs/en/db2-for-zos/13?topic=functions-setting-up-environment-java-routines).
+Before you can run an external Java or SQLJ stored procedure on Db2 for z/OS, you need to set up a WLM environment and set Java environment variables.  For instructions, see [Setting up the environment for Java routines](https://www.ibm.com/docs/en/db2-for-zos/13?topic=functions-setting-up-environment-java-routines).
 
 
 You also need SYSADM authority or EXECUTE privilege on the following procedures:
@@ -25,15 +25,33 @@ You also need SYSADM authority or EXECUTE privilege on the following procedures:
 
 If you do need to refresh the WLM environment, you'll also need to set up the WLM_REFRESH stored procedure. See [WLM_REFRESH stored procedure](https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-wlm-refresh) for details.
 
-## Creating a basic external Java stored procedure with code snippets
+## Creating a basic external Java or SQLJ stored procedure with code snippets
 
-1. Open a new **.spsql** or **.javaspsql** file, and start typing `CREATE PROCEDURE`. You'll only need to type a few letters before you see CREATE PROCEDURE in the list of available code snippets.
+To create a Java or SQLJ stored procedure, you need the following files:
 
-2. Select the `CREATE PROCEDURE statement (Java - IN/OUT parameters)` snippet to populate your file with the basic CREATE PROCEDURE structure:
+- The Java source file that you want to create a stored procedure for, which you provide. This file must end with an extension of **.java** or **.sqlj**.
+- The DDL to create the java stored procedure, which you can create and deploy by using Db2 Developer Extension. This file must end with an extension of **.sqsql** or **.javaspsql**.
+
+To create the stored procedure DDL:
+
+1. Create a new folder to contain your stored procedure files.
+2. Within that new folder, create a new DDL file (**.spsql** or **.javaspsql** file) and the package structure for your java package.
+
+   For example, if your java package is `package com.Administrator.Administrator`, the folder structure would look like this:
+```
+   <DDL_file>.javaspsql | .spsql
+   /com
+     /Administrator
+       /Administrator
+	     /<source_file>.java | .sqlj
+```
+3. Open your new **.spsql** or **.javaspsql** file and start typing `CREATE PROCEDURE`. You'll only need to type a few letters before you see CREATE PROCEDURE in the list of available code snippets.
+
+4. Select the `CREATE PROCEDURE statement (Java - IN/OUT parameters)` snippet to populate your file with the basic CREATE PROCEDURE structure:
 
 ![CREATE PROCEDURE code snippet]({{site.baseurl}}/assets/images/jsp-code-snippet.png)
 
-The snippet includes some of the more commonly used parameters and the required EXTERNAL NAME clause. The EXTERNAL NAME clause must contain a valid external-java-routine-name that is specified in the following format: 
+The snippet includes some of the more commonly used parameters and the required EXTERNAL NAME clause. The EXTERNAL NAME clause must contain a valid external-java-routine-name that is specified in the following format: 
 ```
 jar-name:package-id...class-id.method-id(method-signature)
 ```
@@ -43,7 +61,7 @@ To see all of the options that you can define in an external Java stored procedu
 
 ## What's next
 
-- After you specify an external Java routine name, the stored procedure is ready to be deployed. To learn how, see [Deploying and running external Java stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures.html).
+- After you specify an external Java routine name, the stored procedure is ready to be deployed. To learn how, see [Deploying and running external Java and SQLJ stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures.html).
 
 - You can also explore how to work with [double-byte character set (DBCS) data]({{site.baseurl}}/docs/working-with-stored-procedures/working-with-dbcs-data.html) in a stored procedure.
 

@@ -1,10 +1,10 @@
 ---
-title: "Deploying and running external Java stored procedures"
+title: "Deploying and running external Java and SQLJ stored procedures"
 ---
 
 # {{ page.title }}
 
-This article shows you how to use Db2 Developer Extension to deploy an external Java stored procedure with various deployment options: altering previous deployments, setting target schema, and others. It also walks you through the process of running an external Java stored procedure.
+This article shows you how to use Db2 Developer Extension to deploy an external Java or SQLJ stored procedure with various deployment options: altering previous deployments, setting target schema, and others. It also walks you through the process of running an external Java or SQLJ stored procedure.
 
 **Tip:** If you're new to stored procedures, make sure you're familiar with the information in [Creating external Java stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-java-stored-procedures.html) first.
 
@@ -15,6 +15,10 @@ Another advantage is that you don't need to specify `--#SET TERMINATOR` in the h
 **Note:** Currently, Db2 Developer Extension deploy and run options support only one stored procedure per **.spsql** or **.javaspsql** file. When stored procedure options are specified, only the first stored procedure in the file will be executed; additional stored procedures and SQL statements will be ignored.
 
 We'll use the following example stored procedure throughout this article to demonstrate how to deploy and run an external Java stored procedure. This stored procedure will read the total salary, including bonuses, from the table `SYSADM.EMP` from a passed in-parameter `DEPTNUMBER`. You can paste it into a file so that you try things out for yourself.
+
+**Note:** Although the example is a Java stored procedure, the deployment process is the essentially same for a SQLJ stored procedure. Any differences between the two formats are noted in the instructions.
+
+
 
 **TotalSalaryJavaSP.spsql**
 
@@ -29,6 +33,8 @@ CREATE PROCEDURE MYAPPS.TotalSalaryJavaSP(IN DEPTNUMBER CHAR(3),
     READS SQL DATA
 ```
 And here is the example Java code that includes the SQL SELECT statement:
+
+**TotalSalary.java**
 
 ```
 import java.math.BigDecimal;
@@ -74,17 +80,15 @@ public class TotalSalary {
 
 The file extension of `.spsql` identifies it as a stored procedure. When you open a **.spsql** or **.javaspsql** file in Db2 Developer Extension, you get some additional actions in the toolbar in the upper right corner of the view:
 
-![Deploy and Run action icons]({{site.baseurl}}/assets/images/sp-toolbar-deploy-run.png)
+![Deploy, Debug, Run action icons]({{site.baseurl}}/assets/images/nsp-basics-action-toolbar.png)
 
-From left to right, these actions are **Deploy** and **Run**. We'll cover each one in the following sections.
-
-**Note:** Db2 Developer Extension does not currently support debugging external Java  stored procedures.
+From left to right, these actions are **Deploy**, **Debug**, and **Run**. We'll cover deploying and running in the following sections.
 
 ## Deploying a stored procedure
 
 Click the **Deploy** action to open the **Deployment** view. This is where you can set and customize deployment options and save the options for the **.spsql** or **.javaspsql** file. These options are used only during deployment and do not impact the DDL source code.
 
-The **Deployment** view consists of three sections: **Deployment options**, **Routine options**, and **Java options**.
+The **Deployment** view consists of three sections: **Deployment options**, **Java options**, and **Routine options**.
 
 ### Deployment options
 
@@ -112,6 +116,22 @@ The **Deployment** view consists of three sections: **Deployment options**, **Ro
 
 If you're new to SQL and want more information about embedding SQL in host languages, there's a lot of information about this topic in the [Db2 for z/OS documentation](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_13.0.0/apsg/src/tpc/db2z_programembeddedsql.html).
 
+### Java options
+
+![Java options]({{site.baseurl}}/assets/images/jsp-java-options.png)
+
+- Use the **Java file path** option to specify the Java or SQLJ source file. It must have a public static void method, which works as an entry point for the stored procedure. The class name, declared package, and method name should match the external name defined in the CREATE PROCEDURE statement. If the Java class declares a package path, its location must match the package path to be able to compile properly.
+
+- Use the **Java dependencies** option to specify any compilation and runtime dependencies that are required by the Java class. Dependent JARs are defined to Db2 if you select **Upload**; otherwise, dependent JARs are used only for compilation. Dependent JARs must be defined in the Java path on the server unless they've been defined already to Db2 by other Java stored procedures.
+
+**Requirement:** If a dependent JAR file has its own dependent JAR files, save this JAR file and all its dependent JAR files on the server and add them to your JAVA path on the server. When you deploy this stored procedure, uncheck the **Upload** option for this JAR file and its dependent JAR files.
+
+- Use the **Compatible JRE version** option to specify a JRE that is at the same level or lower than the JRE version that is on Db2 for z/OS database. If the specified JRE version is higher than the version on the database, the stored procedure will not run. 
+
+- Select **Upload source to the database** field to include the associated Java source file when you deploy the stored procedure. If this option is not selected, you can run the stored procedure, but you will not be able to view the source for the stored procedure.
+
+- Click **Refresh Java WLM environment** to ensure that the most current version of the stored procedure is run.
+
 ### Routine options
 
 ![Routine options]({{site.baseurl}}/assets/images/jsp-routine-options.png)
@@ -126,21 +146,7 @@ If you're new to SQL and want more information about embedding SQL in host langu
    QUALIFIER ADMF002; ISOLATION LEVEL RS
 ```
 
-### Java options
-
-![Routine options]({{site.baseurl}}/assets/images/jsp-java-options.png)
-
-- Use the **Java file path** option to specify the Java class file. It must have a public static void method, which works as an entry point for the stored procedure. The class name, declared package, and method name should match teh external name defined in the CREATE PROCEDURE statement. If the Java class declares a package path, its location must match the package path to be able to compile properly.
-
-- Use the **Java dependencies** option to specify any compilation and runtime dependencies that are required by the Java class. Dependent JARs are defined to Db2 if you select **Upload**; otherwise, dependent JARs are used only for compilation. Dependent JARs must be defined in the Java path on the server unless they've been defined already to Db2 by other Java stored procedures.
-
-**Requirement:** If a dependent JAR file has its own dependent JAR files, save this JAR file and all its dependent JAR files on the server and add them to your JAVA path on the server. When you deploy this stored procedure, uncheck the **Upload** option for this JAR file and its dependent JAR files.
-
-- Use the **Compatible JRE version** option to specify a JRE that is at the same level or lower than the JRE version that is on Db2 for z/OS database. If the specified JRE version is higher than the version on the database, the stored procedure will not run. 
-
-- Select **Upload source to the database** field to include the associated Java source file when you deploy the stored procedure. If this option is not selected, you can run the stored procedure, but you will not be able to view the source for the stored procedure.
-
-- Click **Refresh Java WLM environment** to ensure that the most current version of the stored procedure is run.
+- For SQLJ stored procedures only, use the **Bind options** field to specify options for binding the external SQLJ procedure package. Do not specify the MEMBER or LIBRARY option for the Db2 BIND PACKAGE command. For a list of these options, see [BIND and REBIND options](https://www.ibm.com/docs/en/db2-for-zos/13?topic=commands-bind-rebind-options-packages-plans-services).
 
 ## Running a stored procedure
 
