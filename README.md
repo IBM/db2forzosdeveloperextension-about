@@ -14,12 +14,14 @@ This extension provides language support for the Structured Query Language (SQL)
 -   [Code completion and signature help](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/getting-started)
 -   [SQL formatting](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-sql/formatting-sql)
 -   [Customizable code snippets](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tips-and-tricks/creating-your-own-code-snippets)
+-   [DDL generation](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/generating-ddl)
 
 And it includes features that enable you to easily:
 
 -   [Run SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-sql/preparing-to-run-an-sql-statement)
--   Deploy and run [native](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures), [java](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures), and [external](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures) stored procedures
--   [Debug native and external stored procedures](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/working-with-stored-procedures/debugging-native-external-stored-procedures)
+-   Deploy and run [native](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures), [Java and SQLJ](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures), and [external SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures) stored procedures
+-   Debug [native and external SQL procedures](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/working-with-stored-procedures/debugging-native-external-stored-procedures) and [Java and SQLJ stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/debugging-external-java-stored-procedures)
+-   [Deploy user-defined functions](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-user-defined-functions)
 -   [Analyze and tune the performance of SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment)
 -   [Navigate the Db2 catalog](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/navigating-the-db2-catalog)
 -   [Import database connections from Data Studio](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/importing-connections-from-data-studio)
@@ -146,7 +148,7 @@ You need to specify the JDBC license file `db2jcc_license_cisuz.jar` to interact
 
 1. Open your VS Code settings and search for the `db2forzosdeveloperextension.db2sqlservice.dependencies` setting.
 2. Specify the JDBC license file, `db2jcc_license_cisuz.jar`. You must provide the full path.
-3. Optionally, specify the full path of your JDBC driver file. If you're using VS Code on Mac, separate the JDBC driver file from the JDBC license file with a colon (:). If you're using VS Code on Windows, separate them with a semicolon (;).
+3. Optionally, specify the full path of your JDBC driver file. If you're using VS Code on Mac, separate the JDBC driver file from the JDBC license file with a colon (:). If you're using VS Code on Windows, separate them with a semicolon (;). Note that single and double quotation marks must not be used.
 
     The following example shows specifications for both the JDBC license file and an optional JDBC driver file on Mac:
 
