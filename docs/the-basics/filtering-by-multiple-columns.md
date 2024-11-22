@@ -23,3 +23,14 @@ When all of these criteria are applied, we're presented with only those database
 The operators and values vary depending on the characteristics of each column.
 
 To remove a filter, click the **Remove filter** icon on the right side of the **Filter settings** dialog, and to remove all filters click **Clear all**.
+
+Note that certain types of catalog object tables contain columns that can have blank values. These include:
+
+- DATABASE - Storage group, Buffer pool
+- PACKAGE - Version
+- PLAN - Group member
+- STORED PROCEDURE - Version
+- TRIGGER - Version
+- UDF - Language, Version
+
+When you specify a blank value for one of these columns in conjunction with the `EqualTo` (=) or `NotEqualTo` (<>) operator, you can still apply the filter criteria. For example, specifying the Storage group column for a database object, and selecting the `Equal to` operator but leaving the **Value** field blank is a valid filter set of criteria.

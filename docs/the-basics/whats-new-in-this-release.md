@@ -4,6 +4,22 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.2.0 (November 2024)
+
+Db2 for z/OS Developer Extension 2.2.0 provides the following significant enhancements:
+
+- Support for [editing data in Db2 tables]({{site.baseurl}}/docs/the-basics/editing-table-data.html)
+
+- Support for [deploying SQL user-defined functions](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/working-with-stored-procedures/deploying-user-defined-functions.html)
+
+- Support for [creating]({{site.baseurl}}/docs/working-with-stored-procedures/creating-external-java-stored-procedures.html) and [deploying SQLJ stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures.html)
+
+- Support for [debugging Java and SQLJ stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-external-java-stored-procedures.html)
+
+- Support for [deploying multiple stored procedures at the same time]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-multiple-stored-procedures-simultaneously.html)
+
+- Support for [generating DDL]({{site.baseurl}}/docs/the-basics/generating-ddl.html)
+
 ## 2.1.7 (July 2024)
 
 Db2 for z/OS Developer Extension 2.1.7 provides miscellaneous fixes for importing database connections from IBM Data Studio and for tuning SQL.
@@ -12,22 +28,23 @@ Db2 for z/OS Developer Extension 2.1.7 provides miscellaneous fixes for importin
 
 Db2 for z/OS Developer Extension 2.1.6 provides the following significant enhancements:
 
-### Support for debugging external stored procedures
+- Support for [debugging native and external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-native-external-stored-procedures.html)
 
-You can now debug external SQL stored procedures. For more information, see [Debugging native and external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-native-external-stored-procedures.html).
+<!--You can now debug external SQL stored procedures. For more information, see [Debugging native and external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-native-external-stored-procedures.html). -->
 
-### Support for tuning SQL statements without using a tuning profile
+- Support for [tuning SQL statements without using a tuning profile](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment#tuning-without-a-tuning-profile)
 
-You can now run SQL tuning features without using a tuning profile. For more information, see [Setting up an SQL Tuning Environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html).
+<!--You can now run SQL tuning features without using a tuning profile. For more information, see [Setting up an SQL Tuning Environment]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment.html). -->
 
-### Support for importing existing database connections from IBM Data Studio
+- Support for [importing existing database connections from IBM Data Studio]({{site.baseurl}}/docs/the-basics/importing-connections-from-data-studio.html)
 
-You can now import database connections from IBM Data Studio. For more information, see [Importing database connections from IBM Data Studio]({{site.baseurl}}/docs/the-basics/importing-connections-from-data-studio.html).
+<!--You can now import database connections from IBM Data Studio. For more information, see [Importing database connections from IBM Data Studio]({{site.baseurl}}/docs/the-basics/importing-connections-from-data-studio.html). -->
 
-### Complete support for filtering multiple columns
+- Complete support for [filtering multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html)
 
-You can now apply complex filtering criteria to all of the Db2 for z/OS catalog objects. For more information, see [Filtering by multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html).
+<!--You can now apply complex filtering criteria to all of the Db2 for z/OS catalog objects. For more information, see [Filtering by multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html). -->
 
+- Support for [security mechanisms 7 and 9](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/the-basics/creating-a-database-connection#connecting-with-ssltls)
 
 ## 2.1.5 (March 2024)
 
