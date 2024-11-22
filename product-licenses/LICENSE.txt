@@ -3,13 +3,21 @@ LICENSE INFORMATION
 The Programs listed below are licensed under the following License Information terms and conditions in addition to the Program license terms previously agreed to by Client and IBM. If Client does not have previously agreed to license terms in effect for the Program, the International License Agreement for Non-Warranted Programs (i125-5589-06) applies.
 
 Program Name (Program Number):
-IBM Db2 for z/OS Developer Extension, 2.1.7 (plug-in)
+IBM Db2 for z/OS Developer Extension, 2.2.0 (plug-in)
 
 The following standard terms apply to Licensee's use of the Program.
 
 Modifiable Third Party Code
 
 To the extent, if any, in the NOTICES file IBM identifies third party code as "Modifiable Third Party Code," IBM authorizes Licensee to 1) modify the Modifiable Third Party Code and 2) reverse engineer the Program modules that directly interface with the Modifiable Third Party Code provided that it is only for the purpose of debugging Licensee's modifications to such third party code. IBM's service and support obligations, if any, apply only to the unmodified Program.
+
+Separately Licensed Code
+
+Each of the components listed in the NON_IBM_LICENSE file is considered "Separately Licensed Code" licensed to Licensee under the terms of the applicable third party license agreement(s) set forth in the NON_IBM_LICENSE file(s) that accompanies the Program, and not this Agreement. Future Program updates or fixes may contain additional Separately Licensed Code. Such additional Separately Licensed Code and related licenses are listed in the applicable NON_IBM_LICENSE file that accompanies the Program update or fix.
+
+Note: Notwithstanding any of the terms in the third party license agreement, the Agreement, or any other agreement Licensee may have with IBM, with respect to the Separately Licensed Code:
+(a) IBM provides it to Licensee WITHOUT WARRANTIES OF ANY KIND AND DISCLAIMS ANY AND ALL EXPRESS AND IMPLIED WARRANTIES AND CONDITIONS INCLUDING, BUT NOT LIMITED TO, THE WARRANTY OF TITLE, NON-INFRINGEMENT OR NON-INTERFERENCE, AND THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE;
+(b) IBM is not liable for any direct, indirect, incidental, special, exemplary, punitive or consequential damages including, but not limited to, lost data, lost savings, and lost profits.
 
 Privacy
 
@@ -20,9 +28,9 @@ Source Components and Sample Materials
 The Program includes components in source code form ("Source Components"), or other materials identified as Sample Materials or both. Licensee may copy and modify Source Components and Sample Materials for internal use only within the limits of the license rights under this Agreement; provided, however, that Licensee may not alter or delete any copyright information or notices contained in the Source Components or Sample Materials. IBM provides the Source Components and Sample Materials without obligation of support and "AS IS", WITH NO WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING THE WARRANTY OF TITLE, NON-INFRINGEMENT OR NON-INTERFERENCE AND THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 
-L/N: L-BJDK-GLBH8D
-D/N: L-BJDK-GLBH8D
-P/N: L-BJDK-GLBH8D
+L/N: L-DJZB-LNHMN7
+D/N: L-DJZB-LNHMN7
+P/N: L-DJZB-LNHMN7
 
 International License Agreement for Non-Warranted Programs
 
@@ -511,4 +519,3 @@ In Czech Republic: Licensee expressly accepts the terms of this agreement which 
 In Romania: The Licensee expressly accepts, the following standard clauses that may be deemed 'unusual clauses' as per the provisions of article 1203 Romanian Civil Code: clauses 2, 4, 5, 8j. The Licensee hereby acknowledges that it was sufficiently informed of all the provisions of this Agreement, including the clauses mentioned above, it properly analyzed and understood such provisions and had the opportunity to negotiate the terms of each clause.
 
 i125-5589-06 (10-2021)
-
