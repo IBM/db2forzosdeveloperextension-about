@@ -14,7 +14,11 @@
         - title: "Navigating the Db2 catalog"
           url: "docs/the-basics/navigating-the-db2-catalog"
         - title: "Filtering by multiple columns"
-          url: "docs/the-basics/filtering-by-multiple-columns"          
+          url: "docs/the-basics/filtering-by-multiple-columns"
+        - title: "Editing table data"
+          url: "docs/the-basics/editing-table-data"
+        - title: "Generating DDL for a Db2 object"
+          url: "docs/the-basics/generating-ddl"        
     - title: Working with SQL
       url: "docs/working-with-sql"
       children:
@@ -69,7 +73,7 @@
           url: "docs/tuning-sql-queries/comparing-access-paths"
         - title: "Gathering statistics about a transformed query (SQL Annotator)"
           url: "docs/tuning-sql-queries/gathering-statistics-about-transformed-query"
-    - title: Working with stored procedures
+    - title: Working with routines
       url: "docs/working-with-stored-procedures"
       children:
         - title: "Supported types of stored procedures"
@@ -78,22 +82,28 @@
           url: "docs/working-with-stored-procedures/creating-native-sql-stored-procedures"
         - title: "Creating external SQL stored procedures"
           url: "docs/working-with-stored-procedures/creating-external-sql-stored-procedures"
-        - title: "Creating external Java stored procedures"
+        - title: "Creating external Java and SQLJ stored procedures"
           url: "docs/working-with-stored-procedures/creating-external-java-stored-procedures"
         - title: "Deploying and running native SQL stored procedures"
           url: "docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures"
         - title: "Deploying and running external SQL stored procedures"
           url: "docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures"
-        - title: "Deploying and running external Java stored procedures"
-          url: "docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures"  
+        - title: "Deploying and running external Java and SQLJ stored procedures"
+          url: "docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures"
+        - title: "Deploying multiple stored procedures simultaneously"
+          url: "docs/working-with-stored-procedures/deploying-multiple-stored-procedures-simultaneously"       
         - title: "Debugging native and external SQL stored procedures"
           url: "docs/working-with-stored-procedures/debugging-native-external-stored-procedures"
+        - title: "Debugging external Java and SQLJ stored procedures"
+          url: "docs/working-with-stored-procedures/debugging-external-java-stored-procedures"
         - title: "Advanced techniques for debugging native and external SQL stored procedures"
           url: "docs/working-with-stored-procedures/debugging-stored-procedures-advanced"        
         - title: "Working with double-byte character set (DBCS) data"
           url: "docs/working-with-stored-procedures/working-with-dbcs-data"
         - title: "Working with user-defined types"
           url: "docs/working-with-stored-procedures/working-with-user-defined-types"
+        - title: "Deploying user-defined functions"
+          url: "docs/working-with-stored-procedures/deploying-user-defined-functions"
     - title: Tips and tricks
       url: "docs/tips-and-tricks"
       children:
