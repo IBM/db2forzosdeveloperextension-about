@@ -16,7 +16,8 @@ Db2 Developer Extension modernizes the experience of developing Db2 for z/OS app
 - Syntax checking and highlighting
 - Customizable code snippet support
 - Integrated support for connecting to Db2 databases
-- Db2 catalog navigation
+- Db2 catalog navigation and filtering
+- Table editing
 
 **Features for running SQL:**
 - The ability to run selected SQL statements from any type of file
@@ -34,8 +35,9 @@ Db2 Developer Extension modernizes the experience of developing Db2 for z/OS app
 - The ability to define conditional hit-count breakpoints when debugging native and external SQL stored procedures
 - The ability to run SQL that includes parameters and variables from within native and external SQL stored procedures
 
-**Features for working with external Java stored procedures:**
-- The ability to deploy and run external Java stored procedures
+**Features for working with external Java and SQLJ stored procedures:**
+- The ability to create, deploy, and run external Java and SQLJ stored procedures
+- The ability to debug external Java and SQLJ stored procedures
 
 **Features for analyzing and tuning SQL:**
 - The ability to analyze and tune SQL by using the extended set of tuning features that are provided with Query Workload Tuner for z/OS 6.1 or by using the base subset of those tuning features that are provided with Database Services Expansion Pack (Visual Explain, Statistics Advisor, and Capture Query Environment). See [Software requirements for using the SQL tuning features]({{site.baseurl}}/docs/tuning-sql-queries/sql-tuning-requirements.html) for more information.
