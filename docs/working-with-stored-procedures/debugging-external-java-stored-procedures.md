@@ -7,7 +7,7 @@ title: "Debugging external Java and SQLJ stored procedures"
 This topic shows you how to use Db2 Developer Extension to debug external Java and SQLJ stored procedures.
 
 ## Before you begin
-- You must deploy the Java or SQLJ stored procedure before you can debug it. See [Deploying and running external Java and SQL stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures) for more information.
+- You must deploy the Java or SQLJ stored procedure before you can debug it. See [Deploying and running external Java and SQLJ stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures) for more information.
 
 - Debugging Java and SQLJ stored procedures requires the [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug) extension, which is included with the 
 Extension Pack for Java. If this extension is not already part of your VS Code environment, follow [these instructions](https://code.visualstudio.com/docs/editor/extension-marketplace) to install it from within VS Code.
