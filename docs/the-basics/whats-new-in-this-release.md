@@ -46,7 +46,7 @@ Db2 for z/OS Developer Extension 2.1.6 provides the following significant enhanc
 
 - Support for [security mechanisms 7 and 9]({{site.baseurl}}/docs//the-basics/creating-a-database-connection#connecting-with-ssltls)
 
-- Compatibility with the Java 17 JRE.
+- Compatibility with the Java 17 JRE
 
 ## 2.1.5 (March 2024)
 
