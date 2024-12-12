@@ -45,6 +45,7 @@ Db2 for z/OS Developer Extension 2.1.6 provides the following significant enhanc
 <!--You can now apply complex filtering criteria to all of the Db2 for z/OS catalog objects. For more information, see [Filtering by multiple columns]({{site.baseurl}}/docs/the-basics/filtering-by-multiple-columns.html). -->
 
 - Support for [security mechanisms 7 and 9]({{site.baseurl}}/docs//the-basics/creating-a-database-connection#connecting-with-ssltls)
+- Compatibility with the Java 17 JRE.
 
 ## 2.1.5 (March 2024)
 
