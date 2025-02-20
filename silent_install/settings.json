@@ -1,0 +1,6 @@
+{
+  "db2forzosdeveloperextension.db2sqlservice.dependencies": "C:\\Users\\Administrator\\Documents\\lib\\*",
+  "db2forzosdeveloperextension.java.home": "C:\\Program Files\\Java\\jre1.8.0_431",
+  "db2forzosdeveloperextension.db2sqlservice.port": "3000-3050",
+  "db2forzosdeveloperextension.db2sqlservice.debugger.sessionManagerPort": "4555-4605"
+}

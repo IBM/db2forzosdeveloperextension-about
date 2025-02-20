@@ -1,0 +1,16 @@
+{
+  "16160e89-8ce2-45d0-9045-fda49e87a11d": {
+    "name": "Db2zHost/LOCATION",
+    "server": "Db2zHost",
+    "port": "446",
+    "location": "LOCATION",
+    "authType": "REGULAR",
+    "savePassword": false,
+    "traceLevel": 0,
+    "traceFileAppend": false,
+    "tuningProfileToggle": true,
+    "jdbcProperties": {
+      "ExampleJdbcProp": "ExampleJdbcVal"
+    }
+  }
+}
