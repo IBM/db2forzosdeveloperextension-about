@@ -30,7 +30,7 @@ Components that you need to obtain or provide include:
 
 -   The VS Code installer, which you can download from https://code.visualstudio.com/download.
 
--   The Db2 for z/OS Developer Extension vsix artifact, which you can download from https://marketplace.visualstudio.com/items?itemName=IBM.db2forzosdeveloperextension
+-   The Db2 for z/OS Developer Extension vsix artifact, which you can download from https://github.com/IBM/db2forzosdeveloperextension-about/releases
 
 -   A valid jcc license
 
@@ -60,7 +60,7 @@ Components that you need to obtain or provide include:
     - `<VSCode_location_path>/globalStorage/ibm.db2forzosdeveloperextension/tuning_services/tuning_services_servers.json`
     - `<VSCode_location_path>/globalStorage/ibm.db2forzosdeveloperextension/tuning_services/tuning_associations.json`
 
-4) Customize the sample settings.json file with any VS Code settings for Db2 Developer Extension that you want to apply as defaults across your environment. See https://code.visualstudio.com/docs/editor/extension-marketplace#_configuring-extensions for an explanation of VS Code settings.
+4. Customize the sample settings.json file with any VS Code settings for Db2 Developer Extension that you want to apply as defaults across your environment. See https://code.visualstudio.com/docs/editor/extension-marketplace#_configuring-extensions for an explanation of VS Code settings.
 
     The sample setting.json file contains the following parameters:
 
@@ -74,9 +74,9 @@ Components that you need to obtain or provide include:
 
         **Note:** These four settings, as well as additional Db2 Developer Extension settings, can be modified manually after the extension has been installed. To do so, click the **Manage** icon at the lower left corner of the VS Code window, then click **Settings > Extension > IBM Db2 for z/OS Developer Extension**.
 
-5) Make sure that the script, sample json files, VS Code installer, and Db2 Developer Extension vsix artifact are in the same folder.
+5. Make sure that the script, sample json files, VS Code installer, and Db2 Developer Extension vsix artifact are in the same folder.
 
-6) The script is now ready to run. Deploy it using whatever mechanism you use to perform silent installations.
+6. The script is now ready to run. Deploy it using whatever mechanism you use to perform silent installations.
 
 After the script completes sucessfully on each client workstation, users should be able to open VS Code and see that Db2 Developer Extension is installed. If you defined Db2 connection information and SQL Tuning Services information, users should see this information in the primary side bar of the Db2 Developer Extension interface.
 
