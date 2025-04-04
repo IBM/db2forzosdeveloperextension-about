@@ -136,7 +136,7 @@ If you're new to SQL and want more information about embedding SQL in host langu
 
 ![Routine options]({{site.baseurl}}/assets/images/jsp-routine-options.png)
 
-- The **Enable debugging** option is not currently available for external Java stored procedures.
+- Use the **Enable debugging** option to specify whether this procedure is available to be debugged.
 
 - Use the **WLM environment** option to specify which Workload Manager environment will be used to debug the procedure. If you enable debugging but leave this field empty, the default WLM environment will used.
 
