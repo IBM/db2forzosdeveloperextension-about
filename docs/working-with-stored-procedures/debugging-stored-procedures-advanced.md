@@ -1,10 +1,12 @@
 ---
-title: "Advanced techniques for debugging native and external SQL stored procedures"
+title: "Advanced techniques for debugging native and external SQL stored procedures and user-defined functions"
 ---
 
 # {{ page.title }}
 
-After you understand the basic process of debugging native and external SQL stored procedures, you might need some more in-depth information about using Db2 Developer Extension to debug more complex problems.
+After you understand the basic process of debugging native and external SQL stored procedures and user-defined functions (UDFs), you might need some more in-depth information about using Db2 Developer Extension to debug more complex problems.
+
+**Note:** Although the examples and screens in this topic show a stored procedure, the process of debugging a UDF is identical.
 
 For example, many stored procedures contain extremely complex business logic, especially when nested stored procedures are involved. In these types of stored procedures, locating, analyzing, and fixing a problem can be quite a challenge. 
 
@@ -24,7 +26,7 @@ Unfortunately, the caller stored procedure isn't working as expected. It always 
 
 Our first step in debugging these nested stored procedures is to deploy them with ENABLE DEBUGGING turned on. We also need to specify the WLM environment name for debugging.
 
-After the stored procedures are deployed correctly, we start to debug them by clicking **Debug Stored Procedure**.  When the execution cursor is displayed on the first line of the RETURNBESTDEPTINFO caller stored procedure, we set a breakpoint on the line of code that calls the RETURNDEPTSALARY callee stored procedure. Then we either click **Continue** or we press F5 to continue the execution. When the execution cursor reaches that breakpoint (line 22 in the following figure), execution pauses.
+After the stored procedures are deployed correctly, we start to debug them by clicking **Debug Routinee**.  When the execution cursor is displayed on the first line of the RETURNBESTDEPTINFO caller stored procedure, we set a breakpoint on the line of code that calls the RETURNDEPTSALARY callee stored procedure. Then we either click **Continue** or we press F5 to continue the execution. When the execution cursor reaches that breakpoint (line 22 in the following figure), execution pauses.
 
 ![Setting the first breakpoint]({{site.baseurl}}/assets/images/debug-nsp-set-first-breakpoint.gif)
 
@@ -66,9 +68,9 @@ Great! The stored procedures are working as designed and are now returning corre
 
 By using Db2 Developer Extension's stored procedure debugger, we were able to quickly determine that a variable initialization was missing for the OUT_DEPTBONUSCNT variable. Without the stored procedure debugger, to locate a code bug in a stored procedure, we would need to update the stored procedure to print more trace data or generate more logs, we would need to execute the stored procedure multiple times to collect the data, and then we would need to to analyze that data, all of which takes a huge amount of time. With the stored procedure debugger, we can develop and maintain stored procedures more quickly and with higher efficiency.
 
-## More tips on debugging native and external SQL stored procedures
+## More tips on debugging native and external SQL stored procedures and user-defined functions
 
-The following sections contain more information about the process of debugging stored procedures with Db2 Developer Extension.
+The following sections contain more information about the process of debugging stored procedures and UDFs with Db2 Developer Extension.
 
 ### Required privileges
 
@@ -131,4 +133,3 @@ The stored procedure that is being debugged has not been deployed on the Db2 ser
 To obtain detailed information about errors that occurred with the extension:
 1. Turn on extension logging by setting **Db2forzosdeveloperextension > Debug : Log Level** to be any value other than 'off'.
 2. Issue the 'open extension logs folder' command in the **Command Palette** to display the log files folder.
-
