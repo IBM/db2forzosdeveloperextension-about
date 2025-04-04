@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension, 2.2.0
+IBM Db2 for z/OS Developer Extension, 2.2.1
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -25,7 +25,7 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.0
+Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.1
 
 Apache 2.0 License
 
@@ -33,7 +33,7 @@ The Program includes some or all of the following that IBM obtained under the Ap
 
 @carbon/colors  10.12.0
 @carbon/layout  10.29.0
-@carbon/react  1.65.0
+@carbon/react  1.79.0
 @carbon/styles  1.47.0
 @carbon/themes  10.17.0
 @carbon/type  10.13.0
@@ -44,22 +44,23 @@ commons-codec  1.16
 commons-logging  1.2
 find-java-home  1.1.0
 gson  2.10.1
+gson 2.9.1
 httpclient  4.5.14
 httpcore  jar  4.4.16
 jackson-annotations  2.11.0
 jackson-annotations  2.15.2
+jackson-core  2.15.0
 jackson-core  2.15.2
-jackson-core  2.13.2
 jackson-databind  2.15.2
 log4j-api  2.17.1
 log4j-core  2.17.1
 log4js  6.4.1
-
-
+puppeteer-core 13.4.0
 
 Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
+
 TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 1. Definitions.
 "License" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
@@ -140,13 +141,14 @@ The Program includes some or all of the following that IBM obtained under the MI
 
 
 async 3.2.6	Copyright (c) 2010-2018 Caolan McMahon
-axios 1.7.7	Copyright (c) 2014-present Matt Zabriskie
+axios 1.8.2	Copyright (c) 2014-present Matt Zabriskie
 fast-xml-parser 4.5.0   Copyright (c) 20117 Amit Kumar Gupta
 html-react-parser 5.1.15	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
 json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
 karma-chrome-launcher 3.1.0	Copyright (C) 2011-2013 Google, Inc.
 path 0.12.7	Copyright Joyent, Inc. and other Node contributors. All rights reserved.
 react 18.3.1	Copyright (c) Facebook, Inc. and its affiliates.
+react-is 18.3.1  Copyright (c) Meta Platforms, Inc. and affiliates.
 react-autosuggest 10.1.0	Copyright © 2017 Misha Moroshko
 react-dom 18.3.1	Copyright (c) Facebook, Inc. and its affiliates.
 uuid 8.3.2	Copyright (c) 2010-2020 Robert Kieffer and other contributors
@@ -209,6 +211,6 @@ End of Python Software Foundation License 2.0
 
 
 
-L/N: L-DJZB-LNHMN7
-D/N: L-DJZB-LNHMN7
-P/N: L-DJZB-LNHMN7
+L/N: L-ADMQ-E7T2PC
+D/N: L-ADMQ-E7T2PC
+P/N: L-ADMQ-E7T2PC
