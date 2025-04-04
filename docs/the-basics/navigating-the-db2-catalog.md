@@ -138,7 +138,7 @@ The following list shows which characteristics are provided for each object type
     - Options (differs depending on the type of procedure)
     - Parameters
     - Packages
-    - DDL
+    - DDL (output is limited to 7,500 characters)
     - JAR dependencies (applies only to external Java stored procedures)
     - Source (applies only to external Java stored procedures)
 - Tables
