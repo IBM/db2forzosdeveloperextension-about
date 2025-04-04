@@ -57,11 +57,11 @@ CREATE PROCEDURE ADMF001.RETURNDEPTSALARY
 
 The file extension of `.spsql` identifies it as a stored procedure, and the `EXTERNAL NAME` and `FENCED` claues identify it as an external SQL stored procedure. When you open a **.spsql** file in Db2 Developer Extension, you get some additional actions in the toolbar in the upper right corner of the view:
 
-![Deploy and Run action icons]({{site.baseurl}}/assets/images/sp-toolbar-deploy-run.png)
+From left to right, these actions are **Deploy**, **Debug**, and **Run**. We'll cover each one in the following sections. 
 
-From left to right, these actions are **Deploy** and **Run**. We'll cover each one in the following sections. 
+![Deploy, Debug, Run, action icons]({{site.baseurl}}/assets/images/nsp-basics-action-toolbar.png)
 
-**Note:** Db2 Developer Extension does not currently support debugging external SQL stored procedures.
+
 
 ## Deploying a stored procedure
 
@@ -99,7 +99,7 @@ If you're new to SQL and want more information about embedding SQL in host langu
 
 ![Routine options]({{site.baseurl}}/assets/images/esp-routine-options.png)
 
-- The **Enable debugging** option is currently not available for external SQL stored procedures.
+- Use the **Enable debugging option** to specify whether this procedure is available to be debugged.
 
 - Use the **WLM environment** option to specify which Workload Manager environment will be used to debug the procedure. If you enable debugging but leave this field empty, the default WLM environment will used.
 
@@ -181,4 +181,3 @@ This article covers only the following options that you can set in this view:
 
 Second, Db2 Developer Extension runs only the first stored procedure in a file and ignores any other SQL statements that you might have selected to run. If you select **Commit on completion** or **Rollback changes on completion**, processing will end after the first stored procedure is processed, even if you intended to run additional SQL statements in that same file. See [Committing and rolling back changes]({{site.baseurl}}/docs/the-basics/committing-and-rolling-back-changes.html) for more information.
 --> 
-
