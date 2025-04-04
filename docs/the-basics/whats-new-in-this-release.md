@@ -4,6 +4,26 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.2.1 (April 2025)
+
+Db2 for z/OS Developer Extension 2.2.1 provides the following significant enhancements:
+
+- Support for [running]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-user-defined-functions#running-a-user-defined-function.html) and [debugging]({{site.baseurl}}/docs/working-with-stored-procedures/debugging-native-external-stored-procedures.html) user-defined functions (UDFs)
+
+- Support for [deploying a combination of stored procedures and user-defined functions (UDFs) in a single operation]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-multiple-stored-procedures-simultaneously.html)
+
+- Support for [controlling processing behavior if an error occurs when multiple routines are deployed simultaneously]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-multiple-stored-procedures-simultaneously.html)
+
+- Support for [activating a new version of a native stored procedure or compiled UDF from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/activating-new-routine-version.html)
+
+- Support for [calling a native or external stored procedure from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/calling-stored-procedures-from-catalog-navigation.html)
+
+- Support for [editing DISTINCT data types and enhancements to column headings when editing table data]({{site.baseurl}}/docs/the-basics/editing-table-data.html)
+
+- Support for specifying additional collection IDs when tuning SQL through the use of the currentPackagePath property [with a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment#creating-a-tuning-profile) and [without a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment#tuning-without-a-tuning-profile)
+
+- Documented a fix for [truncated trailing zeros in the timestamp column of query results and table data]({{site.baseurl}}/docs/troubleshooting/truncated-timestamp-values.html)
+
 ## 2.2.0 (November 2024)
 
 Db2 for z/OS Developer Extension 2.2.0 provides the following significant enhancements:
