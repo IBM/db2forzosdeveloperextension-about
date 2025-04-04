@@ -42,7 +42,6 @@ After you commit your changes to the database, the **Execution summary** page is
 - You cannot edit the value for the following data types:
     - BLOB
     - DBCLOB
-    - DISTINCT
     - GRAPHIC
     - VARGRAPHIC
     - ROWID
