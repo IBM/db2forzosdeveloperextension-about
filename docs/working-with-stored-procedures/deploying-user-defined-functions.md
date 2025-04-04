@@ -1,10 +1,10 @@
 ---
-title: "Deploying user-defined functions"
+title: "Deploying and running user-defined functions"
 ---
 
 # {{ page.title }}
 
-This article shows you how to use Db2 Developer Extension to deploy an SQL user-defined function (UDF) with various deployment options: altering previous deployments, setting target schema, and others.
+This article shows you how to use Db2 Developer Extension to deploy an SQL user-defined function (UDF) with various deployment options: altering previous deployments, setting target schema, and others. It also walks you through the process of running a UDF.
 
 One big advantage of using Db2 Developer Extension to deploy a UDF, as opposed to manually executing SQL, is that you can save the various deployment options separately from the SQL itself, which means that you can push your code into a source code manager, such as GitHub, without having to remove your personal deployment options first.
 
@@ -43,10 +43,11 @@ Here's how that same SQL user-defined function looks in Db2 Developer Extension:
 
 ![Example of SQL UDF]({{site.baseurl}}/assets/images/udfsql-deploy-example.png)
 
-The file extension of `.udfsql` identifies it as an SQL user-defined function. When you open a **.udfsql** file in Db2 Developer Extension, the **Deploy** action is displayed in the toolbar in the upper right corner of the view:
+The file extension of `.udfsql` identifies it as an SQL user-defined function. When you open a **.udfsql** file in Db2 Developer Extension, you get some additional actions in the toolbar in the upper right corner of the view:
 
-![Deploy icon]({{site.baseurl}}/assets/images/udf-deploy-icon.png)
+![Deploy, Debug, Run, action icons]({{site.baseurl}}/assets/images/nsp-basics-action-toolbar.png)
 
+From left to right, these actions are **Deploy**, **Debug**, and **Run**. We’ll cover deploying and running in the following sections.
 
 ## Deploying a user-defined function
 
@@ -83,9 +84,9 @@ The **Deployment** view consists of two sections: **Deployment options** and **R
 
 ![Routine options]({{site.baseurl}}/assets/images/udf-routine-options.png)
 
-- The **Enable debugging option** is currently not available for user-defined functions.
+- Use the **Enable debugging** option to specify whether this UDF is available to be debugged.
 
-- The **WLM environment** option is disabled because debugging is currently not available for user-defined functions.
+- Use the **WLM environment** option to specify which Workload Manager environment will be used to debug the UDF. If you enable debugging but leave this field empty, the default WLM environment will used.
 
 - Use the **ASU time limit** option to set the ASUTIME, which is the number of CPU seconds permitted for each SQL statement. The default value of 0 means NO LIMIT and is not recommended.
 
@@ -104,3 +105,23 @@ After your SQL user-defined function is executed, the following output is displa
 ![SQL results window]({{site.baseurl}}/assets/images/udf-sql-results-window.png)
 
 The **Status** tab contains overall execution status. If an error occurred, the status will contain SQL code, SQL state, and Message text.
+
+## Running a user-defined function
+After you deploy a UDF, you can run it by clicking the **Run User-Defined Function** icon or by right-clicking and 
+selecting the **Run User-Defined Function** option.
+ 
+If your UDF contains input variables, you’ll be prompted to specify values for them before the UDF executes, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
+ 
+![Input parameters for running a UDF]({{site.baseurl}}/assets/images/udf-run-parameters.png)
+ 
+ After your UDF runs, the following output is displayed in these tabs:
+
+- The **Status** tab contains the overall execution status. If an error occurred, the status will contain **SQL code**, **SQL state**, and **Message text**.
+
+![Status of running a UDF]({{site.baseurl}}/assets/images/udf-run-status.png)
+
+- The **Results** tab contains the output from running the UDF.
+
+![Results of running a UDF]({{site.baseurl}}/assets/images/udf-run-results.png)
+
+Each time you run a UDF, the **QUERY HISTORY** view is updated with a record of that activity.
