@@ -56,6 +56,12 @@ To create a tuning profile:
 
     ![Creating a tuning connection profile]({{site.baseurl}}/assets/images/tuning-create-profile.gif)
 
+    Optionally, you can specify JDBC properties when creating a tuning profile. For example, you can select the `currentPackagePath` property to use a package in a collection ID that you specify. You can specify more than one collection ID for the `currentPackagePath` property. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.
+
+    ![Tuning profile optional properties]({{site.baseurl}}/assets/images/tuning-with-profile-options-cpp.png)
+
+    **Note**: After you set a collection ID or multiple collection IDs for the `currentPackagePath` property, you can reset the collection IDs by removing the `currentPackagePath` property from your tuning profile, saving the change, and then adding the `currentPackagePath` property back to your tuning profile. This process will automatically reset the `currentPackagePath` property with the value `NULLID, IBMTMS`. You can also reset the `currentPackagePath` property by deleting the existing tuning profile and creating a new profile to set a new value for the `currentPackagePath` property.
+
 Now that you've created a tuning profile, you must associate it with a Db2 database connection.
 
 1. Either create a new Db2 connection or edit an existing Db2 connection.
@@ -79,6 +85,10 @@ The use of tuning profiles is optional if you are using Db2 Developer Extension 
 If you are tuning SQL without a tuning profile and you are using MFA, you will be prompted to enter an MFA token twice: when you first connect to Db2 and again when you initiate the tuning action. The tokens must be unique. Use the IBM Verify app to generate these MFA tokens.
 
 **Note:** Tuning without a profile enables you to select and run multiple tuning actions simultaneously. When you do so, the results for each of the tuning actions that you run will share the same Job ID.
+
+Optionally, when you are tuning without a profile you can specify JDBC properties. For example, you can select the `currentPackagePath` property to use a package in a collection ID that you specify. You can specify more than one collection ID for the `currentPackagePath` property. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.
+
+![Tuning without a profile optional properties]({{site.baseurl}}/assets/images/tuning-without-profile-options-cpp.png)
 
 ## Creating EXPLAIN tables
 
