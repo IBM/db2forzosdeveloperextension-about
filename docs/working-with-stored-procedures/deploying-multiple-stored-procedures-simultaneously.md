@@ -1,48 +1,54 @@
 ---
-title: "Deploying multiple stored procedures simultaneously"
+title: "Deploying multiple routines simultaneously"
 ---
 
 # {{ page.title }}
 
-When you are developing a Db2 for z/OS application, you might want to create and deploy many stored procedures for your application. The following instructions describe how to deploy multiple stored procedures in a single operation.
+When you are developing a Db2 for z/OS application, you might want to create and deploy many stored procedures or user-defined functions (UDFs) for your application. The following instructions describe how to deploy multiple routines in a single operation.
 
-1. Select the stored procedures that you want to deploy. The files that you select must have an extension of **.spsql** or **.javaspsql**.
+1. Select the routines that you want to deploy. Only files that have an extension of **.spsql**, **.javaspsql**, or **.udfsql** are supported.
 
-   - Select multiple individual stored procedure files, one or more folders that contain stored procedure files, or a combination of files and folders.  Then right-click and select **Deploy Stored Procedures** from the context menu.
-   - Select all of the stored procedures in your workspace by clicking the **Deploy** icon (![Deploy icon]({{site.baseurl}}/assets/images/deploy-icon.png)).
+   - Select multiple individual stored procedure or UDF files, one or more folders that contain stored procedure or UDF files, or a combination of files and folders. Then right-click and select **Deploy Routines** from the context menu.
+   - Select all of the routines in your workspace by clicking the **Deploy** icon (![Deploy icon]({{site.baseurl}}/assets/images/deploy-icon.png)).
 
-   The Deployment options tab opens and the stored procedures that you selected are parsed to ensure that they're valid.
+   The Deployment options tab opens and the routines that you selected are parsed to ensure that they're valid.
 
-2. Specify the appropriate deployment options for your stored procedures.
+2. Specify the appropriate deployment options for your routines.
 
-   ![Stored procedure deployment options]({{site.baseurl}}/assets/images/batch-sp-deploy-options.png)
+   ![Routine deployment options]({{site.baseurl}}/assets/images/batch-routine-deploy-options.png)
 
-   - Use the **Db2 connection** option to select a connection from the list of defined connections. See [Creating a database connection]({{site.baseurl}}/docs/the-basics/creating-a-database-connection.html) for more information.  Note that when you deploy multiple stored procedures simultaneously, the Db2 connection information that you specify is not saved in the UI.
+   - Use the **Db2 connection** option to select a connection from the list of defined connections. See [Creating a database connection]({{site.baseurl}}/docs/the-basics/creating-a-database-connection.html) for more information.  Note that when you deploy multiple rotuines simultaneously, the Db2 connection information that you specify is not saved in the UI.
    <!-- remove the "Note" sentence when a fix has been implemented. -->
-   - Use the **Target schema** option for unqualified stored procedures. If you leave this field empty, the currentSchema JDBC property will be used if it has been set. If currentSchema is not set, the JDBC connection username will be used.
-   - Use the **Build owner** option to specify the owner of the stored procedure. If you leave this field empty, the currentSQLID JDBC property will be used if it has been set. If currentSQLID is not set, the JDBC connection username will be used.
-   - Use the **Default path** option for resolving an unqualified data type, function, or procedure referenced by the procedure that is being deployed. You can specify multiple schemas, each one separated by a comma. For example:
+   - Use the **Target schema** option for unqualified routines. If you leave this field empty, the currentSchema JDBC property will be used if it has been set. If currentSchema is not set, the JDBC connection username will be used.
+   - Use the **Build owner** option to specify the owner of the routine. If you leave this field empty, the currentSQLID JDBC property will be used if it has been set. If currentSQLID is not set, the JDBC connection username will be used.
+   - Use the **Default path** option for resolving an unqualified data type, function, or procedure referenced by the routine that is being deployed. You can specify multiple schemas, each one separated by a comma. For example:
 
          "ADMF002","ADMF003","ADMF004"
 
-   - Use the **Duplicate handling** option to specify the behavior of the deployment when a stored procedure with the same name in the same schema already exists. The options that are available depend on the types of stored procedures that you are deploying:
+   - Use the **Duplicate handling** option to specify the behavior of the deployment when a routine with the same name in the same schema already exists. The options that are available depend on the types of routines that you are deploying:
 
-     - **Drop duplicates** calls DROP PROCEDURE before running the CREATE PROCEDURE DDL if the procedure already exists and creates the procedure.
-     - **Treat duplicate deployments as errors** returns an error if the procedure already exists. If other versions of the procedure do not already exist, the procedure is created.
-     - **Alter native duplicates and drop external duplicates** applies to situations in which you have a combination of native stored procedures and external stored procedures. For duplicate native stored procedures, this option modifies the CREATE PROCEDURE DDL to ALTER PROCEDURE if the procedure already exists. For duplicate external stored procedures, this option calls DROP PROCEDURE before running the CREATE PROCEDURE DDL if the procedure already exists and creates the procedure.
+     - **Alter duplicate native stored procedures and non-inline UDFs** applies to situations in which you have a combination of routines. Depending on the type of routine, this option alters an existing routine, or drops an existing routine and creates the routine.
+     - **Drop duplicates** drops the existing duplicate routine during deployment and creates a new routine.
+     - **Treat duplicate deployments as errors** returns an error if the routine already exists. If other versions of the routine do not exist, the routine is created.
 
-3. Click the **Other options** tab to specify additional deployment parameters. A list of the stored procedures that you selected is displayed alongside additional deployment options. The tabs that are displayed will vary depending on the type of stored procedure that you are working with:
+   - Use the **Error handling** option to specify the behavior of the deployment when a deployment for a routine fails. The following options are:
+     
+     - **Ignore errors and continue to the next routine** will continue to deploy the following routines after the first deployment error.
+     - **Stop on errors** causes the following routines after the first deployment error, to not be deployed.
 
-   - For native stored procedures, only the **Routine options** tab is displayed.
+3. Click the **Other options** tab to specify additional deployment parameters. A list of the routines that you selected is displayed alongside additional deployment options. The tabs that are displayed will vary depending on the type of routine that you are working with:
+
+   - For native stored procedures and non-inline UDFs, only the **Routine options** tab is displayed.
    - For external SQL stored procedures, the **Routine options** tab and the **External SQL options** tabs are displayed.
    - For Java and SQLJ stored procedures, the **Routine options tab** and the **Java options** tabs are displayed.
+   - For UDFs, there are currently no additional deployment options.
 
    **Routine options**
 
-   ![Stored procedure deployment routine options]({{site.baseurl}}/assets/images/batch-sp-deploy-routine-options.png)
+   ![Routine deployment options for native stored procedures and non-inline UDFs]({{site.baseurl}}/assets/images/batch-routine-deploy-nsp-ni-udfs-options.png)
 
-   - Use the **Enable debugging** option to specify whether the stored procedures are available to be debugged.
-   - Use the **WLM environment** option to specify which Workload Manager environment will be used to debug the procedures. If you enable debugging but leave this field empty, the default WLM environment will used.
+   - Use the **Enable debugging** option to specify whether the routines are available to be debugged.
+   - Use the **WLM environment** option to specify which Workload Manager environment will be used to debug the routines. If you enable debugging but leave this field empty, the default WLM environment will be used.
    - Use the **ASU time limit** option to set the ASUTIME, which is the number of CPU seconds permitted for each SQL statement. The default value of 0 means NO LIMIT and is not recommended.
    - Use the **Additional routine options** field to specify any additional options that you want to include. Separate each option with a semicolon. For example:
 
@@ -50,7 +56,7 @@ When you are developing a Db2 for z/OS application, you might want to create and
 
    **External SQL options**
 
-   ![Stored procedure deployment external SQL options]({{site.baseurl}}/assets/images/batch-sp-deploy-external-sql-options.png)
+   ![Routine deployment external SQL options]({{site.baseurl}}/assets/images/batch-routine-deploy-ext-sql-options.png)
    - The **Build utility** field identifies the Db2 SQL procedure processor, SYSPROC.DSNTPSMP, which is used to create an external SQL stored procedure.
    - Use the **Precompile options** option to specify options for precompiling the C language program that Db2 generates for the external SQL procedure. Do not specify the HOST option. For a list of these options see SQL processing options.
    - Use the **Compile options** option to specify options for compiling the C language program that Db2 generates for the external SQL procedure.
@@ -60,7 +66,7 @@ When you are developing a Db2 for z/OS application, you might want to create and
 
    **Java options**
 
-   ![Stored procedure deployment java options]({{site.baseurl}}/assets/images/batch-sp-deploy-java-options.png)
+   ![Routine deployment java options]({{site.baseurl}}/assets/images/batch-routine-deploy-java-options.png)
    - Use the **Java file path** option to specify the Java class file. It must have a public static void method, which works as an entry point for the stored procedure. The class name, declared package, and method name should match the external name defined in the CREATE PROCEDURE statement. If the Java class declares a package path, its location must match the package path to be able to compile properly.
    - Use the **Java dependencies** option to specify any compilation and runtime dependencies that are required by the Java class. Dependent JARs are defined to Db2 if you select Upload; otherwise, dependent JARs are used only for compilation. Dependent JARs must be defined in the Java path on the server unless they have been defined already to Db2 by other Java stored procedures.
 
@@ -72,25 +78,25 @@ When you are developing a Db2 for z/OS application, you might want to create and
 
    If you don't specify a required value or specify an invalid value, click on the error icon to troubleshoot the problem:
 
-   ![Stored procedure deployment java options errors]({{site.baseurl}}/assets/images/batch-sp-deploy-java-options-errors.png)
+   ![Routine deployment java options errors]({{site.baseurl}}/assets/images/batch-routine-deploy-java-options-errors.png)
 
-4. Optional: Propagate the same Routine options settings and External SQL options settings for multiple stored procedures by using the following actions:
+4. Optional: Propagate the same Routine options settings and External SQL options settings for multiple routines by using the following actions:
 
-   - **Apply settings to all** is available when you highlight a folder in the list of selected stored procedures.  You can specify options at the folder level and click **Apply settings to all** to propagate those options to every stored procedure file in the folder.
+   - **Apply settings to all** is available when you highlight a folder in the list of selected routines. You can specify options at the folder level and click **Apply settings to all** to propagate those options to every routine file in the folder.
 
-   - **Apply folder settings** is available when you highlight an individual stored procedure in the list of stored procedures.  Click **Apply folder settings** to propagate the options settings that you specified to the folder to only this stored procedure.
+   - **Apply folder settings** is available when you highlight an individual routine in the list of routines.  Click **Apply folder settings** to propagate the options settings that you specified to the folder to only this routine.
 
-   The options that are propagated depend on the type of stored procedure:
+   The options that are propagated depend on the type of routine:
      
-   - For native and Java stored procedures, these actions propagate the Routine options only.
+   - For native stored procedures, Java, and non-inline UDFs, these actions propagate the Routine options only.
    - For external stored procedures, these actions propagate both the Routine options and the External options.
 
-   When you have correctly specified all the required options for all the selected stored procedures, the **Deploy** button is enabled.
+   When you have correctly specified all the required options for all the selected routines, the **Deploy** button is enabled.
 
-5. Click **Deploy** to start the deployment process.  The Deployment results view is displayed, which provides the status and results for each stored procedure:
+5. Click **Deploy** to start the deployment process. The Deployment results view is displayed, which provides the status and results for each routine:
 
-   ![Stored procedure deployment results]({{site.baseurl}}/assets/images/batch-sp-deploy-results.png)
+   ![Routine deployment results]({{site.baseurl}}/assets/images/batch-routine-deploy-results.png)
 
-6. Expand a stored procedure to see details about its results.  For stored procedures that do not deploy successfully, information if provided to help you correct the problem:
+6. Expand a routine to see details about its results. For routines that do not deploy successfully, information is provided to help you correct the problem:
 
-   ![Stored procedure deployment errors]({{site.baseurl}}/assets/images/batch-sp-deploy-errors.png)
+   ![Routine deployment errors]({{site.baseurl}}/assets/images/batch-routine-deploy-expanded-results.png)
