@@ -21,7 +21,7 @@ And it includes features that enable you to easily:
 -   [Run SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-sql/preparing-to-run-an-sql-statement)
 -   Deploy and run [native](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures), [Java and SQLJ](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures), and [external SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures) stored procedures
 -   Debug [native and external SQL procedures](https://pages.github.ibm.com/ericrad/db2devext-docs-staging/docs/working-with-stored-procedures/debugging-native-external-stored-procedures) and [Java and SQLJ stored procedures](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/debugging-external-java-stored-procedures)
--   [Deploy user-defined functions](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-user-defined-functions)
+-   [Deploy, run](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-user-defined-functions) and [debug](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/debugging-native-external-stored-procedures) user-defined functions
 -   [Analyze and tune the performance of SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment)
 -   [Navigate the Db2 catalog](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/navigating-the-db2-catalog)
 -   [Import database connections from Data Studio](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/importing-connections-from-data-studio)
@@ -79,7 +79,7 @@ Installing Db2 Developer Extension requires the following software:
     -   [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 11 of Oracle Java
     -   Version 8 or 11 of the [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=openj9)
 
-    Alternatively, if you are not developing Java applications, you can install a [supported JRE](https://www.oracle.com/java/technologies/javase-jre8-downloads.html).
+    Alternatively, if you are not developing Java applications, you can install a [supported JRE](https://www.oracle.com/java/technologies/javase-jre8-downloads.html) (including 17 and 21).
 
     See [Configuring Java](#configuring-java) for information about setting the various options that control how Db2 Developer Extension uses Java.
 
