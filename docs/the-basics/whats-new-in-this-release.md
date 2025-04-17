@@ -16,7 +16,7 @@ Db2 for z/OS Developer Extension 2.2.1 provides the following significant enhanc
 
 - Support for [activating a new version of a native stored procedure or compiled UDF from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/activating-new-routine-version.html)
 
-- Support for [calling a native or external stored procedure from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/calling-stored-procedures-from-catalog-navigation.html)
+- Support for [calling a native or external SQL stored procedure from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/calling-stored-procedures-from-catalog-navigation.html)
 
 - Support for [editing DISTINCT data types and enhancements to column headings when editing table data]({{site.baseurl}}/docs/the-basics/editing-table-data.html)
 
