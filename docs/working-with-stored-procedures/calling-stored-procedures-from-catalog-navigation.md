@@ -4,9 +4,9 @@ title: "Calling a stored procedure from catalog navigation"
 
 # {{ page.title }}
 
-You can call a native stored procedure or an external stored procedure directly from the Db2 Developer Extension catalog navigation view. Only these two types of stored procedures are supported at this time.
+You can call a native SQL stored procedure or an external SQL stored procedure directly from the Db2 Developer Extension catalog navigation view. Only these two types of stored procedures are supported at this time.
 
-To call a native or external stored procedure, first select the **Stored procedure** object type from the catalog navigation tree, then click **Run** from the overflow menu for the stored procedure that you want to call:  
+To call a native or external SQL stored procedure, first select the **Stored procedure** object type from the catalog navigation tree, then click **Run** from the overflow menu for the stored procedure that you want to call:  
 
 ![Calling a stored procedure from catalog navigation]({{site.baseurl}}/assets/images/call-stored-procedure-run.png)
 
