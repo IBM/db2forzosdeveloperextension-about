@@ -13,6 +13,8 @@ Db2 for z/OS Developer Extension provides a number of features that make it easy
 
 It also also provides built-in capability for connecting to Db2 for z/OS databases and running your SQL. This article provides an introduction to using these basic features.
 
+For a quick overview of the Db2 Developer Extension interface, see [Getting started with Db2 for z/OS Developer Extension and VS Code](https://ibm.biz/Bda2D9).
+
 **Important:** Before you start to work with Db2 Developer Extension, make sure that your system meets all of the [prerequisites](https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#prerequisites-for-installing-db2-developer-extension) and that you have [configured Java](https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#configuring-java), that you have [set the JDBC license files and JDBC driver files](https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#setting-the-jdbc-license-and-jdbc-driver-files), and that you have specified the required [port numbers](https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#specifying-port-numbers).
 
 ## Creating a simple SQL statement
