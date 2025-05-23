@@ -4,6 +4,14 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.2.2 (May 2025)
+
+Db2 for z/OS Developer Extension 2.2.2 provides fixes for the following issues:
+
+- User credentials are dropped when a Db2 connection is shared for the first time. In this situation, users of that connection will be prompted to re-enter their user ID and password.
+
+- Changes in VS Code keytar support can prevent Db2 Developer Extension from opening. See [Usage problems related to changes in keytar support]({{site.baseurl}}/docs/troubleshooting/usage-problems-related-to-changes-in-keytar-support.html) for more information.
+
 ## 2.2.1 (April 2025)
 
 Db2 for z/OS Developer Extension 2.2.1 provides the following significant enhancements:
