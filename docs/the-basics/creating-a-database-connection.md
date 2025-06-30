@@ -30,7 +30,9 @@ When you create a connection, a connection name is automatically generated based
 
 When you select **MFA token** as the login method, use the IBM Verify app to generate an MFA token and specify that token in the **MFA token** field.
 
-![Using multi-factor authentication]({{site.baseurl}}/assets/images/db2-connection-mfa.png)
+If your environment is set up for login using an MFA token only, you can log in without a password by turning the **Use MFA without a password** toggle on.
+
+![Using multi-factor authentication]({{site.baseurl}}/assets/images/db2-connection-mfa-with-toggle.png)
 
 **Important:** To reduce timeout issues with MFA tokens, make sure that the following Db2 for z/OS subsystem parameters are set appropriately. For example:
 
