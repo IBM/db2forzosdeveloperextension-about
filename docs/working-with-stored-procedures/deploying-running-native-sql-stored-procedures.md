@@ -119,7 +119,13 @@ Click **Deploy** to finish the configuration and begin the deployment process fo
 
 ## Running a stored procedure
 
-Click the **Run** action to start execution process. If your NSP contains input variables, you'll be prompted to specify values for them before the NSP executes, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
+You can run a stored procedure by using any of the following methods:
+
+- From within the catalog navigation view by clicking **Run** from the overflow menu
+- From within a **.spsql** file by by clicking **Run stored procedure** from the context menu or the **Run stored procedure** icon
+- From the SQL editor either by clicking **Run All** or highlighting part of the file and clicking **Run Selected SQL**
+
+If your stored procedure contains input variables, you’ll be prompted to specify values for them before the stored procedure executes, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
 
 If you have an input type that's an array, you'd specify the values like this:
 
@@ -127,6 +133,10 @@ If you have an input type that's an array, you'd specify the values like this:
 numeric:   [1; 2; 3]
 character: [hello; world]
 ```
+
+**Note**: Arrays are not supported when you run a stored procedure from the SQL editor.
+
+If your statement contains host variables or positional parameters, you'll be prompted to specify values for input variables and parameters.
 
 ![Input parameters for running]({{site.baseurl}}/assets/images/nsp-basics-run-parameters.png)
 
