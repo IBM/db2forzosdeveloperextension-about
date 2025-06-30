@@ -6,11 +6,7 @@ title: "Canceling running SQL statements"
 
 Db2 Developer Extension provides support for canceling SQL statements while they are running. This feature is useful when you need to cancel long-running or unresponsive SQL statements.
 
-Note: Currently, only SQL statements executed from files that end with **.sql** can be canceled.
-
-
-Currently, only SQL statements that are executed from the SQL editor using the **Run All** or **Run Selected SQL** options can be canceled.
-
+Note: Currently, only SQL statements that are executed from the SQL editor using the **Run All** or **Run Selected SQL** options can be canceled.
 
 When an SQL script is running, a notification with the the **Cancel** button is displayed in the lower right corner of the window.
 
