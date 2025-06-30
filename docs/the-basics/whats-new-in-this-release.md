@@ -4,6 +4,16 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.2.3 (June 2025)
+
+Db2 for z/OS Developer Extension 2.2.3 provides the following significant enhancements:
+
+- Support for [multi-factor authentication (MFA) login without a password for environments that are configured with MFA token only login]({{site.baseurl}}/docs/the-basics/creating-a-database-connection#connecting-with-multi-factor-authentication.html)
+
+- Support for [loading, saving, and resetting host variables for stored procedures and user-defined functions (UDFs)]({{site.baseurl}}/docs/working-with-stored-procedures/setting-host-variables)
+
+- Support for [canceling running SQL statements]({{site.baseurl}}/docs/working-with-sql/canceling-running-sql.html)
+
 ## 2.2.2 (May 2025)
 
 Db2 for z/OS Developer Extension 2.2.2 provides fixes for the following issues:
