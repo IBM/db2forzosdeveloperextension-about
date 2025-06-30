@@ -153,7 +153,7 @@ If you're new to SQL and want more information about embedding SQL in host langu
 You can run a stored procedure by using any of the following methods:
 
 - From within the catalog navigation view by clicking **Run** from the overflow menu
-- From within a **.spsql** file by by clicking **Run stored procedure** from the context menu or the **Run stored procedure** icon
+- From within a **.spsql** file by clicking **Run stored procedure** from the context menu or the **Run stored procedure** icon
 - From the SQL editor either by clicking **Run All** or highlighting part of the file and clicking **Run Selected SQL**
 
 If your stored procedure contains input variables, you’ll be prompted to specify values for them before the stored procedure executes, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
