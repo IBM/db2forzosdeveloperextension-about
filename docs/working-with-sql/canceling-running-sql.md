@@ -8,7 +8,7 @@ Db2 Developer Extension provides support for canceling SQL statements while they
 
 Note: Currently, only SQL statements that are executed from the SQL editor using the **Run All** or **Run Selected SQL** options can be canceled.
 
-When an SQL script is running, a notification with the the **Cancel** button is displayed in the lower right corner of the window.
+When an SQL script is running, a notification with the **Cancel** button is displayed in the lower right corner of the window.
 
 ![Canceling running SQL statement button]({{site.baseurl}}/assets/images/cancel-running-sql-button.png)
 
