@@ -27,9 +27,3 @@ z/OS supports TLS 1.0 and 1.1, which have been deprecated in favor of 1.2 or 1.3
      - If you're using Java 11 or later, it's located at `$JAVA_HOME/conf/security/java.security`
   2. Locate the `jdk.tls.disabledAlgorithms` property within the `java.security` file and delete the `TLSv1` and `TLSv1.1` entries.
   3. Save and close the file.
-
-## Connection configuration issues with security mechanism 18
-
-- If you specified security mechanism 18 (SSL) when you created a database connection, you will be prompted to specify a password when you attempt to use that connection, even though SSL does not require a password. When the prompt is displayed, press Enter without specifying a password to use the connection.
-
-- If you specified specified security mechanism 18 when you created a database connection and you also selected the **Save password** checkbox, you will receive a `Failed to connect` error when you attempt to save the connection. Edit the connection, deselect **Save password**, and click **Finish**. As with the previous condition, when you are prompted to specify a password, press Enter without specifying a password to use the connection.
