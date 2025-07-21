@@ -142,6 +142,8 @@
           url: "docs/troubleshooting/sql-tuning-services"               
         - title: "Formatting errors when using the backslash as the escape character"
           url: "docs/troubleshooting/formatting-errors-when-using-the-backslash-as-the-escape-character"
+        - title: "Running a stored procedure with single quotation marks as the escape character"
+          url: "docs/troubleshooting/running-sp-with-single-quotes-as-escape-character"
         - title: "Column names being interpreted as variables"
           url: "docs/troubleshooting/column-names-being-interpreted-as-variables"
         - title: "Usage problems related to changes in keytar support"
