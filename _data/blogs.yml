@@ -1,26 +1,29 @@
+- title: Announcing Db2 for z/OS Developer Extension 2.2.1
+  url: https://community.ibm.com/community/user/blogs/madhavi-amirneni/2025/04/18/whats-new-in-db2-for-zos-tools-modernization
+  date: 2025/04/18
 - title: Getting started with Db2 for z/OS Developer Extension and VS Code
-  url: https://ibm.biz/Bda2D9
+  url: https://community.ibm.com/community/user/blogs/eric-radzinski1/2024/10/08/getting-started-with-db2-for-zos-developer-extensi
   date: 2024/10/09
 - title: Announcing IBM Db2 for z/OS Developer Extension 2.2
-  url: https://ibm.biz/BdaWZF
+  url: https://community.ibm.com/community/user/blogs/madhavi-amirneni/2024/12/03/announcing-the-latest-updates-to-the-db2-for-zos-m
   date: 2024/12/03
 - title: Announcing IBM Db2 for z/OS Developer Extension 2.1
-  url: https://ibm.biz/BdPncM
+  url: https://community.ibm.com/community/user/blogs/katherine-soohoo/2023/02/20/announcing-db2-for-zos-developer-extension-21
   date: 2023/02/24
 - title: Announcing IBM Db2 for z/OS Developer Extension 1.4
-  url: https://ibm.biz/BdPFvZ
+  url: https://community.ibm.com/community/user/blogs/katherine-soohoo/2022/05/31/announcing-ibm-db2-for-zos-developer-extension-14
   date: 2022/05/31
 - title: SQL tuning capabilities are available in Db2 for z/OS Developer Extension 1.3
-  url: https://community.ibm.com/community/user/datamanagement/blogs/eric-radzinski1/2021/09/17/sql-tuning-capabilities-are-available-in-db2-for-z
-  date: 2021/09/22
+  url: https://community.ibm.com/community/user/blogs/eric-radzinski1/2021/09/17/sql-tuning-capabilities-are-available-in-db2-for-z
+  date: 2021/09/23
 - title: Announcing IBM Db2 for z/OS Developer Extension 1.2
-  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2021/06/22/announcing-ibm-db2-for-zos-developer-extension-12
+  url: https://community.ibm.com/community/user/blogs/eric-radzinski1/2021/06/22/announcing-ibm-db2-for-zos-developer-extension-12
   date: 2021/06/22
 - title: Getting started with IBM Db2 for z/OS Developer Extension - <b>Video</b>
   url: https://video.ibm.com/recorded/130624971
   date: 2021/06/21
 - title: Announcing IBM Db2 for z/OS Developer Extension 1.1
-  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/calene-janacek1/2021/02/23/announcing-ibm-db2-for-zos-developer-extension-11
+  url: https://community.ibm.com/community/user/blogs/calene-janacek1/2021/02/23/announcing-ibm-db2-for-zos-developer-extension-11
   date: 2021/02/31
 - title: Running SQL with Db2 Developer Extension in Visual Studio Code
   url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/12/08/running-sqls-with-db2-developer-extension-in-visua
@@ -29,11 +32,11 @@
 #   url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/10/27/running-db2-for-zos-developer-extension-in-theia
 #   date: 2020/10/27
 - title: Announcing IBM Db2 for z/OS Developer Extension 0.5.0
-  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2020/10/27/announcing-ibm-db2-for-zos-developer-extension-050
+  url: https://community.ibm.com/community/user/blogs/eric-radzinski1/2020/10/27/announcing-ibm-db2-for-zos-developer-extension-050
   date: 2020/10/27
 - title: Customizing themes for SQL syntax highlighting for Db2 for z/OS in Visual Studio Code
   url: https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/08/18/customizing-themes-for-sql-syntax-in-vsc
   date: 2020/08/18
 - title: Announcing IBM Db2 for z/OS Developer Extension for Microsoft Visual Studio Code
-  url: https://community.ibm.com/community/user/hybriddatamanagement/blogs/eric-radzinski1/2020/07/29/announcing-ibm-db2-for-zos-developer-extension-for
+  url: https://community.ibm.com/community/user/blogs/eric-radzinski1/2020/07/29/announcing-ibm-db2-for-zos-developer-extension-for
   date: 2020/07/29
