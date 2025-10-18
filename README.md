@@ -25,6 +25,7 @@ And it includes features that enable you to easily:
 -   [Analyze and tune the performance of SQL](https://ibm.github.io/db2forzosdeveloperextension-about/docs/tuning-sql-queries/setting-up-a-basic-tuning-environment)
 -   [Navigate the Db2 catalog](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/navigating-the-db2-catalog)
 -   [Import database connections from Data Studio](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/importing-connections-from-data-studio)
+-   Work with DDL in CI/CD pipelines by using integrated [Db2 CI/CD Expert features](https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-cicde/working-with-ddl-cicde)
 
 For more information about the latest Db2 Developer Extension features, see [What's new in this release](https://ibm.github.io/db2forzosdeveloperextension-about/docs/the-basics/whats-new-in-this-release).
 
@@ -50,7 +51,7 @@ This current release of Db2 Developer Extension will collect anonymous data for 
 -   Syntax parsing
 -   Connecting to Db2
 -   SQL execution
--   Deploying, running, or debugging native stored procedures
+-   Deploying, running, or debugging stored procedures and user-defined functions
 -   Performing tuning actions
 -   Navigating the Db2 catalog
 -   Deactivation of this VS Code extension
@@ -117,6 +118,8 @@ Installing Db2 Developer Extension requires the following software:
 
     -   Google Chrome is required to view the results of Access Path Comparison and Visual Explain jobs from within VS Code. Otherwise, the results can be displayed in an external browser.
 
+    - To use the integrated features of Db2 CI/CD Expert, you need to install Db2 CI/CD Expert in a Unified Management Server environment and connect to a Db2 CI/CD server. See the [Db2 for CI/CD Expert documentation](https://www.ibm.com/docs/en/dcefz/1.1.0?topic=db2-cicd-expert-zos-overview) for more information.
+
 ## Configuring Java
 
 Because part of the SQL language server in IBM Db2 for z/OS Developer Extension is implemented using Java, a Java runtime must be defined in the program path to start Db2 Developer Extension in VS Code. You can specify the specific Java runtime that you want to use and you can set additional Java configuration parameters, such as how much memory the extension can use, in the [VS Code User or Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings). You can also specify a Java runtime and set configuration parameters by editing the `settings.json` file directly.
@@ -177,7 +180,5 @@ The Debugger Session Manager (DSM) provides support for debugging native stored 
 3. Restart VS Code.
 
 ## Limitations for this release
-
--   When you run a CALL statement that includes OUT or INOUT parameters, it will fail.
 
 -   Debugging a native stored procedure that contains input parameters as array types is not supported.

@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension, 2.2.3
+IBM Db2 for z/OS Developer Extension, 2.2.4
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -25,7 +25,7 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.3
+Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.4
 
 Apache 2.0 License
 
@@ -140,8 +140,9 @@ MIT License
 The Program includes some or all of the following that IBM obtained under the MIT License:
 
 
+@monaco-editor/react     Copyright (c) 2018 Suren Atoyan
 async 3.2.6	Copyright (c) 2010-2018 Caolan McMahon
-axios 1.8.2	Copyright (c) 2014-present Matt Zabriskie
+axios 3.2.3	Copyright (c) 2014-present Matt Zabriskie
 fast-xml-parser 4.5.0   Copyright (c) 20117 Amit Kumar Gupta
 html-react-parser 5.1.15	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
 json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
@@ -211,6 +212,6 @@ End of Python Software Foundation License 2.0
 
 
 
-L/N: L-BJFZ-GJMJ2W
-D/N: L-BJFZ-GJMJ2W
-P/N: L-BJFZ-GJMJ2W
+L/N: L-XTRN-B7VEGY
+D/N: L-XTRN-B7VEGY
+P/N: L-XTRN-B7VEGY
