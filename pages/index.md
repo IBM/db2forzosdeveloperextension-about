@@ -29,9 +29,13 @@ Db2 Developer Extension modernizes the experience of developing Db2 for z/OS app
 - The ability to sort query history by the timestamp of the execution and to quickly identify and display failing SQL statements
 - The ability to run SQL with or without parameter markers and host variables and to save SQL execution results
 - The ability to modify and re-run SQL from the query history
+- Integration with IBM Db2 CI/CD Expert for z/OS
 
-**Features for working with native and external SQL stored procedures:**
+**Features for working with SQL stored procedures and user-defined functions:**
 - The ability to deploy, debug, and run native and external SQL stored procedures
+- The ability to deploy, debug, and run user-defined functions
+- The ability to call stored procedures and user-defined functions in all supported languages from catalog navigation
+- The ability to deploy stored procedures and user-defined functions for SQL language from catalog navigation
 - The ability to define conditional hit-count breakpoints when debugging native and external SQL stored procedures
 - The ability to run SQL that includes parameters and variables from within native and external SQL stored procedures
 
