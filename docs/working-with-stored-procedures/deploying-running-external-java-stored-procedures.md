@@ -86,7 +86,12 @@ From left to right, these actions are **Deploy**, **Debug**, and **Run**. We'll 
 
 ## Deploying a stored procedure
 
-Click the **Deploy** action to open the **Deployment** view. This is where you can set and customize deployment options and save the options for the **.spsql** or **.javaspsql** file. These options are used only during deployment and do not impact the DDL source code.
+You can deploy a stored procedure by using any of the following methods:
+
+- From within the **.spsql** or **.javaspsql** file by clicking **Deploy stored procedure** from the context menu or the **Deployment** icon 
+- From within the catalog navigation view by clicking **Deploy** from the overflow menu
+
+The **Deployment** view is where you can set and customize deployment options and save the options for the **.spsql** file or **.javaspsql** file. These options are used only during deployment and do not impact the DDL source code.
 
 The **Deployment** view consists of three sections: **Deployment options**, **Java options**, and **Routine options**.
 
