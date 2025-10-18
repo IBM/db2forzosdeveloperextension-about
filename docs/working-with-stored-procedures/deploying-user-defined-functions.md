@@ -51,7 +51,12 @@ From left to right, these actions are **Deploy**, **Debug**, and **Run**. We’l
 
 ## Deploying a user-defined function
 
-Click the **Deploy** action to open the **Deployment** view. This is where you can set and customize deployment options and save the options for the **.udfsql** file. These options are used only during deployment and do not impact the DDL source code.
+You can deploy a user-defined function by using any of the following methods:
+
+- From within the **.udfsql** file by clicking **Deploy user-defined function** from the context menu or the **Deployment** icon 
+- From within the catalog navigation view by clicking **Deploy** from the overflow menu
+
+The **Deployment** view is where you can set and customize deployment options and save the options for the **.udfsql** file. These options are used only during deployment and do not impact the DDL source code.
 
 The **Deployment** view consists of two sections: **Deployment options** and **Routine options**.
 
@@ -107,8 +112,12 @@ After your SQL user-defined function is executed, the following output is displa
 The **Status** tab contains overall execution status. If an error occurred, the status will contain SQL code, SQL state, and Message text.
 
 ## Running a user-defined function
-After you deploy a UDF, you can run it by clicking the **Run User-Defined Function** icon or by right-clicking and 
-selecting the **Run User-Defined Function** option.
+
+You can run a UDF by using any of the following methods:
+
+- From within the catalog navigation view by clicking **Run** from the overflow menu
+- From within the **.udfsql** file by clicking **Run User-Defined Function** from the context menu or the **Run User-Defined Function** icon
+- From within the SQL editor either by clicking **Run All** or by highlighting part of the file and clicking **Run Selected SQL**
  
 If your UDF contains input variables, you’ll be prompted to specify values for them before the UDF executes, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
  
