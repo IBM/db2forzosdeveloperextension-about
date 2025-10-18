@@ -3,6 +3,23 @@ title: "What's new in this release"
 ---
 
 # {{ page.title }}
+## 2.2.4 (October 2025)
+
+Db2 for z/OS Developer Extension 2.2.4 provides the following significant enhancements:
+
+- Integration with [IBM Db2 CI/CD Expert for z/OS]({{site.baseurl}}/docs/working-with-cicde/working-with-ddl-cicde)
+
+- Support for [XML schemas in catalog navigation]({{site.baseurl}}/docs/the-basics/navigating-the-db2-catalog)
+
+- Support for [calling stored procedures and user-defined functions in all supported languages from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/calling-stored-procedures-from-catalog-navigation) 
+
+- Support for deploying [native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures#deploying-a-stored-procedure), [external SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures#deploying-a-stored-procedure), [Java and SQLJ stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures#deploying-a-stored-procedure), and [user-defined-functions]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-user-defined-functions#deploying-a-user-defined-function) from catalog navigation
+
+- Support for [explicit commit or rollback based on the impact of SQL changes]({{site.baseurl}}/docs/working-with-sql/commit-or-rollback-impact-analysis) through the use of a new "Run SQL Impact" context menu option in the editor tab
+
+- Support for remote certification when [tuning without a profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment#tuning-without-a-tuning-profile)
+
+- Support for the [encryptionAlgorithm and sslTrustStoreType properties for use with a tuning profile]({{site.baseurl}}/docs/tuning-sql-queries/setting-up-a-tuning-environment#creating-a-tuning-profile)
 
 ## 2.2.3 (June 2025)
 
