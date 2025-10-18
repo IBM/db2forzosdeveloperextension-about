@@ -56,18 +56,18 @@ To create a tuning profile:
 
     ![Creating a tuning connection profile]({{site.baseurl}}/assets/images/tuning-create-profile.gif)
 
-    Optionally, you can specify JDBC properties when creating a tuning profile. Db2 Developer Extension supports the following JDBC properties:    
- 
-       currentPackagePath
-       encryptionAlgorithm
-       securityMechanism
-       sslCertLocation
-       sslConnection
-       sslKeyStoreLocation
-       sslKeyStorePassword
-       sslTrustStoreLocation
-       sslTrustStorePassword
-       sslTrustStoreType
+    Optionally, you can specify JDBC properties when creating a tuning profile. Db2 Developer Extension supports the following JDBC properties:
+
+   - `currentPackagePath`
+   - `encryptionAlgorithm`
+   - `securityMechanism`
+   - `sslCertLocation`
+   - `sslConnection`
+   - `sslKeyStoreLocation`
+   - `sslKeyStorePassword`
+   - `sslTrustStoreLocation`
+   - `sslTrustStorePassword`
+   - `sslTrustStoreType`
 
     ![Tuning profile optional properties]({{site.baseurl}}/assets/images/tuning-with-profile-options.png)
 
