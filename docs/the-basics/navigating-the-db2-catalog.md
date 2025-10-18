@@ -73,6 +73,7 @@ After catalog navigation has been enabled by granting read access to Db2 system 
 - User-defined functions
 - User-defined types
 - Views (including view aliases)
+- XML schemas
 
 You can expand an object to see detailed information about that object (columns, constraints, indexes, and so on).
 
@@ -169,3 +170,5 @@ The following list shows which characteristics are provided for each object type
     - Data
     - Dependencies
     - DDL
+- XML schemas
+    - Data
