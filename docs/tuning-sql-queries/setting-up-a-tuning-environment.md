@@ -56,9 +56,22 @@ To create a tuning profile:
 
     ![Creating a tuning connection profile]({{site.baseurl}}/assets/images/tuning-create-profile.gif)
 
-    Optionally, you can specify JDBC properties when creating a tuning profile. For example, you can select the `currentPackagePath` property to use a package in a collection ID that you specify. You can specify more than one collection ID for the `currentPackagePath` property. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.
+    Optionally, you can specify JDBC properties when creating a tuning profile. Db2 Developer Extension supports the following JDBC properties:    
+ 
+       currentPackagePath
+       encryptionAlgorithm
+       securityMechanism
+       sslCertLocation
+       sslConnection
+       sslKeyStoreLocation
+       sslKeyStorePassword
+       sslTrustStoreLocation
+       sslTrustStorePassword
+       sslTrustStoreType
 
-    ![Tuning profile optional properties]({{site.baseurl}}/assets/images/tuning-with-profile-options-cpp.png)
+    ![Tuning profile optional properties]({{site.baseurl}}/assets/images/tuning-with-profile-options.png)
+
+    When you select the `currentPackagePath` property to use a package in a collection ID that you specify, you can specify more than one collection ID. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.
 
     **Note**: After you set a collection ID or multiple collection IDs for the `currentPackagePath` property, you can reset the collection IDs by removing the `currentPackagePath` property from your tuning profile, saving the change, and then adding the `currentPackagePath` property back to your tuning profile. This process will automatically reset the `currentPackagePath` property with the value `NULLID, IBMTMS`. You can also reset the `currentPackagePath` property by deleting the existing tuning profile and creating a new profile to set a new value for the `currentPackagePath` property.
 
@@ -86,9 +99,32 @@ If you are tuning SQL without a tuning profile and you are using MFA, you will b
 
 **Note:** Tuning without a profile enables you to select and run multiple tuning actions simultaneously. When you do so, the results for each of the tuning actions that you run will share the same Job ID.
 
+<!--
 Optionally, when you are tuning without a profile you can specify JDBC properties. For example, you can select the `currentPackagePath` property to use a package in a collection ID that you specify. You can specify more than one collection ID for the `currentPackagePath` property. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.
+-->
 
-![Tuning without a profile optional properties]({{site.baseurl}}/assets/images/tuning-without-profile-options-cpp.png)
+When you are tuning without a profile, you can specify JDBC properties. In most cases, specifying JDBC properties is optional; however, if you are using SSL to connect to Db2 and you are using a secure port _without_ a public CA, you can specify the following SSL-related properties: 
+
+- `sslTrustStoreLocation`
+- `sslTrustStorePassword`
+- `sslTrustStoreType`
+- `sslKeyStoreLocation`
+- `sslKeyStorePassword`
+
+If you are not using SSL or you are using SSL with a public CA, you do not need to specify these properties.
+
+**Usage notes:**
+- When the `sslConnection` property is set to `true`, if you specify these properties in the **Optional** tab, the property names will be automatically specified in the **Tuning** tab but no values will be assigned.
+- You can manually specify unique values for these properties in the **Tuning** tab; however, if you don't specify unique values in the **Tuning** tab, the values in the **Optional** tab are used for tuning actions.
+- Any values specified in the **Tuning** tab take precedence over values specified in the **Optional** tab.
+- If you delete a property from the **Tuning** tab, but the property still exists in the **Optional** tab, the property name will automatically be specified in the **Tuning** tab.
+- You can add these properties directly in the **Tuning** tab without specifying them in the **Optional** tab. 
+
+In addition to the SSL-related properties, you can use the `currentPackagePath` property, which enables you to use a package in a collection ID that you specify. You can specify more than one collection ID for the `currentPackagePath` property. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.
+
+When the `currentPackagePath` property is specified in the **Optional** tab, both the property name and the specified value are automatically populated in the **Tuning** tab.
+
+![Tuning without a profile optional properties]({{site.baseurl}}/assets/images/tuning-without-profile-options.png)
 
 ## Creating EXPLAIN tables
 
