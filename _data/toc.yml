@@ -40,6 +40,8 @@
           url: "docs/working-with-sql/running-sql-from-history"
         - title: "Committing and rolling back changes"
           url: "docs/working-with-sql/committing-and-rolling-back-changes"
+        - title: "Committing or rolling back changes based on impact analysis"
+          url: "docs/working-with-sql/commit-or-rollback-impact-analysis"
         - title: "Canceling running SQL statements"
           url: "docs/working-with-sql/canceling-running-sql"
         - title: "Limiting the number of rows returned"
@@ -96,7 +98,7 @@
           url: "docs/working-with-stored-procedures/deploying-running-user-defined-functions"
         - title: "Deploying multiple routines simultaneously"
           url: "docs/working-with-stored-procedures/deploying-multiple-stored-procedures-simultaneously"       
-        - title: "Calling a stored procedure from catalog navigation"
+        - title: "Calling stored procedures and user-defined functions from catalog navigation"
           url: "docs/working-with-stored-procedures/calling-stored-procedures-from-catalog-navigation"
         - title: "Setting host variables for stored procedures and user-defined functions"
           url: "docs/working-with-stored-procedures/setting-host-variables"
@@ -112,6 +114,11 @@
           url: "docs/working-with-stored-procedures/working-with-dbcs-data"
         - title: "Working with user-defined types"
           url: "docs/working-with-stored-procedures/working-with-user-defined-types"
+    - title: Working with Db2 CI/CD Expert
+      url: "docs/working-with-cicde"
+      children:
+        - title: "Working with DDL in a Db2 CI/CD Expert environment"
+          url: "docs/working-with-cicde/working-with-ddl-cicde"
     - title: Tips and tricks
       url: "docs/tips-and-tricks"
       children:
