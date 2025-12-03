@@ -117,6 +117,8 @@
     - title: Working with Db2 CI/CD Expert
       url: "docs/working-with-cicde"
       children:
+        - title: "Connecting to a Db2 CI/CD Expert for z/OS server"
+          url: "docs/working-with-cicde/connecting-to-cicde-server"
         - title: "Working with DDL in a Db2 CI/CD Expert environment"
           url: "docs/working-with-cicde/working-with-ddl-cicde"
     - title: Tips and tricks
