@@ -77,14 +77,14 @@ Installing Db2 Developer Extension requires the following software:
 
 -   One of the following Java SDKs:
 
-    -   [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 11 of Oracle Java
-    -   Version 8 or 11 of the [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=openj9)
+    -   [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 21 of Oracle Java
+    -   Version 8 or 21 of the [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=openj9)
 
     Alternatively, if you are not developing Java applications, you can install a [supported JRE](https://www.oracle.com/java/technologies/javase-jre8-downloads.html) (including 17 and 21).
 
     See [Configuring Java](#configuring-java) for information about setting the various options that control how Db2 Developer Extension uses Java.
 
--   IBM Data Server Driver for JDBC and SQLJ 4.32.28 (11.5.8), which is packaged with Db2 Developer Extension, and one of the following licenses, which is required to connect to Db2 for z/OS:
+-   IBM Data Server Driver for JDBC and SQLJ 4.34 (12.1), which is packaged with Db2 Developer Extension, and one of the following licenses, which is required to connect to Db2 for z/OS:
 
     -   [Db2 Connect Enterprise Edition](https://www.ibm.com/support/customer/csol/terms/?ref=L-KHAI-CARQ42-01-10-2022-zz-en) (client-side license). See [Setting the JDBC license and JDBC driver files](https://github.com/IBM/db2forzosdeveloperextension-about#setting-the-jdbc-license-and-jdbc-driver-files) for information about specifying this license in your VS Code settings.
 
@@ -147,15 +147,15 @@ If a Java runtime is not found in any of these locations, an error message is is
 
 ## Setting the JDBC license and JDBC driver files 
 
-You need to specify the JDBC license file `db2jcc_license_cisuz.jar` to interact with Db2 for z/OS. Optionally, to use your own JDBC driver version, you can provide a JDBC driver file.
+You need to specify the JDBC license file `db2jcc_license_consvZS.jar` to interact with Db2 for z/OS. Optionally, to use your own JDBC driver version, you can provide a JDBC driver file.
 
 1. Open your VS Code settings and search for the `db2forzosdeveloperextension.db2sqlservice.dependencies` setting.
-2. Specify the JDBC license file, `db2jcc_license_cisuz.jar`. You must provide the full path.
+2. Specify the JDBC license file, `db2jcc_license_consvZS.jar`. You must provide the full path.
 3. Optionally, specify the full path of your JDBC driver file. If you're using VS Code on Mac, separate the JDBC driver file from the JDBC license file with a colon (:). If you're using VS Code on Windows, separate them with a semicolon (;). Note that single and double quotation marks must not be used.
 
     The following example shows specifications for both the JDBC license file and an optional JDBC driver file on Mac:
 
-    `/Users/myname/jccjars/db2jcc_license_cisuz.jar:/Users/myname/jccjars/db2jcc4.jar`
+    `/Users/myname/jccjars/db2jcc_license_consvZS.jar:/Users/myname/jccjars/db2jcc4.jar`
 
 4. Restart VS Code for the changes to take effect.
 

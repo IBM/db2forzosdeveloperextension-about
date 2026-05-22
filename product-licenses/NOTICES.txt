@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension, 2.2.4
+IBM Db2 for z/OS Developer Extension, 2.2.5
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -25,7 +25,7 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.4
+Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.5
 
 Apache 2.0 License
 
@@ -33,7 +33,7 @@ The Program includes some or all of the following that IBM obtained under the Ap
 
 @carbon/colors  10.12.0
 @carbon/layout  10.29.0
-@carbon/react  1.79.0
+@carbon/react  1.103.0
 @carbon/styles  1.47.0
 @carbon/themes  10.17.0
 @carbon/type  10.13.0
@@ -47,13 +47,12 @@ gson  2.10.1
 gson 2.9.1
 httpclient  4.5.14
 httpcore  jar  4.4.16
-jackson-annotations  2.11.0
-jackson-annotations  2.15.2
-jackson-core  2.15.0
-jackson-core  2.15.2
-jackson-databind  2.15.2
-log4j-api  2.17.1
-log4j-core  2.17.1
+jackson-annotations  2.18.6
+jackson-annotations  2.21
+jackson-core  2.21.2
+jackson-databind  2.21.2
+log4j-api  2.25.4
+log4j-core  2.25.4
 log4js  6.4.1
 puppeteer-core 13.4.0
 
@@ -96,7 +95,7 @@ In no event and under no legal theory, whether in tort (including negligence), c
 While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.
 END OF TERMS AND CONDITIONS
 
-End or Apache 2.0 License
+End of Apache 2.0 License
 **************************************************************
 
 
@@ -142,17 +141,20 @@ The Program includes some or all of the following that IBM obtained under the MI
 
 @monaco-editor/react     Copyright (c) 2018 Suren Atoyan
 async 3.2.6	Copyright (c) 2010-2018 Caolan McMahon
-axios 3.2.3	Copyright (c) 2014-present Matt Zabriskie
-fast-xml-parser 4.5.0   Copyright (c) 20117 Amit Kumar Gupta
+axios 1.15.1	Copyright (c) 2014-present Matt Zabriskie
+fast-xml-parser 5.8.0   Copyright (c) 20117 Amit Kumar Gupta
 html-react-parser 5.1.15	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
-json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
+json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
 karma-chrome-launcher 3.1.0	Copyright (C) 2011-2013 Google, Inc.
 path 0.12.7	Copyright Joyent, Inc. and other Node contributors. All rights reserved.
 react 18.3.1	Copyright (c) Facebook, Inc. and its affiliates.
 react-is 18.3.1  Copyright (c) Meta Platforms, Inc. and affiliates.
 react-autosuggest 10.1.0	Copyright © 2017 Misha Moroshko
 react-dom 18.3.1	Copyright (c) Facebook, Inc. and its affiliates.
-uuid 8.3.2	Copyright (c) 2010-2020 Robert Kieffer and other contributors
+sql-formatter 4.0.2     Copyright (c) 2016-2020 ZeroTurnaround LLC
+                        Copyright (c) 2020-2021 George Leslie-Waksman and other contributors
+                        Copyright (c) 2021-Present inferrinizzard and other contributors
+uuid 11.1.1	Copyright (c) 2010-2020 Robert Kieffer and other contributors
 vscode-debugadapter  1.51.0	Copyright (c) Microsoft Corporation
 vscode-debugprotocol 1.41.0	Copyright (c) Microsoft Corporation
 vscode-extension-telemetry  0.4.5	Copyright (c) Microsoft Corporation
@@ -212,6 +214,6 @@ End of Python Software Foundation License 2.0
 
 
 
-L/N: L-XTRN-B7VEGY
-D/N: L-XTRN-B7VEGY
-P/N: L-XTRN-B7VEGY
+L/N: L-MWQB-GYQWUA
+D/N: L-MWQB-GYQWUA
+P/N: L-MWQB-GYQWUA
