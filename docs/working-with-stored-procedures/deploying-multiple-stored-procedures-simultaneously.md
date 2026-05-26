@@ -101,4 +101,4 @@ When you are developing a Db2 for z/OS application, you might want to create and
 
    ![Routine deployment errors]({{site.baseurl}}/assets/images/batch-routine-deploy-expanded-results.png)
 
-After you deploy a routine, an entry is added to the **QUERY HISTORY** view. The entry shows the schema, and the path if specified, of the routine. This information is useful when identical routine names exist across multiple schemas.
+After you deploy a routine or multiple routines, an entry is added to the **QUERY HISTORY** view. The entry shows the schema, and the path if specified, of the routine. This information is useful when identical routine names exist across multiple schemas.
