@@ -100,3 +100,5 @@ When you are developing a Db2 for z/OS application, you might want to create and
 6. Expand a routine to see details about its results. For routines that do not deploy successfully, information is provided to help you correct the problem:
 
    ![Routine deployment errors]({{site.baseurl}}/assets/images/batch-routine-deploy-expanded-results.png)
+
+After you deploy a routine, an entry is added to the **QUERY HISTORY** view. The entry shows the schema, and the path if specified, of the routine. This information is useful when identical routine names exist across multiple schemas.
