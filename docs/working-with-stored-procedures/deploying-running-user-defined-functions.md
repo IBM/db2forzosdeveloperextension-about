@@ -133,4 +133,4 @@ If your UDF contains input variables, you’ll be prompted to specify values for
 
 ![Results of running a UDF]({{site.baseurl}}/assets/images/udf-run-results.png)
 
-Each time you run a UDF, the **QUERY HISTORY** view is updated with a record of that activity.
+After you run a user-defined function, an entry is added to the **QUERY HISTORY** view. The entry shows the schema, and the path if specified, of the UDF.
