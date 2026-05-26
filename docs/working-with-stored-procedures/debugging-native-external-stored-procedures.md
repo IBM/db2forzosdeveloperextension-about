@@ -26,6 +26,8 @@ You can also specify additional debugging options by using the **Run SQL Options
 
 Click the **Debug** action to start debugging process. If your routine contains input variables, you'll be prompted to specify values for them before the SQL goes through debugging, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.
 
+**Note:** Only native SQL stored procedures can include a mix of NULL and non-NULL elements in the array input values (for example: `[value1; NULL; NULL; value4; NULL; value6]`).
+
 ![Input parameters for debugging]({{site.baseurl}}/assets/images/nsp-basics-debug-parameters.png)
 
 After you specify input parameter values, click **Debug**. Set the breakpoints for where you want the debugger to pause execution:
