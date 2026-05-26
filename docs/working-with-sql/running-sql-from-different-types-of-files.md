@@ -8,7 +8,7 @@ A unique and extremely useful feature of Db2 Developer Extension is the ability 
 
 This feature is useful for validating your SQL code from directly within the host language file, without the overhead of copying and pasting it into a **.sql** or, for stored procedures, into a **.spsql** file first.
 
-Using this feature is pretty straightforward. The only prerequisite is that you have a database connection.  You can associate a specific connection to the file that you want to run your SQL from, but if you don't, Db2 Developer Extension will try to establish a connection for you.
+Using this feature is pretty straightforward. The only prerequisite is that you have a database connection. You can associate a specific connection to the file, or you'll be prompted to select one when you run the SQL.
 
 1. Open a file and add a SQL statement.
 2. As an optional step, you can specify JDBC runtime options by right-clicking anywhere in the editor and selecting **Run SQL Options** from the context menu.
@@ -16,6 +16,8 @@ Using this feature is pretty straightforward. The only prerequisite is that you 
    For example, you can specify commit and rollback settings, and you can set the [CURRENT SCHEMA](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_currentschema.html) and [CURRENT PATH](https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_currentpath.html) special registers. For information about the commit and rollback options, see [Committing and rolling back changes]({{site.baseurl}}/docs/working-with-sql/committing-and-rolling-back-changes.html).
 
 3. Highlight the statement, right-click it, and select **Run Selected SQL** from the context menu.
+
+   **Note:** If you're prompted to select a connection, choose one from the list. The **Status Bar** updates, and the SQL request continues automatically.
 
 That's it. Results are displayed in the **SQL Results** page that opens when the statement completes and stored in the **Query History** view.
 
