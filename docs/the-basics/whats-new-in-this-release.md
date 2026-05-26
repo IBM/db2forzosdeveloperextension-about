@@ -3,6 +3,33 @@ title: "What's new in this release"
 ---
 
 # {{ page.title }}
+
+## 2.2.5 (May 2026)
+
+Db2 for z/OS Developer Extension 2.2.5 provides the following significant enhancements:
+
+- Support for [editing SQL routines from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/opening-sql-routines-from-catalog)
+
+- Support for [loading data from a file into an existing table]({{site.baseurl}}/docs/the-basics/load-data-from-file)
+
+- Support for [updating user IDs and passwords for multiple connection profiles at once]({{site.baseurl}}/docs/the-basics/bulk-passwords-update)
+
+- Support for [exporting Db2 for z/OS connections]({{site.baseurl}}/docs/the-basics/exporting-db2-connections)
+
+- Support for [sorting data in an SQL results set for SELECT statements by enabling server-side sorting]({{site.baseurl}}/docs/working-with-sql/server-side-sorting)
+
+- Support for [setting both NULL and non-NULL values to an array input variable for native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures#running-a-stored-procedure)
+
+- Support for [selecting a location to save an SQL results set instead of manually typing out the path]({{site.baseurl}}/docs/working-with-sql/saving-sql-results-to-a-file)
+
+- Enhanced Query History view that displays the schema, and the path if specified, for a routine that was executed or deployed
+
+- Enhanced Tuning Actions panel:
+    
+    - Support for selecting or deselecting all of the tuning actions in the panel
+    
+    - Support for preserving the tuning actions that were selected previously for a file
+
 ## 2.2.4 (October 2025)
 
 Db2 for z/OS Developer Extension 2.2.4 provides the following significant enhancements:
