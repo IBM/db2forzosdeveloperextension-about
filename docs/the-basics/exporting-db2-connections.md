@@ -18,9 +18,11 @@ To export database connections:
 
 
 1. From the **DB2 FOR Z/OS CONNECTIONS** view, click **Export Db2 Connections**.
+
    ![Export Db2 Connections](../../assets/images/export-connections-icon.png)
 
 2. Select the connections that you want to export.
+
    ![Export Db2 Connections view](../../assets/images/export-connections-view.png)
 
 3. Enter a file name and folder for the exported `.xml` file, or click **Select file** to specify a location.
