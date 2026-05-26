@@ -24,10 +24,6 @@ When working with IBM Support to resolve a performance problem with an SQL state
 
    The **Tuning Summary** window opens, which shows that the status for Capture Query Environment is Pending. When the job completes, the status changes to Success.
 
-7. From the **TUNING HISTORY** view, select **Capture Query Environment**, then specify the full path to contain the results.  
-
-8. Press **Enter**. A message is displayed that indicates that the results of running Capture Query Environment were successfully saved in the path that you specified.
-
-9. Go to Explorer to locate the file.
+7. To download the output, select it from the **TUNING HISTORY** view and click **Capture Query Environment**. Specify a location in your file explorer for the output and click **Save File**.
 
     ![Capture Query Environment tuning action]({{site.baseurl}}/assets/images/tuning-capture-query-environment.gif)
