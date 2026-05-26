@@ -20,9 +20,11 @@ To set host variables:
 
 5. To update a host variable, select a value and type in a new value.
 
-6. Click **Save values** and select the location where you want to save the XML file containing the host variables.
+   **Note:** Only native SQL stored procedures can include a mix of NULL and non-NULL elements in the array input values (for example: `[value1; NULL; NULL; value4; NULL; value6]`).
 
-7. To reset all of the values for the stored procedure or UDF, click **Reset values**.
+7. Click **Save values** and select the location where you want to save the XML file containing the host variables.
+
+8. To reset all of the values for the stored procedure or UDF, click **Reset values**.
 
     **Important:** Resetting values resets all parameters to an empty value.
 
