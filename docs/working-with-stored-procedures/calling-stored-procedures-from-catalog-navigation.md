@@ -18,4 +18,6 @@ To call a stored procedure or user-defined function, first select the **Stored p
 
   ![Specifying variables for a stored procedure]({{site.baseurl}}/assets/images/call-stored-procedure-variables.png)
 
+  **Note:** Only native SQL stored procedures can include a mix of NULL and non-NULL elements in the array input values (for example: `[value1; NULL; NULL; value4; NULL; value6]`).
+
   After you specify the values and click **Run**, the results are displayed.
