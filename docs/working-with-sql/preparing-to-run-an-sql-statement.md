@@ -31,5 +31,7 @@ When you have some valid SQL and you have a valid database connection, you're ju
    - Highlight your SELECT statement, right-click anywhere in your SQL file and click **Run Selected SQL**. This option is useful for testing and debugging individual SQL statements.
 
    - Use the Visual Studio Code [Command Palette]({{site.baseurl}}/docs/tips-and-tricks/running-commands-from-the-command-palette.html).
+  
+   **Note:** If you're prompted to select a connection, choose one from the list. The **Status Bar** updates from **No connection** to the selected connection, and the SQL request continues running automatically.
 
-   The results are displayed in the **SQL Results** page that opens when the statement completes and stored in the **QUERY HISTORY** menu in the sidebar. You can also save the results in a **.csv** file or in a spreadsheet.
+The results are displayed in the **SQL Results** page that opens when the statement completes and stored in the **QUERY HISTORY** menu in the sidebar. You can also save the results in a **.csv** file or in a spreadsheet.
