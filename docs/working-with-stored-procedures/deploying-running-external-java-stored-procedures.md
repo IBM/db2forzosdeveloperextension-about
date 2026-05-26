@@ -188,6 +188,8 @@ After your stored procedure is executed, the following output is displayed in th
 
 - The **SQL Results** view contains data if a result set is expected (in our example, a result set isn't expected so the **Result** tab isn't shown).
 
+After you run a stored procedure, an entry is added to the **QUERY HISTORY** view. The entry shows the schema, and the path if specified, of the procedure.
+
 <!-- 
 ## Specifying additional options
 
