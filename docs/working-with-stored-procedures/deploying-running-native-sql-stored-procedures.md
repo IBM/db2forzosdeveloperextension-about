@@ -139,7 +139,7 @@ numeric:   [1; 2; 3]
 character: [hello; world]
 ```
 
-**Note**: Arrays are not supported when you run a stored procedure from the SQL editor.
+You can also enter a mix of NULL and non-NULL input values in the array (for example: `[value1; NULL; NULL; value4; NULL; value6]`).
 
 If your statement contains host variables or positional parameters, you'll be prompted to specify values for input variables and parameters.
 
@@ -156,6 +156,8 @@ After your NSP is executed, the following output is displayed in these tabs:
 ![Parameters tab]({{site.baseurl}}/assets/images/nsp-basics-parameters-tab.png)
 
 - The **SQL Results** view contains data if a result set is expected (in our NSP example, a result set isn't expected so the **Result** tab isn't shown).
+
+After you run a stored procedure, an entry is added to the **QUERY HISTORY** view. The entry shows the schema, and the path if specified, of the procedure.
 
 ## Specifying additional options
 
