@@ -169,6 +169,8 @@
           url: "docs/troubleshooting/usage-problems-related-to-changes-in-keytar-support"
         - title: "Truncated timestamp values in query results and table data"
           url: "docs/troubleshooting/truncated-timestamp-values"
+        - title: "Unable to open Db2 for z/OS Developer Extension 2.2.5"
+          url: "docs/troubleshooting/version-225-not-loading"
     - title: Legal information
       url: "docs/legal-information"
       children:
