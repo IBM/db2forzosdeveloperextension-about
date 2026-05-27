@@ -4,6 +4,10 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.2.6 (May 2026)
+
+Db2 for z/OS Developer Extension 2.2.6 fixes an issue that prevents version 2.2.5 of Db2 Developer Extension from loading properly. If you have installed Db2 Developer Extension 2.2.5, you must upgrade to version 2.2.6.
+
 ## 2.2.5 (May 2026)
 
 Db2 for z/OS Developer Extension 2.2.5 provides the following significant enhancements:
