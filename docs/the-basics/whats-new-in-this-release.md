@@ -6,11 +6,9 @@ title: "What's new in this release"
 
 ## 2.2.6 (May 2026)
 
-Db2 for z/OS Developer Extension 2.2.6 fixes an issue that prevents version 2.2.5 of Db2 Developer Extension from loading properly. If you have installed Db2 Developer Extension 2.2.5, you must upgrade to version 2.2.6.
+Db2 for z/OS Developer Extension 2.2.6 introduces changes to the prerequisite software required to use the extension. Before you install or upgrade to version 2.2.6, you must have Java version 21 installed, and you need to update the JCC license file name. For more information on how to update these prerequisites, see [Updating prerequisites]({{site.baseurl}}/docs/the-basics/updating-prereqs).
 
-## 2.2.5 (May 2026)
-
-Db2 for z/OS Developer Extension 2.2.5 provides the following significant enhancements:
+Db2 for z/OS Developer Extension 2.2.6 provides the following significant enhancements:
 
 - Support for [editing SQL routines from catalog navigation]({{site.baseurl}}/docs/working-with-stored-procedures/opening-sql-routines-from-catalog)
 
@@ -218,5 +216,3 @@ You can now view and hide implicit objects by using the view icon (![View icon](
 ### Support for VS Code Remote Development
 
 You can now take advantage of VS Code Remote Development support to create a remote Db2 Developer Extension development environment. See [Support for VS Code Remote Development]({{site.baseurl}}/docs/tips-and-tricks/support-for-remote-development.html) for more information.
-
-
