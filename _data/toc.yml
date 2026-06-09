@@ -24,7 +24,9 @@
         - title: "Loading data from a file"
           url: "docs/the-basics/load-data-from-file"
         - title: "Updating passwords for multiple Db2 for z/OS database connections"
-          url: "docs/the-basics/bulk-passwords-update" 
+          url: "docs/the-basics/bulk-passwords-update"
+        - title: "Updating prerequisites"
+          url: "docs/the-basics/updating-prereqs"
     - title: Working with SQL
       url: "docs/working-with-sql"
       children:
