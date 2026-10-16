@@ -4,6 +4,14 @@ title: "What's new in this release"
 
 # {{ page.title }}
 
+## 2.2.7 (October 2026)
+
+Db2 for z/OS Developer Extension 2.2.7 provides the following significant enhancements:
+
+- Support for [passing values between cells in a notebook editor]({{site.baseurl}}/docs/working-with-sql/working-with-sql-in-notebook-editor#passing-values-between-cells)
+
+- Support for [configuring different Java installation paths for different VS Code workspaces]({{site.baseurl}}/docs/the-basics/updating-prereqs#updating-the-java-version)
+
 ## 2.2.6 (May 2026)
 
 Db2 for z/OS Developer Extension 2.2.6 introduces changes to the prerequisite software required to use the extension. Before you install or upgrade to version 2.2.6, you must have Java version 21 installed, and you need to update the JCC license file name. For more information on how to update these prerequisites, see [Updating prerequisites]({{site.baseurl}}/docs/the-basics/updating-prereqs).
