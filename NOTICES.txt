@@ -1,6 +1,6 @@
 NOTICES AND INFORMATION
 
-IBM Db2 for z/OS Developer Extension, 2.2.6
+IBM Db2 for z/OS Developer Extension, 2.2.7
 
 The IBM license agreement and any applicable information on the web
 download page for IBM products refers Licensee to this file for details
@@ -9,9 +9,8 @@ above ("the Program").
 
 Notwithstanding the terms and conditions of any other agreement Licensee
 may have with IBM or any of its related or affiliated entities
-(collectively "IBM"), the third party code identified below is subject
-to the terms and conditions of the IBM license agreement for the Program
-and not the license terms that may be contained in the notices below.
+(collectively "IBM"), the following licenses apply to the applicable
+third party code included in this application.
 The notices are provided for informational purposes.
 
 Please note: This Notices file may identify information that is not used
@@ -25,36 +24,32 @@ and all liability for errors and omissions or for any damages accruing
 from the use of this NOTICES file or its contents, including without
 limitation URLs or references to any third party websites.
 
-Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.6
+Notices and Information for IBM Db2 for z/OS Developer Extension, 2.2.7
 
 Apache 2.0 License
 
 The Program includes some or all of the following that IBM obtained under the Apache License Version 2.0:
 
-@carbon/colors  10.12.0
-@carbon/layout  10.29.0
-@carbon/react  1.103.0
-@carbon/styles  1.47.0
-@carbon/themes  10.17.0
-@carbon/type  10.13.0
-carbon-components-react  8.65.0
-carbon-components  10.58.15
-carbon-icons  7.0.7
+@carbon/colors  10.37.5
+@carbon/layout  10.37.5
+@carbon/react  1.117.0
+@carbon/styles  1.116.0
+@carbon/themes  10.55.6
+@carbon/type  10.45.6
 commons-codec  1.16
 commons-logging  1.2
 find-java-home  1.1.0
 gson  2.10.1
 gson 2.9.1
 httpclient  4.5.14
-httpcore  jar  4.4.16
-jackson-annotations  2.18.6
-jackson-annotations  2.21
-jackson-core  2.21.2
-jackson-databind  2.21.2
-log4j-api  2.25.4
-log4j-core  2.25.4
-log4js  6.4.1
-puppeteer-core 13.4.0
+httpcorejar  4.4.16
+jackson-annotations  2.22
+jackson-core  2.22.3
+jackson-databind  2.22.3
+log4j-api  2.26.1
+log4j-core  2.26.1
+log4js  6.9.1
+puppeteer-core 25.0.2
 
 Apache License
 Version 2.0, January 2004
@@ -102,8 +97,7 @@ End of Apache 2.0 License
 
 Eclipse Public License v2.0
 
-The Program includes some or all of the following that IBM obtained under the Eclipse Public License v2.0 (source code available via the indicated URL):"
-
+The Program includes some or all of the following that IBM obtained under the Eclipse Public License v2.0 (source code available via the indicated URL):
 
 org.eclipse.lsp4j 0.21.0 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j/0.21.0
 org.eclipse.lsp4j.jsonrpc 0.18.0 https://mvnrepository.com/artifact/org.eclipse.lsp4j/org.eclipse.lsp4j.jsonrpc/0.18.0
@@ -141,28 +135,30 @@ The Program includes some or all of the following that IBM obtained under the MI
 
 @monaco-editor/react     Copyright (c) 2018 Suren Atoyan
 async 3.2.6	Copyright (c) 2010-2018 Caolan McMahon
-axios 1.15.1	Copyright (c) 2014-present Matt Zabriskie
-fast-xml-parser 5.8.0   Copyright (c) 20117 Amit Kumar Gupta
-html-react-parser 5.1.15	Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
-json2csv 5.0.6	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
-karma-chrome-launcher 3.1.0	Copyright (C) 2011-2013 Google, Inc.
+axios 1.20.0	Copyright (c) 2014-present Matt Zabriskie
+fast-xml-parser 5.10.1   Copyright (c) 20117 Amit Kumar Gupta
+fast-xml-parser 5.11.2   Copyright (c) 20117 Amit Kumar Gupta
+html-react-parser 5.2.17  Copyright (c) 2016 Menglin "Mark" Xu <mark@remarkablemark.org>
+json2csv 5.0.7	Copyright (C) 2012 [Mirco Zeiss](mailto: mirco.zeiss@gmail.com)
+karma-chrome-launcher 3.2.0	Copyright (C) 2011-2013 Google, Inc.
 path 0.12.7	Copyright Joyent, Inc. and other Node contributors. All rights reserved.
-react 18.3.1	Copyright (c) Facebook, Inc. and its affiliates.
-react-is 18.3.1  Copyright (c) Meta Platforms, Inc. and affiliates.
+react 19.3.0	Copyright (c) Facebook, Inc. and its affiliates.
+react-is 19.3.0  Copyright (c) Meta Platforms, Inc. and affiliates.
 react-autosuggest 10.1.0	Copyright © 2017 Misha Moroshko
-react-dom 18.3.1	Copyright (c) Facebook, Inc. and its affiliates.
+react-dom 19.3.0	Copyright (c) Facebook, Inc. and its affiliates.
 sql-formatter 4.0.2     Copyright (c) 2016-2020 ZeroTurnaround LLC
                         Copyright (c) 2020-2021 George Leslie-Waksman and other contributors
                         Copyright (c) 2021-Present inferrinizzard and other contributors
-uuid 11.1.1	Copyright (c) 2010-2020 Robert Kieffer and other contributors
+uuid 14.0.1	Copyright (c) 2010-2020 Robert Kieffer and other contributors
 vscode-debugadapter  1.51.0	Copyright (c) Microsoft Corporation
-vscode-debugprotocol 1.41.0	Copyright (c) Microsoft Corporation
+vscode-debugprotocol 1.51.0	Copyright (c) Microsoft Corporation
 vscode-extension-telemetry  0.4.5	Copyright (c) Microsoft Corporation
 vscode-jsonrpc 5.0.1	Copyright (c) Microsoft Corporation
 vscode-languageclient 6.1.4	Copyright (c) Microsoft Corporation
 vscode-languageserver 6.1.1	Copyright (c) Microsoft Corporation
-vscode-languageserver-textdocument 1.0.1	Copyright (c) Microsoft Corporation
-vscode-nls 5.0.0	Copyright (c) Microsoft Corporation
+vscode-languageserver-protocol 3.15.3   Copyright (c) Microsoft Corporation
+vscode-languageserver-textdocument 1.0.12	Copyright (c) Microsoft Corporation
+vscode-nls 5.2.0	Copyright (c) Microsoft Corporation
 
 
 
@@ -214,6 +210,6 @@ End of Python Software Foundation License 2.0
 
 
 
-L/N: L-MWQB-GYQWUA
-D/N: L-MWQB-GYQWUA
-P/N: L-MWQB-GYQWUA
+L/N: L-TTCW-JFGKA7
+D/N: L-TTCW-JFGKA7
+P/N: L-TTCW-JFGKA7

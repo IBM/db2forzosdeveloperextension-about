@@ -70,6 +70,7 @@ Installing Db2 Developer Extension requires the following software:
 
 -   An appropriate version of Visual Studio Code:
 
+    -   For Db2 Developer Extension 2.2.7 and earlier, VS Code 1.102.3 or later is required.
     -   For Db2 Developer Extension 1.3 and later, VS Code 1.59.0 or later is required.
     -   For Db2 Developer Extension 1.2 and earlier, VS Code 1.44.0 or later is required.
 
@@ -77,10 +78,10 @@ Installing Db2 Developer Extension requires the following software:
 
 -   One of the following Java SDKs:
 
-    -   [Oracle Java SDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 8 or the LTS version 21 of Oracle Java
-    -   Version 8 or 21 of the [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=openj9)
+    -   [Oracle Java SDK](https://www.oracle.com/java/technologies/downloads/#java21) the LTS version 21 of Oracle Java
+    -   Version 21 of the [OpenJDK](https://adoptium.net/temurin/releases?version=21&jvmVariant=openj9)
 
-    Alternatively, if you are not developing Java applications, you can install a [supported JRE](https://www.oracle.com/java/technologies/javase-jre8-downloads.html) (including 17 and 21).
+    Alternatively, if you are not developing Java applications, you can install a [supported JRE](https://www.oracle.com/java/technologies/downloads/#java21) (including 21).
 
     See [Configuring Java](#configuring-java) for information about setting the various options that control how Db2 Developer Extension uses Java.
 
@@ -118,7 +119,7 @@ Installing Db2 Developer Extension requires the following software:
 
     -   Google Chrome is required to view the results of Access Path Comparison and Visual Explain jobs from within VS Code. Otherwise, the results can be displayed in an external browser.
 
-    - To use the integrated features of Db2 CI/CD Expert, you need to install Db2 CI/CD Expert in a Unified Management Server environment and connect to a Db2 CI/CD server. See the [Db2 for CI/CD Expert documentation](https://www.ibm.com/docs/en/dcefz/1.1.0?topic=db2-cicd-expert-zos-overview) for more information.
+    -   To use the integrated features of Db2 CI/CD Expert, you need to install Db2 CI/CD Expert in a Unified Management Server environment and connect to a Db2 CI/CD server. See the [Db2 for CI/CD Expert documentation](https://www.ibm.com/docs/en/dcefz/1.1.0?topic=db2-cicd-expert-zos-overview) for more information.
 
 ## Configuring Java
 
@@ -138,11 +139,11 @@ If a Java runtime is not found in any of these locations, an error message is is
 
 -   On Mac:
     ```
-    "db2forzosdeveloperextension.java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home"
+    "db2forzosdeveloperextension.java.home": "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
     ```
 -   On Windows:
     ```
-    "db2forzosdeveloperextension.java.home": "C:\Program Files\Java\jdk1.8.0_181"
+    "db2forzosdeveloperextension.java.home": "C:\Program Files\Java\jdk-21"
     ```
 
 ## Setting the JDBC license and JDBC driver files 
