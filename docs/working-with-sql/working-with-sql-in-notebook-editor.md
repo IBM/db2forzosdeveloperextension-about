@@ -39,5 +39,32 @@ To use the notebook editor:
    - Create a new markdown cell instead of a code cell by clicking **+ Markdown**. Your text will be saved as markdown in the file.
    - Rearrange the order of the cells by clicking and dragging them.
 
+## Passing values between cells 
 
-   
+You can reference values returned by one cell in subsequent cells in the same notebook. This capability is especially useful when a query returns multiple values that you want to use in another SQL statement.
+
+To reference a returned value in a subsequent cell, prefix the column name or alias with a colon (`:`). Column name and alias matching is case-insensitive, so `:table_name` and `:TABLE_NAME` reference the same value.
+
+You can assign an alias when you need a more specific name or when multiple cells return the same column name. You must assign an alias to an expression, such as `COUNT(*)` or `MAX(COL)`, because an expression does not have a natural column name.
+
+**Important:** Run the producing cell before running a cell that references its column name or alias. If the producing cell has not been run, the `:alias` reference is passed as-is to Db2, which returns an error.
+
+For example, the following query returns multiple table names and assigns the alias `table_name` to the `NAME` column:
+
+```
+SELECT NAME AS table_name
+FROM SYSIBM.SYSTABLES
+FETCH FIRST 10 ROWS ONLY;
+```
+
+Because the producing cell returns multiple rows, use `IN (:alias)` to reference all of the returned values in a subsequent cell:
+
+```
+SELECT NAME, TBNAME
+FROM SYSIBM.SYSCOLUMNS
+WHERE TBNAME IN (:table_name);
+```
+
+When the producing cell returns a single row and a single column, use `= :alias` instead of `IN (:alias)`. Using `= :alias` when the producing cell returns multiple rows results in an error.
+
+If multiple cells produce the same column name or alias, the values from the most recently executed cell are used. Re-running any producing cell makes its values current for subsequent references.
