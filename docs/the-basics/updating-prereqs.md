@@ -12,7 +12,9 @@ Before you install or upgrade to version 2.2.6, you must have Java version 21 in
 
 To use a different Java version for existing projects, configure the Java version 21 path in the Db2 for z/OS Developer Extension settings. This configuration allows the extension to use the required Java version 21 runtime independently of the project-specific Java version.
 
-To update this configuration, Click **Settings > Extensions > IBM Db2 for z/OS Developer Extension**, and configure the **Db2forzosdeveloperextension › Java: Home** field.
+To update this configuration, click **Settings > Extensions > IBM Db2 for z/OS Developer Extension**, and configure the **Db2forzosdeveloperextension › Java: Home** field.
+
+**Note:** In Db2 for z/OS Developer Extension 2.2.7 and later, you can configure different Java installation paths for different VS Code workspaces. After you update the Java installation path, VS Code prompts you to reload. The reload applies only to the current window and does not affect other open VS Code windows. 
 
 ##  Updating the license JAR file from IBM Data Server Driver for JDBC and SQLJ
 
