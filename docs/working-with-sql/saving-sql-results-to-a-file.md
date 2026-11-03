@@ -6,7 +6,7 @@ title: "Saving SQL results to a file"
 
 Any SQL results that generate a result set can be saved to a file. To save the results, open a SQL result, go to the **Result** tab, and click the **Save** icon. Specify a location in your file explorer for the results and click **Save File**.
 
-![Saving SQL results]({{site.baseurl}}/assets/images/runsql-save-results.gif)
+![Saving SQL results]({{site.baseurl}}/assets/images/save_results.gif)
 
 ## Customizing SQL results options
 
